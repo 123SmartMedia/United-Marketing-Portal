@@ -1,0 +1,57 @@
+@import 'tailwindcss';
+
+/*
+  United Mortgage brand theme.
+  Navy + blue accent sampled from the "UNITED MORTGAGE CORP" logo and existing
+  marketing collateral. Neutral grays match the clean, white-forward look of the
+  current unitedmarketingdesk.com.
+*/
+@theme {
+  --color-navy-50: #eef2f8;
+  --color-navy-100: #d5dfee;
+  --color-navy-200: #adc0dc;
+  --color-navy-300: #7e9bc6;
+  --color-navy-400: #5478ac;
+  --color-navy-500: #3a5c8f;
+  --color-navy-600: #2e4a75;
+  --color-navy-700: #24395c;
+  --color-navy-800: #1a2b46;
+  --color-navy-900: #14213d;
+  --color-navy-950: #0c1428;
+
+  --color-brand-50: #eaf3fb;
+  --color-brand-100: #cfe3f6;
+  --color-brand-200: #a3c8ec;
+  --color-brand-300: #6ea6de;
+  --color-brand-400: #3f84cd;
+  --color-brand-500: #2e6db4;
+  --color-brand-600: #245699;
+  --color-brand-700: #1f477d;
+  --color-brand-800: #1d3c66;
+  --color-brand-900: #1b3355;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-navy-900 antialiased;
+}
+
+/* Utility: line clamp for card titles/descriptions */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

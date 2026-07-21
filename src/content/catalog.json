@@ -1,0 +1,4163 @@
+{
+  "generatedAt": "2026-07-21T15:22:54.688Z",
+  "site": {
+    "name": "United Marketing Desk",
+    "org": "United Mortgage Corp",
+    "domain": "marketing.unitedmortgage.com",
+    "email": "marketing@unitedmortgage.com",
+    "requestEmail": "marketingdesk@unitedmortgage.com",
+    "phone": "516-212-0299"
+  },
+  "totals": {
+    "files": 247,
+    "items": 154
+  },
+  "categories": [
+    {
+      "slug": "business-cards-stationery",
+      "folder": "Business-Collateral",
+      "title": "Business Cards & Stationery",
+      "tagline": "Cards, letterhead, folders, banners & brand kit",
+      "description": "Order business cards in four styles, plus letterhead, cobranded folders, social banners, and the United Mortgage brand kit.",
+      "card": true,
+      "requestForm": true,
+      "image": "/assets/Site-Design/Business-Cards.jpg",
+      "items": [
+        {
+          "slug": "brand-guideline-08-2024",
+          "title": "Brand Guideline 08 2024",
+          "files": [
+            {
+              "name": "Brand-Guideline-08-2024.pdf",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Brand-Guideline-08-2024.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "business-card-thickness-examples",
+          "title": "Business Card Thickness Examples",
+          "files": [
+            {
+              "name": "business-card-thickness-examples.jpg",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/business-card-thickness-examples.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/business-card-thickness-examples.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "classic-cobrand-folder",
+          "title": "Classic Cobrand Folder",
+          "files": [
+            {
+              "name": "Classic-Cobrand-Folder-scaled.jpg",
+              "label": "Cobranded · Classic",
+              "url": "/assets/Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "color-pop-cobrand-folder",
+          "title": "Color Pop Cobrand Folder",
+          "files": [
+            {
+              "name": "Color-Pop-Cobrand-Folder-scaled.jpg",
+              "label": "Cobranded · Color-Pop",
+              "url": "/assets/Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "facebook-banner",
+          "title": "Facebook Banner",
+          "files": [
+            {
+              "name": "Facebook-Banner-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Facebook-Banner-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Facebook-Banner-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "featured-image-cobrand-folders",
+          "title": "Featured Image Cobrand Folders",
+          "files": [
+            {
+              "name": "Featured-Image-Cobrand-Folders-scaled.jpg",
+              "label": "Cobranded",
+              "url": "/assets/Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "featured-image-scaled",
+          "title": "Featured Image Scaled",
+          "files": [
+            {
+              "name": "Featured-Image-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Featured-Image-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Featured-Image-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "headshot-business-card-style",
+          "title": "Headshot Business Card Style",
+          "files": [
+            {
+              "name": "Headshot-business-card-style.png",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Headshot-business-card-style.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Headshot-business-card-style.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "landing",
+          "title": "Landing",
+          "files": [
+            {
+              "name": "Landing-page-1.png",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Landing-page-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Landing-page-1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "linkedin-banner",
+          "title": "LinkedIn Banner",
+          "files": [
+            {
+              "name": "LinkedIn-Banner-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/LinkedIn-Banner-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/LinkedIn-Banner-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "no-photo-business-card-style",
+          "title": "No Photo Business Card Style",
+          "files": [
+            {
+              "name": "No-photo-business-card-style.png",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/No-photo-business-card-style.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/No-photo-business-card-style.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "profile-business-card-style",
+          "title": "Profile Business Card Style",
+          "files": [
+            {
+              "name": "Profile-business-card-style.png",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Profile-business-card-style.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Profile-business-card-style.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "shield-business-card-style",
+          "title": "Shield Business Card Style",
+          "files": [
+            {
+              "name": "Shield-business-card-style.png",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/Shield-business-card-style.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/Shield-business-card-style.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "united-mortgage-letterhead",
+          "title": "United Mortgage Letterhead",
+          "files": [
+            {
+              "name": "United-Mortgage-Letterhead-4-12-24-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "United-Mortgage-Letterhead-4-12-24.docx",
+              "label": "Download",
+              "url": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24.docx",
+              "type": "doc",
+              "ext": "docx",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
+          "types": [
+            "image",
+            "doc"
+          ]
+        }
+      ],
+      "fileCount": 15,
+      "itemCount": 14
+    },
+    {
+      "slug": "program-flyers",
+      "folder": "Program-Flyers",
+      "title": "Program Flyers",
+      "tagline": "Loan program one-sheets, generic & cobranded",
+      "description": "Downloadable flyers for every loan program — FTHB, VA, DSCR, ITIN, Non-QM, 2-1 Buydown, Renovation, Refi, Reverse, Second Mortgage, and state DPA programs. Available in Classic, Color-Pop, and Illustration styles.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Site-Design/Special-Programs-Flyer__featured-Image.png",
+      "items": [
+        {
+          "slug": "2-1-buy-down-loan-program-flyer",
+          "title": "2 1 Buy Down Loan Program Flyer",
+          "files": [
+            {
+              "name": "2-1-Buy-Down-Loan-Program-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "2-1-Buy-Down-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "2-1-buy-down-loan-program-flyer",
+          "title": "2 1 Buy Down Loan Program Flyer",
+          "files": [
+            {
+              "name": "2-1-Buy-down-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/2-1-Buy-down-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "cash-out-refinance-flyer",
+          "title": "Cash Out Refinance Flyer",
+          "files": [
+            {
+              "name": "Cash-out-Refinance-Flyer_Classic-scaled.jpg",
+              "label": "Classic",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Cash-out-Refinance-Flyer-Hook-Image.png",
+              "label": "Download",
+              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer-Hook-Image.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
+          "types": [
+            "image",
+            "pdf"
+          ]
+        },
+        {
+          "slug": "dpal-pa-k-fit",
+          "title": "DPAL PA K FIT",
+          "files": [
+            {
+              "name": "DPAL_PA-K-FIT_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "DPAL_PA-K-FIT_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "DPAL_PA-K-FIT_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/DPAL_PA-Program_featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "dscr-program-flyer",
+          "title": "DSCR Program Flyer",
+          "files": [
+            {
+              "name": "DSCR-Program-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Style-02-01-scaled.jpg",
+              "label": "Style 02",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 02",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Style-03-scaled.jpg",
+              "label": "Style 03",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 03",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "label": "Cobranded · Style 01",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 01",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "label": "Cobranded · Style 02",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 02",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "DSCR-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "label": "Cobranded · Style 03",
+              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 03",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
+          "types": [
+            "pdf",
+            "image"
+          ]
+        },
+        {
+          "slug": "essex-dpa-flyer",
+          "title": "Essex DPA Flyer",
+          "files": [
+            {
+              "name": "Essex-DPA-Flyer_Classic-scaled.jpg",
+              "label": "Classic",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Cobrand_Classic-scaled.jpg",
+              "label": "Cobranded · Classic",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "label": "Cobranded · Color-Pop",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Essex-DPA-Flyer_Cobrand_Illustration-scaled.jpg",
+              "label": "Cobranded · Illustration",
+              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
+          "types": [
+            "image",
+            "pdf"
+          ]
+        },
+        {
+          "slug": "fthb-programs-flyer",
+          "title": "FTHB Programs Flyer",
+          "files": [
+            {
+              "name": "FTHB-Programs-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "FTHB-Programs-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "FTHB-Programs-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/FTHB-Flyer-Featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "general-programs-overview-flyer",
+          "title": "General Programs Overview Flyer",
+          "files": [
+            {
+              "name": "General-Programs-Overview-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "General-Programs-Overview-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "General-Programs-Overview-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "itin-loan-program-flyer",
+          "title": "ITIN Loan Program Flyer",
+          "files": [
+            {
+              "name": "ITIN-Loan-Program-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
+              "label": "Style 01",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 01",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Style-02-scaled.jpg",
+              "label": "Style 02",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-02-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 02",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Style-03-scaled.jpg",
+              "label": "Style 03",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 03",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "label": "Cobranded · Style 01",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 01",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "label": "Cobranded · Style 02",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 02",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "label": "Cobranded · Style 03",
+              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 03",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
+          "types": [
+            "pdf",
+            "image"
+          ]
+        },
+        {
+          "slug": "njhmfa-flyer",
+          "title": "NJHMFA Flyer",
+          "files": [
+            {
+              "name": "NJHMFA-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NJHMFA-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NJHMFA-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/NJHMFA-Flyer__featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "non-qm-overview-flyer",
+          "title": "NON QM Overview Flyer",
+          "files": [
+            {
+              "name": "NON-QM-Overview-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NON-QM-Overview-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NON-QM-Overview-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "ny-down-payment-assistance-flyer",
+          "title": "NY Down Payment Assistance Flyer",
+          "files": [
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "NY-Down-Payment-Assistance-Flyer_Style-01-scaled.jpg",
+              "label": "Style 01",
+              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Style-01-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Style 01",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
+          "types": [
+            "pdf",
+            "image"
+          ]
+        },
+        {
+          "slug": "rate-and-term-refinance-flyer",
+          "title": "Rate And Term Refinance Flyer",
+          "files": [
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
+              "label": "Classic",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Classic-scaled.jpg",
+              "label": "Cobranded · Classic",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "label": "Cobranded · Color-Pop",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Illustration-scaled.jpg",
+              "label": "Cobranded · Illustration",
+              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
+          "types": [
+            "image",
+            "pdf"
+          ]
+        },
+        {
+          "slug": "renovation-overview-flyer",
+          "title": "Renovation Overview Flyer",
+          "files": [
+            {
+              "name": "Renovation-Overview-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Renovation-Overview-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Renovation-Overview-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Renovation-Overview-Flyer__featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "reverse-mortgage-cobrand-flyer",
+          "title": "Reverse Mortgage Cobrand Flyer",
+          "files": [
+            {
+              "name": "Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
+              "label": "Cobranded · Classic",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Cobrand-Flyer_Color-Pop-scaled.jpg",
+              "label": "Cobranded · Color-Pop",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": "Cobranded",
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Cobrand-Flyer_Illustration-scaled.jpg",
+              "label": "Cobranded · Illustration",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "reverse-mortgage-flyer",
+          "title": "Reverse Mortgage Flyer",
+          "files": [
+            {
+              "name": "Reverse-Mortgage-Flyer_Classic-scaled.jpg",
+              "label": "Classic",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "reverse-mortgage-generic-flyer",
+          "title": "Reverse Mortgage Generic Flyer",
+          "files": [
+            {
+              "name": "Reverse-Mortgage-Generic-Flyer_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Generic-Flyer_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Reverse-Mortgage-Generic-Flyer_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Reverse-Mortgage-Flyer-Featured-Image.png",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "second-mortgage-program-flyer",
+          "title": "Second Mortgage Program Flyer",
+          "files": [
+            {
+              "name": "Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
+              "label": "Classic",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Second-Mortgage-Program-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Second-Mortgage-Program-Flyer_Color-Pop-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Color-Pop-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Second-Mortgage-Program-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Second-Mortgage-Program-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Second-Mortgage-Program-Flyer_Illustration-scaled.jpg",
+              "label": "Illustration",
+              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Illustration-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
+          "types": [
+            "image",
+            "pdf"
+          ]
+        },
+        {
+          "slug": "va-program-flyer",
+          "title": "VA Program Flyer",
+          "files": [
+            {
+              "name": "VA-Program-Flyer_Generic_Classic.pdf",
+              "label": "Generic · Classic",
+              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Classic.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Classic",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "VA-Program-Flyer_Generic_Color-Pop.pdf",
+              "label": "Generic · Color-Pop",
+              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Color-Pop.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Color-Pop",
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "VA-Program-Flyer_Generic_Illustration.pdf",
+              "label": "Generic · Illustration",
+              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Illustration.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": "Illustration",
+              "brand": "Generic",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
+          "types": [
+            "pdf"
+          ]
+        }
+      ],
+      "fileCount": 87,
+      "itemCount": 19
+    },
+    {
+      "slug": "program-videos",
+      "folder": "Program-Videos",
+      "title": "Program Videos",
+      "tagline": "Short explainer videos, English & Spanish",
+      "description": "Ready-to-share program explainer videos in English and Spanish, covering 2-Family, VA, DSCR, ITIN, Bank Statement, P&L, No Down Payment, 2-1 Buydown, and Renovation programs.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Site-Design/DSCR-Program_featured-Image-1.png",
+      "items": [
+        {
+          "slug": "2-1-buydown-program",
+          "title": "2 1 Buydown Program",
+          "files": [
+            {
+              "name": "2-1-Buydown-Program-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/2-1-Buydown-Program-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "2-1-Buydown-Program-Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/2-1-Buydown-Program-Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "2-family-program",
+          "title": "2 Family Program",
+          "files": [
+            {
+              "name": "2-Family-Program-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/2-Family-Program-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "2-Family-Program-Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/2-Family-Program-Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "bank-statement-program",
+          "title": "Bank Statement Program",
+          "files": [
+            {
+              "name": "Bank-Statement-Program_English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/Bank-Statement-Program_English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "Bank-Statement-Program_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/Bank-Statement-Program_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "bank-statement-refi-program",
+          "title": "Bank Statement Refi Program",
+          "files": [
+            {
+              "name": "Bank-Statement-Refi-Program_English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/Bank-Statement-Refi-Program_English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "Bank-Statement-Refi-Program_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/Bank-Statement-Refi-Program_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "brendan-skrocki-bank-statement-refi-program-video",
+          "title": "Brendan Skrocki Bank Statement Refi Program Video",
+          "files": [
+            {
+              "name": "Brendan-Skrocki-Bank-Statement-Refi-Program-Video.mp4",
+              "label": "Download",
+              "url": "/assets/Program-Videos/Brendan-Skrocki-Bank-Statement-Refi-Program-Video.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "dscr-1-united-mortage-corp",
+          "title": "DSCR 1 United Mortage Corp",
+          "files": [
+            {
+              "name": "DSCR-1-United-Mortage-Corp-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/DSCR-1-United-Mortage-Corp-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "dscr-program",
+          "title": "DSCR Program",
+          "files": [
+            {
+              "name": "DSCR-Program_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/DSCR-Program_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/DSCR-Program_featured-Image-1.png",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "investor-program-united-mortgage",
+          "title": "Investor Program United Mortgage",
+          "files": [
+            {
+              "name": "Investor-Program-United-Mortgage.mp4",
+              "label": "Download",
+              "url": "/assets/Program-Videos/Investor-Program-United-Mortgage.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Second-Mortgage-Program-Flyer_featured-Image.png",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "itin-program",
+          "title": "ITIN Program",
+          "files": [
+            {
+              "name": "ITIN-Program_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/ITIN-Program_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "itin-program-united-mortgage",
+          "title": "ITIN Program United Mortgage",
+          "files": [
+            {
+              "name": "ITIN-Program-United-Mortgage-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/ITIN-Program-United-Mortgage-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "no-down-payment",
+          "title": "No Down Payment",
+          "files": [
+            {
+              "name": "No-Down-Payment_English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/No-Down-Payment_English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "No-Down-Payment_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/No-Down-Payment_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/No-Down-Payment_Featured-Image.png",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "pl-program",
+          "title": "PL Program",
+          "files": [
+            {
+              "name": "PL-Program-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/PL-Program-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "PL-Program-Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/PL-Program-Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "renovation-program",
+          "title": "Renovation Program",
+          "files": [
+            {
+              "name": "Renovation-Program-English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/Renovation-Program-English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "Renovation-Program-Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/Renovation-Program-Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "va-program",
+          "title": "VA Program",
+          "files": [
+            {
+              "name": "VA-Program_English.mp4",
+              "label": "English",
+              "url": "/assets/Program-Videos/VA-Program_English.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "English"
+            },
+            {
+              "name": "VA-Program_Spanish.mp4",
+              "label": "Spanish",
+              "url": "/assets/Program-Videos/VA-Program_Spanish.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
+          "types": [
+            "video"
+          ]
+        }
+      ],
+      "fileCount": 22,
+      "itemCount": 14
+    },
+    {
+      "slug": "social-media",
+      "folder": "Social-Media",
+      "title": "Social Media",
+      "tagline": "Program posts, holidays, testimonials & reels",
+      "description": "Social graphics and reels: program posts, holiday content, new-hire and team spotlights, testimonials, and seasonal campaigns.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Site-Design/Social-Media.jpg",
+      "items": [
+        {
+          "slug": "2-1-buy-down-program",
+          "title": "2 1 Buy Down Program",
+          "files": [
+            {
+              "name": "2-1-Buy-Down-Program.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/2-1-Buy-Down-Program.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/2-1-Buy-Down-Program.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "4th-of-july-holiday",
+          "title": "4th Of July Holiday",
+          "files": [
+            {
+              "name": "4th-of-July_Holiday.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/4th-of-July_Holiday.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/4th-of-July_Holiday.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "4th-of-july-holidays",
+          "title": "4th Of July Holidays",
+          "files": [
+            {
+              "name": "4th-of-July_Holidays-Illustration.png",
+              "label": "Illustration",
+              "url": "/assets/Social-Media/4th-of-July_Holidays-Illustration.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/4th-of-July_Holidays-Illustration.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "4th-of-july-reel",
+          "title": "4th Of July Reel",
+          "files": [
+            {
+              "name": "4th-of-July-reel.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/4th-of-July-reel.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc",
+          "title": "Aerial Push In Shot Of Modern Single Story Duplex 2023 11 27 04 56 03 Utc",
+          "files": [
+            {
+              "name": "aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "air-force-holiday",
+          "title": "Air Force Holiday",
+          "files": [
+            {
+              "name": "Air-Force_Holiday.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Air-Force_Holiday.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Air-Force_Holiday.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "air-force-holidays",
+          "title": "Air Force Holidays",
+          "files": [
+            {
+              "name": "Air-Force_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Air-Force_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Air-Force_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "bank-statement-program",
+          "title": "Bank Statement Program",
+          "files": [
+            {
+              "name": "Bank-Statement-Program.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Bank-Statement-Program.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Bank-Statement-Program.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "brendan-skrocki-new-hire",
+          "title": "Brendan Skrocki New Hire",
+          "files": [
+            {
+              "name": "Brendan-Skrocki_New-Hire-03.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "brendan-skrocko-headshot-circle",
+          "title": "Brendan Skrocko Headshot Circle",
+          "files": [
+            {
+              "name": "Brendan-Skrocko-headshot-circle.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Brendan-Skrocko-headshot-circle.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Brendan-Skrocko-headshot-circle.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "carousel-cartoon-holidays",
+          "title": "Carousel Cartoon Holidays",
+          "files": [
+            {
+              "name": "Carousel-Cartoon-holidays-scaled.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Carousel-Cartoon-holidays-scaled.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Carousel-Cartoon-holidays-scaled.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "christmas-holidays-colors-ball",
+          "title": "Christmas Holidays Colors Ball",
+          "files": [
+            {
+              "name": "Christmas-Holidays-Colors-Ball.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Christmas-Holidays-Colors-Ball.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "christmas-holidays-house",
+          "title": "Christmas Holidays House",
+          "files": [
+            {
+              "name": "Christmas-Holidays-House.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Christmas-Holidays-House.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "christmas-holidays-personalised",
+          "title": "Christmas Holidays Personalised",
+          "files": [
+            {
+              "name": "Christmas-Holidays-Personalised.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Christmas-Holidays-Personalised.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Christmas-Holidays-Personalised-Cobrand.mp4",
+              "label": "Cobranded",
+              "url": "/assets/Social-Media/Christmas-Holidays-Personalised-Cobrand.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "cinco-de-mayo",
+          "title": "Cinco De Mayo",
+          "files": [
+            {
+              "name": "Cinco-de-Mayo.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Cinco-de-Mayo.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "coast-guard-holiday",
+          "title": "Coast Guard Holiday",
+          "files": [
+            {
+              "name": "Coast-Guard_Holiday.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Coast-Guard_Holiday.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Coast-Guard_Holiday.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "coast-guard-holidays",
+          "title": "Coast Guard Holidays",
+          "files": [
+            {
+              "name": "Coast-Guard_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Coast-Guard_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Coast-Guard_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "dscr-cartoon",
+          "title": "DSCR Cartoon",
+          "files": [
+            {
+              "name": "DSCR-Cartoon_1.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/DSCR-Cartoon_1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "DSCR-Cartoon-Featured-Image.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/DSCR-Cartoon-Featured-Image.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/DSCR-Cartoon_1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "erika-martinez-personalized-slide",
+          "title": "Erika Martinez Personalized Slide",
+          "files": [
+            {
+              "name": "Erika-Martinez-Personalized-Slide-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "for-personalized",
+          "title": "For Personalized",
+          "files": [
+            {
+              "name": "for-Personalized-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/for-Personalized-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/for-Personalized-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "happy-fathers-day",
+          "title": "Happy Fathers Day",
+          "files": [
+            {
+              "name": "Happy-Fathers-Day.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-Fathers-Day.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "happy-fathers-day-holidays",
+          "title": "Happy Fathers Day Holidays",
+          "files": [
+            {
+              "name": "Happy-Fathers-Day-_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-Fathers-Day-_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Happy-Fathers-Day-_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "happy-fathers-day-illustration-post",
+          "title": "Happy Fathers Day Illustration Post",
+          "files": [
+            {
+              "name": "Happy-Fathers-Day-_Illustration-Post.png",
+              "label": "Illustration",
+              "url": "/assets/Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "happy-holidays",
+          "title": "Happy Holidays",
+          "files": [
+            {
+              "name": "Happy-Holidays_Generic.mp4",
+              "label": "Generic",
+              "url": "/assets/Social-Media/Happy-Holidays_Generic.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Happy-Holidays.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-Holidays.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Happy-Holidays.jpg",
+          "types": [
+            "video",
+            "image"
+          ]
+        },
+        {
+          "slug": "happy-juneteenth",
+          "title": "Happy Juneteenth",
+          "files": [
+            {
+              "name": "Happy-Juneteenth.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-Juneteenth.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "happy-mothers-day",
+          "title": "Happy Mothers Day",
+          "files": [
+            {
+              "name": "Happy-Mothers-Day.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-Mothers-Day.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "happy-national-moving-month",
+          "title": "Happy National Moving Month",
+          "files": [
+            {
+              "name": "Happy-National-Moving-Month.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-National-Moving-Month.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "happy-new-year",
+          "title": "Happy New Year",
+          "files": [
+            {
+              "name": "Happy-New-Year_Generic.mp4",
+              "label": "Generic",
+              "url": "/assets/Social-Media/Happy-New-Year_Generic.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": "Generic",
+              "lang": null
+            },
+            {
+              "name": "Happy-New-Year.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/Happy-New-Year.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Happy-New-Year.jpg",
+          "types": [
+            "video",
+            "image"
+          ]
+        },
+        {
+          "slug": "juneteenth-holidays",
+          "title": "Juneteenth Holidays",
+          "files": [
+            {
+              "name": "Juneteenth-_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Juneteenth-_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Juneteenth-_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "juneteenth-holidays-cartoon",
+          "title": "Juneteenth Holidays Cartoon",
+          "files": [
+            {
+              "name": "Juneteenth-_Holidays-Cartoon.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Juneteenth-_Holidays-Cartoon.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Juneteenth-_Holidays-Cartoon.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "memorial-day",
+          "title": "Memorial Day",
+          "files": [
+            {
+              "name": "Memorial-Day.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Memorial-Day.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "mockup-cartoon-posts",
+          "title": "Mockup Cartoon Posts",
+          "files": [
+            {
+              "name": "Mockup-Cartoon-Posts-scaled.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Mockup-Cartoon-Posts-scaled.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Mockup-Cartoon-Posts-scaled.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "mothers-day-holidays-template",
+          "title": "Mothers Day Holidays Template",
+          "files": [
+            {
+              "name": "Mothers-Day_Holidays-Template-1.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Mothers-Day_Holidays-Template-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Mothers-Day_Holidays-Template-2.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Mothers-Day_Holidays-Template-2.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Mothers-Day_Holidays-Template-1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "national-military-appreciation-month-holiday",
+          "title": "National Military Appreciation Month Holiday",
+          "files": [
+            {
+              "name": "National-Military-Appreciation-Month_Holiday.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/National-Military-Appreciation-Month_Holiday.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/National-Military-Appreciation-Month_Holiday.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "national-military-appreciation-month-holidays",
+          "title": "National Military Appreciation Month Holidays",
+          "files": [
+            {
+              "name": "National-Military-Appreciation-Month_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/National-Military-Appreciation-Month_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/National-Military-Appreciation-Month_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "navy-holidays",
+          "title": "Navy Holidays",
+          "files": [
+            {
+              "name": "Navy_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Navy_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Navy_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "navy-holidays-template",
+          "title": "Navy Holidays Template",
+          "files": [
+            {
+              "name": "Navy_Holidays-Template.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Navy_Holidays-Template.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Navy_Holidays-Template.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "news-announcement",
+          "title": "News Announcement",
+          "files": [
+            {
+              "name": "News-Announcement-02.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/News-Announcement-02.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/News-Announcement-02.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "promo-product-corporate",
+          "title": "Promo Product Corporate",
+          "files": [
+            {
+              "name": "Promo-Product_Corporate.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Promo-Product_Corporate.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "renovation-loan-program",
+          "title": "Renovation Loan Program",
+          "files": [
+            {
+              "name": "Renovation-Loan-Program-Featured-Image.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Renovation-Loan-Program-Featured-Image.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Renovation-Loan-Program.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Renovation-Loan-Program.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Renovation-Loan-Program-Featured-Image.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "social-media-0",
+          "title": "Social Media — Design 0",
+          "files": [
+            {
+              "name": "0-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/0-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/0-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "social-media-1",
+          "title": "Social Media — Design 1",
+          "files": [
+            {
+              "name": "1-1.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/1-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "1.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/1.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "1.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/1-1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "social-media-2",
+          "title": "Social Media — Design 2",
+          "files": [
+            {
+              "name": "2-1.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/2-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "2.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/2.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "2.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/2.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/2-1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "social-media-3",
+          "title": "Social Media — Design 3",
+          "files": [
+            {
+              "name": "3.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/3.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/3.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "socialpost222555222",
+          "title": "Socialpost222555222",
+          "files": [
+            {
+              "name": "socialpost222555222.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/socialpost222555222.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/socialpost222555222.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "space-force-holidays",
+          "title": "Space Force Holidays",
+          "files": [
+            {
+              "name": "Space-Force_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Space-Force_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Space-Force_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "space-force-holidays-template",
+          "title": "Space Force Holidays Template",
+          "files": [
+            {
+              "name": "Space-Force_Holidays-Template.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Space-Force_Holidays-Template.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Space-Force_Holidays-Template.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "summers-holidays",
+          "title": "Summers Holidays",
+          "files": [
+            {
+              "name": "Summers_Holidays.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Summers_Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Summers_Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "summers-illustration-holidays",
+          "title": "Summers Illustration Holidays",
+          "files": [
+            {
+              "name": "Summers-Illustration-Holidays.png",
+              "label": "Illustration",
+              "url": "/assets/Social-Media/Summers-Illustration-Holidays.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Summers-Illustration-Holidays.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "testimonial-reel-william-maier-iv",
+          "title": "Testimonial Reel William Maier IV",
+          "files": [
+            {
+              "name": "Testimonial-Reel_William-Maier-IV.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Testimonial-Reel_William-Maier-IV.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "testimonial-thumbnail",
+          "title": "Testimonial Thumbnail",
+          "files": [
+            {
+              "name": "Testimonial-Thumbnail-3.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Testimonial-Thumbnail-3.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Testimonial-Thumbnail-3.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "u-s-army-holiday",
+          "title": "U.S Army Holiday",
+          "files": [
+            {
+              "name": "U.S-Army_Holiday.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/U.S-Army_Holiday.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/U.S-Army_Holiday.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "u-s-army-holiday-cartoon",
+          "title": "U.S Army Holiday Cartoon",
+          "files": [
+            {
+              "name": "U.S-Army_Holiday-Cartoon.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/U.S-Army_Holiday-Cartoon.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/U.S-Army_Holiday-Cartoon.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "veterans-program",
+          "title": "Veterans Program",
+          "files": [
+            {
+              "name": "Veterans-Program-Featured-Image.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Veterans-Program-Featured-Image.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Veterans-Program-Featured-Image.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "welcoming-spring",
+          "title": "Welcoming Spring",
+          "files": [
+            {
+              "name": "Welcoming-Spring.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Welcoming-Spring.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "welcoming-spring-homebuyer-season-clasic",
+          "title": "Welcoming Spring Homebuyer Season Clasic",
+          "files": [
+            {
+              "name": "Welcoming-Spring-Homebuyer-Season-Clasic.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "welcoming-spring-homebuyer-season-ilustration",
+          "title": "Welcoming Spring Homebuyer Season Ilustration",
+          "files": [
+            {
+              "name": "Welcoming-Spring-Homebuyer-Season-Ilustration.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "welcoming-spring-homebuyer-season-pets",
+          "title": "Welcoming Spring Homebuyer Season Pets",
+          "files": [
+            {
+              "name": "Welcoming-Spring-Homebuyer-Season-Pets.png",
+              "label": "Download",
+              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "welcoming-summer",
+          "title": "Welcoming Summer",
+          "files": [
+            {
+              "name": "Welcoming-Summer.mp4",
+              "label": "Download",
+              "url": "/assets/Social-Media/Welcoming-Summer.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "winters-holiday",
+          "title": "Winters Holiday",
+          "files": [
+            {
+              "name": "Winters-Holiday.jpg",
+              "label": "Download",
+              "url": "/assets/Social-Media/Winters-Holiday.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Social-Media/Winters-Holiday.jpg",
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "fileCount": 70,
+      "itemCount": 60
+    },
+    {
+      "slug": "open-house-promotion",
+      "folder": "Open-House",
+      "title": "Open House Promotion",
+      "tagline": "Open house flyers, signage & video templates",
+      "description": "Everything for an open house: flyer styles, visitor sign-in sheet, and animated \"This Home is For Sale\" video templates.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Site-Design/Open-House.jpg",
+      "items": [
+        {
+          "slug": "dancing-this-home-is-for-sale-video",
+          "title": "Dancing This Home Is For Sale Video",
+          "files": [
+            {
+              "name": "Dancing-This-Home-is-For-Sale-Video.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Dancing-This-Home-is-For-Sale-Video.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "open-house-blue-los-template",
+          "title": "Open House Blue LOs Template",
+          "files": [
+            {
+              "name": "Open-House-Blue_LOs-Template.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Blue_LOs-Template.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "open-house-flyer",
+          "title": "Open House Flyer",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
+              "label": "Color-Pop",
+              "url": "/assets/Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-collage",
+          "title": "Open House Flyer Collage",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Collage1Rltr-scaled.jpg",
+              "label": "Collage",
+              "url": "/assets/Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Collage",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-informational",
+          "title": "Open House Flyer Informational",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Informational1Rltr-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-insert-page",
+          "title": "Open House Flyer Insert Page",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-minimalist",
+          "title": "Open House Flyer Minimalist",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
+              "label": "Minimalist",
+              "url": "/assets/Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": "Minimalist",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-open-house",
+          "title": "Open House Flyer Open House",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Open-House1Rltr-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-original",
+          "title": "Open House Flyer Original",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Original1Rltr-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "open-house-flyer-visitor-sign-in",
+          "title": "Open House Flyer Visitor Sign In",
+          "files": [
+            {
+              "name": "Open-House-Flyer_Visitor-Sign-in.pdf",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-Flyer_Visitor-Sign-in.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "open-house-los-template",
+          "title": "Open House LOs Template",
+          "files": [
+            {
+              "name": "Open-House_LOs-Template.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House_LOs-Template.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "open-house-white-los-template",
+          "title": "Open House White LOs Template",
+          "files": [
+            {
+              "name": "Open-House-White_LOs-Template.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Open-House-White_LOs-Template.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "revealing-this-home-if-for-sale",
+          "title": "Revealing This Home If For Sale",
+          "files": [
+            {
+              "name": "Revealing-This-Home-if-For-Sale.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Revealing-This-Home-if-For-Sale.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "standard-this-home-is-for-sale",
+          "title": "Standard This Home Is For Sale",
+          "files": [
+            {
+              "name": "Standard-This-Home-Is-For-Sale.mp4",
+              "label": "Download",
+              "url": "/assets/Open-House/Standard-This-Home-Is-For-Sale.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        }
+      ],
+      "fileCount": 14,
+      "itemCount": 14
+    },
+    {
+      "slug": "closing-posts",
+      "folder": "Closing-Posts",
+      "title": "Closing Posts",
+      "tagline": "Celebrate closings with branded video posts",
+      "description": "Video templates to celebrate a closing — polaroid, collage, map, and listing-photo styles ready to personalize.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+      "items": [
+        {
+          "slug": "blurred-house",
+          "title": "Blurred House",
+          "files": [
+            {
+              "name": "Blurred-House.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Blurred-House.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "collage",
+          "title": "Collage",
+          "files": [
+            {
+              "name": "Collage.mp4",
+              "label": "Collage",
+              "url": "/assets/Closing-Posts/Collage.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": "Collage",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "gisela-pratt-241-s-main-street-pittston-pa-18640-2026",
+          "title": "Gisela Pratt 241 S Main Street Pittston PA 18640 2026",
+          "files": [
+            {
+              "name": "Gisela-Pratt_241-S-Main-Street-Pittston-PA-18640_2026.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Gisela-Pratt_241-S-Main-Street-Pittston-PA-18640_2026.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "google-map",
+          "title": "Google Map",
+          "files": [
+            {
+              "name": "Google-Map.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Google-Map.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "keith-michael-chabot-1794-morven-court-deltona-fl-32738",
+          "title": "Keith Michael Chabot 1794 Morven Court Deltona FL 32738",
+          "files": [
+            {
+              "name": "Keith-Michael-Chabot_1794-Morven-Court-Deltona-FL-32738.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Keith-Michael-Chabot_1794-Morven-Court-Deltona-FL-32738.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "listing-mlo-split",
+          "title": "Listing MLO Split",
+          "files": [
+            {
+              "name": "Listing-MLO-Split.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Listing-MLO-Split.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "listing-photo",
+          "title": "Listing Photo",
+          "files": [
+            {
+              "name": "Listing-Photo_Featured-Image.png",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "listing-photo-louis-trocchio-1-kara-court-yaphank-ny-11980",
+          "title": "Listing Photo Louis Trocchio 1 Kara Court Yaphank NY 11980",
+          "files": [
+            {
+              "name": "Listing-Photo_Louis-Trocchio_1-Kara-Court-Yaphank-NY-11980.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Listing-Photo_Louis-Trocchio_1-Kara-Court-Yaphank-NY-11980.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "news-map",
+          "title": "News Map",
+          "files": [
+            {
+              "name": "News-Map.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/News-Map.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "polaroid-frame",
+          "title": "Polaroid Frame",
+          "files": [
+            {
+              "name": "Polaroid-Frame.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Polaroid-Frame.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "richard-hernandez-44-pepperbush-pl-malta-ny-12020",
+          "title": "Richard Hernandez 44 Pepperbush Pl Malta NY 12020",
+          "files": [
+            {
+              "name": "Richard-Hernandez_44-Pepperbush-Pl-Malta-NY-12020.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Richard-Hernandez_44-Pepperbush-Pl-Malta-NY-12020.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "stephanie-taddeo-closing-lo-v012-63-villa-street-roslyn-heights-ny-11577",
+          "title": "Stephanie Taddeo Closing LO V012 63 Villa Street Roslyn Heights NY 11577",
+          "files": [
+            {
+              "name": "Stephanie-Taddeo_Closing-LO-V012-63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Stephanie-Taddeo_Closing-LO-V012-63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "stephanie-taddeo-closing-lo-v032-63-villa-street-roslyn-heights-ny-11577",
+          "title": "Stephanie Taddeo Closing LO V032 63 Villa Street Roslyn Heights NY 11577",
+          "files": [
+            {
+              "name": "Stephanie-Taddeo_Closing-LO-V032_63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Stephanie-Taddeo_Closing-LO-V032_63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "type": "video",
+              "ext": "mp4",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "video"
+          ]
+        },
+        {
+          "slug": "thumbnail",
+          "title": "Thumbnail",
+          "files": [
+            {
+              "name": "Thumbnail.png",
+              "label": "Download",
+              "url": "/assets/Closing-Posts/Thumbnail.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Closing-Posts/Thumbnail.png",
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "fileCount": 14,
+      "itemCount": 14
+    },
+    {
+      "slug": "postcards-mailers",
+      "folder": "Marketing",
+      "title": "Postcards, Door Hangers & Brochures",
+      "tagline": "EDDM postcards, door hangers, brochures & flyers",
+      "description": "Direct-mail and door-to-door pieces: cobranded postcards, door hangers in three styles, the Direct Lender brochure, Loanopoly, and Rent-vs-Own flyers.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+      "items": [
+        {
+          "slug": "direct-lender-brochure-85inx14in-4panel-rollfold",
+          "title": "Direct Lender Brochure 85inx14in 4panel Rollfold",
+          "files": [
+            {
+              "name": "Direct-Lender-brochure-85inx14in-4panel-rollfold.pdf",
+              "label": "Download",
+              "url": "/assets/Marketing/Direct-Lender-brochure-85inx14in-4panel-rollfold.pdf",
+              "type": "pdf",
+              "ext": "pdf",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": null,
+          "types": [
+            "pdf"
+          ]
+        },
+        {
+          "slug": "doorhanger",
+          "title": "Doorhanger",
+          "files": [
+            {
+              "name": "Doorhanger_classic-1.png",
+              "label": "Classic",
+              "url": "/assets/Marketing/Doorhanger_classic-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Classic",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Doorhanger_color-pop-1.png",
+              "label": "Color-Pop",
+              "url": "/assets/Marketing/Doorhanger_color-pop-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Doorhanger_Illustration-1.png",
+              "label": "Illustration",
+              "url": "/assets/Marketing/Doorhanger_Illustration-1.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Illustration",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Doorhanger_classic-1.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "doorhanger-thickness-examples",
+          "title": "Doorhanger Thickness Examples",
+          "files": [
+            {
+              "name": "doorhanger-thickness-examples.jpg",
+              "label": "Download",
+              "url": "/assets/Marketing/doorhanger-thickness-examples.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/doorhanger-thickness-examples.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "home-for-sale-cobrand-postcard",
+          "title": "Home For Sale Cobrand Postcard",
+          "files": [
+            {
+              "name": "Home-For-Sale-Cobrand-postcard_Style-01.png",
+              "label": "Cobranded · Style 01",
+              "url": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Style 01",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "home-for-sale-color-pop-door-hanger",
+          "title": "Home For Sale Color Pop Door Hanger",
+          "files": [
+            {
+              "name": "Home-for-Sale_Color-Pop_Door-hanger.png",
+              "label": "Color-Pop",
+              "url": "/assets/Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Color-Pop",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "home-for-sale-minimalist-door-hanger",
+          "title": "Home For Sale Minimalist Door Hanger",
+          "files": [
+            {
+              "name": "Home-for-Sale_Minimalist_Door-hanger.png",
+              "label": "Minimalist",
+              "url": "/assets/Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Minimalist",
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "just-sold-cobrand-postcard",
+          "title": "Just Sold Cobrand Postcard",
+          "files": [
+            {
+              "name": "Just-Sold-Cobrand-Postcard_Style-01.png",
+              "label": "Cobranded · Style 01",
+              "url": "/assets/Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Style 01",
+              "brand": "Cobranded",
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "loanopoly-flyer-2024",
+          "title": "Loanopoly Flyer 2024",
+          "files": [
+            {
+              "name": "Loanopoly-Flyer_2024-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Marketing/Loanopoly-Flyer_2024-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Loanopoly-Flyer_2024-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "neighborhood-specialists-door-hanger",
+          "title": "Neighborhood Specialists Door Hanger",
+          "files": [
+            {
+              "name": "Neighborhood-Specialists_Door-Hanger.png",
+              "label": "Download",
+              "url": "/assets/Marketing/Neighborhood-Specialists_Door-Hanger.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Neighborhood-Specialists_Door-Hanger.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "property-listing-cobrand-postcard-style-01-for-avery5689",
+          "title": "Property Listing Cobrand Postcard Style 01 For Avery5689",
+          "files": [
+            {
+              "name": "Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
+              "label": "Cobranded · Style 01 · Spanish",
+              "url": "/assets/Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
+              "type": "image",
+              "ext": "png",
+              "style": "Style 01",
+              "brand": "Cobranded",
+              "lang": "Spanish"
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "property-worth-door-hanger",
+          "title": "Property Worth Door Hanger",
+          "files": [
+            {
+              "name": "Property-Worth_Door-Hanger.png",
+              "label": "Download",
+              "url": "/assets/Marketing/Property-Worth_Door-Hanger.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Property-Worth_Door-Hanger.png",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "rent-vs-own-flyer",
+          "title": "Rent Vs Own Flyer",
+          "files": [
+            {
+              "name": "Rent-vs-Own-Flyer-01.png",
+              "label": "Download",
+              "url": "/assets/Marketing/Rent-vs-Own-Flyer-01.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Rent-vs-Own-Flyer-02.png",
+              "label": "Download",
+              "url": "/assets/Marketing/Rent-vs-Own-Flyer-02.png",
+              "type": "image",
+              "ext": "png",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Marketing/Rent-vs-Own-Flyer-01.png",
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "fileCount": 15,
+      "itemCount": 12
+    },
+    {
+      "slug": "branding-signage",
+      "folder": "Branding-and-Signage",
+      "title": "Branding & Signage",
+      "tagline": "Retractable banners & yard signs",
+      "description": "Large-format branding for events and listings — retractable banners and yard signs.",
+      "card": true,
+      "requestForm": false,
+      "image": "/assets/Site-Design/Branding-Signanges.jpg",
+      "items": [
+        {
+          "slug": "branding-signage-01",
+          "title": "Branding — Design 1",
+          "files": [
+            {
+              "name": "01-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Branding-and-Signage/01-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Branding-and-Signage/01-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "branding-signage-02",
+          "title": "Branding — Design 2",
+          "files": [
+            {
+              "name": "02-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Branding-and-Signage/02-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Branding-and-Signage/02-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "branding-signage-03",
+          "title": "Branding — Design 3",
+          "files": [
+            {
+              "name": "03-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Branding-and-Signage/03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Branding-and-Signage/03-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "branding-signage-04",
+          "title": "Branding — Design 4",
+          "files": [
+            {
+              "name": "04-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Branding-and-Signage/04-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Branding-and-Signage/04-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "yard-sign",
+          "title": "Yard Sign",
+          "files": [
+            {
+              "name": "Yard-Sign-Featured-Image-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "fileCount": 5,
+      "itemCount": 5
+    },
+    {
+      "slug": "event-promotion",
+      "folder": "Event-Promotion",
+      "title": "Event Promotion",
+      "tagline": "Event flyers & promotional graphics",
+      "description": "Flyers and graphics to promote United Mortgage events.",
+      "card": false,
+      "requestForm": false,
+      "image": "/assets/Event-Promotion/Example-graphics-scaled.jpg",
+      "items": [
+        {
+          "slug": "combine-flyer",
+          "title": "Combine Flyer",
+          "files": [
+            {
+              "name": "Combine-Flyer-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Event-Promotion/Combine-Flyer-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Event-Promotion/Combine-Flyer-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        },
+        {
+          "slug": "example-graphics",
+          "title": "Example Graphics",
+          "files": [
+            {
+              "name": "Example-graphics-02-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Event-Promotion/Example-graphics-02-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Example-graphics-03-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Event-Promotion/Example-graphics-03-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Example-graphics-04-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Event-Promotion/Example-graphics-04-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            },
+            {
+              "name": "Example-graphics-scaled.jpg",
+              "label": "Download",
+              "url": "/assets/Event-Promotion/Example-graphics-scaled.jpg",
+              "type": "image",
+              "ext": "jpg",
+              "style": null,
+              "brand": null,
+              "lang": null
+            }
+          ],
+          "thumbnail": "/assets/Event-Promotion/Example-graphics-02-scaled.jpg",
+          "types": [
+            "image"
+          ]
+        }
+      ],
+      "fileCount": 5,
+      "itemCount": 2
+    }
+  ]
+}
