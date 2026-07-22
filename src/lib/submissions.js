@@ -7,13 +7,22 @@
  * ALSO route the same submission to Total Expert / a CRM — add a channel here,
  * and every form gains the new destination with zero form changes.
  *
- * Email is sent through Resend's REST API (no SDK dependency). If RESEND_API_KEY
- * is not configured (e.g. local dev), the submission is logged and reported as
- * "logged" so the UX can still be exercised end-to-end.
+ * Email is sent through SendGrid's REST API (no SDK dependency). If
+ * SENDGRID_API_KEY is not configured (e.g. local dev), the submission is logged
+ * and reported as "logged" so the UX can still be exercised end-to-end.
+ *
+ * The FROM address must be a verified sender / authenticated domain in SendGrid.
  */
 
 const REQUEST_EMAIL = process.env.REQUEST_EMAIL || 'marketing@unitedmortgage.com';
 const FROM_EMAIL = process.env.FROM_EMAIL || 'United Marketing Desk <marketing@unitedmortgage.com>';
+
+// Parse a "Display Name <email@x.com>" string into { email, name }.
+function parseFrom(value) {
+  const m = value.match(/^\s*(.*?)\s*<([^>]+)>\s*$/);
+  if (m) return { name: m[1] || undefined, email: m[2] };
+  return { email: value.trim() };
+}
 
 export async function deliverSubmission(submission) {
   const channels = [];
@@ -29,39 +38,42 @@ export async function deliverSubmission(submission) {
 }
 
 async function sendEmail(submission) {
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.SENDGRID_API_KEY;
   const subject = `[Marketing Desk] ${submission.requestType} — ${submission.name}`;
   const html = renderEmail(submission);
 
   if (!key) {
-    console.log('\n[submission] RESEND_API_KEY not set — logging instead of sending:');
+    console.log('\n[submission] SENDGRID_API_KEY not set — logging instead of sending:');
     console.log(JSON.stringify({ to: REQUEST_EMAIL, subject, submission }, null, 2));
     return { channel: 'email', ok: true, mode: 'logged' };
   }
 
+  const from = parseFrom(FROM_EMAIL);
+
   try {
-    const res = await fetch('https://api.resend.com/emails', {
+    const res = await fetch('https://api.sendgrid.com/v3/mail/send', {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${key}`,
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: FROM_EMAIL,
-        to: [REQUEST_EMAIL],
-        reply_to: submission.email,
+        personalizations: [{ to: [{ email: REQUEST_EMAIL }] }],
+        from,
+        reply_to: submission.email ? { email: submission.email, name: submission.name } : undefined,
         subject,
-        html,
+        content: [{ type: 'text/html', value: html }],
       }),
     });
-    if (!res.ok) {
+    // SendGrid returns 202 Accepted on success (empty body).
+    if (res.status !== 202) {
       const text = await res.text();
-      console.error('[submission] Resend error:', res.status, text);
-      return { channel: 'email', ok: false, error: `resend_${res.status}` };
+      console.error('[submission] SendGrid error:', res.status, text);
+      return { channel: 'email', ok: false, error: `sendgrid_${res.status}` };
     }
     return { channel: 'email', ok: true, mode: 'sent' };
   } catch (err) {
-    console.error('[submission] Resend request failed:', err);
+    console.error('[submission] SendGrid request failed:', err);
     return { channel: 'email', ok: false, error: 'network' };
   }
 }

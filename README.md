@@ -10,7 +10,7 @@ content instead of hard-coded pages. See `marketingportal_project.md` for the fu
 - **Next.js 16** (App Router) + **React 19**, deployed static-first on Vercel
 - **Tailwind CSS v4** for styling (navy + blue brand theme from the UM logo)
 - Catalog generated from the asset library into `src/content/catalog.json`
-- Request forms post to a serverless route (`/api/requests`) → email via Resend
+- Request forms post to a serverless route (`/api/requests`) → email via SendGrid
 
 ## How it's wired
 
@@ -44,7 +44,7 @@ npm install
 npm run dev            # regenerates catalog, starts dev server on :3000
 ```
 
-Copy `.env.example` → `.env.local`. Without `RESEND_API_KEY`, form submissions
+Copy `.env.example` → `.env.local`. Without `SENDGRID_API_KEY`, form submissions
 are logged to the server console instead of emailed — the UX still works end to end.
 
 ## Building
@@ -61,8 +61,9 @@ npm start
   object storage / a CDN and point the catalog's `ASSET_URL_BASE` at it, or
   commit only the non-video assets and stream video from a bucket. Do **not**
   push 3.7GB to Vercel.
-- **Email:** verify the `marketing.unitedmortgage.com` sender domain in Resend
-  and set `RESEND_API_KEY` / `REQUEST_EMAIL` / `FROM_EMAIL` in Vercel env vars.
+- **Email:** verify the `marketing@unitedmortgage.com` sender (or authenticate
+  the domain) in SendGrid
+  and set `SENDGRID_API_KEY` (and optionally `REQUEST_EMAIL` / `FROM_EMAIL`) in Vercel env vars.
 - **DNS:** add the `CNAME` for `marketing.unitedmortgage.com` at launch (Phase 3).
 - The site is `noindex` by default (quasi-internal LO hub); flip in
   `src/app/layout.jsx` if public indexing is wanted.
