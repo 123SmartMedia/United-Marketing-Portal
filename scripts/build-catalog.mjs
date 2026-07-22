@@ -417,7 +417,7 @@ async function main() {
       org: 'United Mortgage Corp',
       domain: 'marketing.unitedmortgage.com',
       email: 'marketing@unitedmortgage.com',
-      requestEmail: 'marketingdesk@unitedmortgage.com',
+      requestEmail: 'marketing@unitedmortgage.com',
       phone: '516-212-0299',
     },
     totals,

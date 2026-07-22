@@ -12,8 +12,8 @@
  * "logged" so the UX can still be exercised end-to-end.
  */
 
-const REQUEST_EMAIL = process.env.REQUEST_EMAIL || 'marketingdesk@unitedmortgage.com';
-const FROM_EMAIL = process.env.FROM_EMAIL || 'United Marketing Desk <no-reply@marketing.unitedmortgage.com>';
+const REQUEST_EMAIL = process.env.REQUEST_EMAIL || 'marketing@unitedmortgage.com';
+const FROM_EMAIL = process.env.FROM_EMAIL || 'United Marketing Desk <marketing@unitedmortgage.com>';
 
 export async function deliverSubmission(submission) {
   const channels = [];

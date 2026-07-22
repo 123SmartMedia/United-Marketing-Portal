@@ -43,7 +43,7 @@ export default function RequestForm({ defaultType = 'Custom / Other', asset = ''
       }
     } catch {
       setStatus('error');
-      setError('Something went wrong. Please email marketingdesk@unitedmortgage.com directly.');
+      setError('Something went wrong. Please email marketing@unitedmortgage.com directly.');
     }
   }
 
@@ -127,7 +127,7 @@ export default function RequestForm({ defaultType = 'Custom / Other', asset = ''
         {status === 'submitting' ? 'Sending…' : 'Submit request'}
       </button>
       <p className="text-center text-xs text-navy-400">
-        Goes straight to marketingdesk@unitedmortgage.com
+        Goes straight to marketing@unitedmortgage.com
       </p>
     </form>
   );
@@ -160,7 +160,7 @@ function errorMessage(code) {
     case 'invalid_email':
       return 'Please enter a valid email address.';
     case 'delivery_failed':
-      return 'We couldn’t send your request. Please email marketingdesk@unitedmortgage.com.';
+      return 'We couldn’t send your request. Please email marketing@unitedmortgage.com.';
     default:
       return 'Something went wrong. Please try again.';
   }
