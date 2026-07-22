@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { getAllItems } from '@/lib/catalog';
+import { assetUrl } from '@/lib/asset';
 
 /**
  * Instant client-side search across the whole catalog — replaces the WordPress
@@ -94,7 +95,7 @@ export default function SearchOverlay({ open, onClose }) {
               <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-md bg-navy-50">
                 {item.thumbnail ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={item.thumbnail} alt="" className="h-full w-full object-cover" />
+                  <img src={assetUrl(item.thumbnail)} alt="" className="h-full w-full object-cover" />
                 ) : (
                   <TypeGlyph types={item.types} />
                 )}

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T15:22:54.688Z",
+  "generatedAt": "2026-07-22T15:42:19.626Z",
   "site": {
     "name": "United Marketing Desk",
     "org": "United Mortgage Corp",
@@ -21,7 +21,7 @@
       "description": "Order business cards in four styles, plus letterhead, cobranded folders, social banners, and the United Mortgage brand kit.",
       "card": true,
       "requestForm": true,
-      "image": "/assets/Site-Design/Business-Cards.jpg",
+      "image": "Site-Design/Business-Cards.jpg",
       "items": [
         {
           "slug": "brand-guideline-08-2024",
@@ -30,7 +30,7 @@
             {
               "name": "Brand-Guideline-08-2024.pdf",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Brand-Guideline-08-2024.pdf",
+              "url": "Business-Collateral/Brand-Guideline-08-2024.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": null,
@@ -50,7 +50,7 @@
             {
               "name": "business-card-thickness-examples.jpg",
               "label": "Download",
-              "url": "/assets/Business-Collateral/business-card-thickness-examples.jpg",
+              "url": "Business-Collateral/business-card-thickness-examples.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -58,7 +58,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/business-card-thickness-examples.jpg",
+          "thumbnail": "Business-Collateral/business-card-thickness-examples.jpg",
           "types": [
             "image"
           ]
@@ -70,7 +70,7 @@
             {
               "name": "Classic-Cobrand-Folder-scaled.jpg",
               "label": "Cobranded · Classic",
-              "url": "/assets/Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
+              "url": "Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -78,7 +78,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
+          "thumbnail": "Business-Collateral/Classic-Cobrand-Folder-scaled.jpg",
           "types": [
             "image"
           ]
@@ -90,7 +90,7 @@
             {
               "name": "Color-Pop-Cobrand-Folder-scaled.jpg",
               "label": "Cobranded · Color-Pop",
-              "url": "/assets/Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
+              "url": "Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -98,7 +98,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
+          "thumbnail": "Business-Collateral/Color-Pop-Cobrand-Folder-scaled.jpg",
           "types": [
             "image"
           ]
@@ -110,7 +110,7 @@
             {
               "name": "Facebook-Banner-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Facebook-Banner-scaled.jpg",
+              "url": "Business-Collateral/Facebook-Banner-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -118,7 +118,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Facebook-Banner-scaled.jpg",
+          "thumbnail": "Business-Collateral/Facebook-Banner-scaled.jpg",
           "types": [
             "image"
           ]
@@ -130,7 +130,7 @@
             {
               "name": "Featured-Image-Cobrand-Folders-scaled.jpg",
               "label": "Cobranded",
-              "url": "/assets/Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
+              "url": "Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -138,7 +138,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
+          "thumbnail": "Business-Collateral/Featured-Image-Cobrand-Folders-scaled.jpg",
           "types": [
             "image"
           ]
@@ -150,7 +150,7 @@
             {
               "name": "Featured-Image-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Featured-Image-scaled.jpg",
+              "url": "Business-Collateral/Featured-Image-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -158,7 +158,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Featured-Image-scaled.jpg",
+          "thumbnail": "Business-Collateral/Featured-Image-scaled.jpg",
           "types": [
             "image"
           ]
@@ -170,7 +170,7 @@
             {
               "name": "Headshot-business-card-style.png",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Headshot-business-card-style.png",
+              "url": "Business-Collateral/Headshot-business-card-style.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -178,7 +178,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Headshot-business-card-style.png",
+          "thumbnail": "Business-Collateral/Headshot-business-card-style.png",
           "types": [
             "image"
           ]
@@ -190,7 +190,7 @@
             {
               "name": "Landing-page-1.png",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Landing-page-1.png",
+              "url": "Business-Collateral/Landing-page-1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -198,7 +198,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Landing-page-1.png",
+          "thumbnail": "Business-Collateral/Landing-page-1.png",
           "types": [
             "image"
           ]
@@ -210,7 +210,7 @@
             {
               "name": "LinkedIn-Banner-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Business-Collateral/LinkedIn-Banner-scaled.jpg",
+              "url": "Business-Collateral/LinkedIn-Banner-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -218,7 +218,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/LinkedIn-Banner-scaled.jpg",
+          "thumbnail": "Business-Collateral/LinkedIn-Banner-scaled.jpg",
           "types": [
             "image"
           ]
@@ -230,7 +230,7 @@
             {
               "name": "No-photo-business-card-style.png",
               "label": "Download",
-              "url": "/assets/Business-Collateral/No-photo-business-card-style.png",
+              "url": "Business-Collateral/No-photo-business-card-style.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -238,7 +238,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/No-photo-business-card-style.png",
+          "thumbnail": "Business-Collateral/No-photo-business-card-style.png",
           "types": [
             "image"
           ]
@@ -250,7 +250,7 @@
             {
               "name": "Profile-business-card-style.png",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Profile-business-card-style.png",
+              "url": "Business-Collateral/Profile-business-card-style.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -258,7 +258,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Profile-business-card-style.png",
+          "thumbnail": "Business-Collateral/Profile-business-card-style.png",
           "types": [
             "image"
           ]
@@ -270,7 +270,7 @@
             {
               "name": "Shield-business-card-style.png",
               "label": "Download",
-              "url": "/assets/Business-Collateral/Shield-business-card-style.png",
+              "url": "Business-Collateral/Shield-business-card-style.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -278,7 +278,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/Shield-business-card-style.png",
+          "thumbnail": "Business-Collateral/Shield-business-card-style.png",
           "types": [
             "image"
           ]
@@ -290,7 +290,7 @@
             {
               "name": "United-Mortgage-Letterhead-4-12-24-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
+              "url": "Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -300,7 +300,7 @@
             {
               "name": "United-Mortgage-Letterhead-4-12-24.docx",
               "label": "Download",
-              "url": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24.docx",
+              "url": "Business-Collateral/United-Mortgage-Letterhead-4-12-24.docx",
               "type": "doc",
               "ext": "docx",
               "style": null,
@@ -308,7 +308,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
+          "thumbnail": "Business-Collateral/United-Mortgage-Letterhead-4-12-24-scaled.jpg",
           "types": [
             "image",
             "doc"
@@ -326,7 +326,7 @@
       "description": "Downloadable flyers for every loan program — FTHB, VA, DSCR, ITIN, Non-QM, 2-1 Buydown, Renovation, Refi, Reverse, Second Mortgage, and state DPA programs. Available in Classic, Color-Pop, and Illustration styles.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Site-Design/Special-Programs-Flyer__featured-Image.png",
+      "image": "Site-Design/Special-Programs-Flyer__featured-Image.png",
       "items": [
         {
           "slug": "2-1-buy-down-loan-program-flyer",
@@ -335,7 +335,7 @@
             {
               "name": "2-1-Buy-Down-Loan-Program-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -345,7 +345,7 @@
             {
               "name": "2-1-Buy-Down-Loan-Program-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/2-1-Buy-Down-Loan-Program-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -353,7 +353,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
+          "thumbnail": "Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -365,7 +365,7 @@
             {
               "name": "2-1-Buy-down-Loan-Program-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/2-1-Buy-down-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/2-1-Buy-down-Loan-Program-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -373,7 +373,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
+          "thumbnail": "Site-Design/2-1-Buy-Down-Loan-Program-Featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -385,7 +385,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Classic-scaled.jpg",
               "label": "Classic",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -395,7 +395,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -405,7 +405,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -415,7 +415,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -425,7 +425,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -435,7 +435,7 @@
             {
               "name": "Cash-out-Refinance-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -445,7 +445,7 @@
             {
               "name": "Cash-out-Refinance-Flyer-Hook-Image.png",
               "label": "Download",
-              "url": "/assets/Program-Flyers/Cash-out-Refinance-Flyer-Hook-Image.png",
+              "url": "Program-Flyers/Cash-out-Refinance-Flyer-Hook-Image.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -453,7 +453,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
+          "thumbnail": "Program-Flyers/Cash-out-Refinance-Flyer_Classic-scaled.jpg",
           "types": [
             "image",
             "pdf"
@@ -466,7 +466,7 @@
             {
               "name": "DPAL_PA-K-FIT_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Classic.pdf",
+              "url": "Program-Flyers/DPAL_PA-K-FIT_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -476,7 +476,7 @@
             {
               "name": "DPAL_PA-K-FIT_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/DPAL_PA-K-FIT_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -486,7 +486,7 @@
             {
               "name": "DPAL_PA-K-FIT_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/DPAL_PA-K-FIT_Generic_Illustration.pdf",
+              "url": "Program-Flyers/DPAL_PA-K-FIT_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -494,7 +494,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/DPAL_PA-Program_featured-Image.png",
+          "thumbnail": "Site-Design/DPAL_PA-Program_featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -506,7 +506,7 @@
             {
               "name": "DSCR-Program-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -516,7 +516,7 @@
             {
               "name": "DSCR-Program-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -526,7 +526,7 @@
             {
               "name": "DSCR-Program-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -536,7 +536,7 @@
             {
               "name": "DSCR-Program-Flyer_Style-02-01-scaled.jpg",
               "label": "Style 02",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 02",
@@ -546,7 +546,7 @@
             {
               "name": "DSCR-Program-Flyer_Style-03-scaled.jpg",
               "label": "Style 03",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-03-scaled.jpg",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Style-03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 03",
@@ -556,7 +556,7 @@
             {
               "name": "DSCR-Program-Flyer_Cobrand_Style-01-scaled.jpg",
               "label": "Cobranded · Style 01",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-01-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 01",
@@ -566,7 +566,7 @@
             {
               "name": "DSCR-Program-Flyer_Cobrand_Style-02-scaled.jpg",
               "label": "Cobranded · Style 02",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-02-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 02",
@@ -576,7 +576,7 @@
             {
               "name": "DSCR-Program-Flyer_Cobrand_Style-03-scaled.jpg",
               "label": "Cobranded · Style 03",
-              "url": "/assets/Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "url": "Program-Flyers/DSCR-Program-Flyer_Cobrand_Style-03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 03",
@@ -584,7 +584,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
+          "thumbnail": "Program-Flyers/DSCR-Program-Flyer_Style-02-01-scaled.jpg",
           "types": [
             "pdf",
             "image"
@@ -597,7 +597,7 @@
             {
               "name": "Essex-DPA-Flyer_Classic-scaled.jpg",
               "label": "Classic",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -607,7 +607,7 @@
             {
               "name": "Essex-DPA-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -617,7 +617,7 @@
             {
               "name": "Essex-DPA-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -627,7 +627,7 @@
             {
               "name": "Essex-DPA-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -637,7 +637,7 @@
             {
               "name": "Essex-DPA-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -647,7 +647,7 @@
             {
               "name": "Essex-DPA-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -657,7 +657,7 @@
             {
               "name": "Essex-DPA-Flyer_Cobrand_Classic-scaled.jpg",
               "label": "Cobranded · Classic",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Classic-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Cobrand_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -667,7 +667,7 @@
             {
               "name": "Essex-DPA-Flyer_Cobrand_Color-Pop-scaled.jpg",
               "label": "Cobranded · Color-Pop",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Cobrand_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -677,7 +677,7 @@
             {
               "name": "Essex-DPA-Flyer_Cobrand_Illustration-scaled.jpg",
               "label": "Cobranded · Illustration",
-              "url": "/assets/Program-Flyers/Essex-DPA-Flyer_Cobrand_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Essex-DPA-Flyer_Cobrand_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -685,7 +685,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
+          "thumbnail": "Program-Flyers/Essex-DPA-Flyer_Classic-scaled.jpg",
           "types": [
             "image",
             "pdf"
@@ -698,7 +698,7 @@
             {
               "name": "FTHB-Programs-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/FTHB-Programs-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -708,7 +708,7 @@
             {
               "name": "FTHB-Programs-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/FTHB-Programs-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -718,7 +718,7 @@
             {
               "name": "FTHB-Programs-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/FTHB-Programs-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/FTHB-Programs-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -726,7 +726,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/FTHB-Flyer-Featured-Image.png",
+          "thumbnail": "Site-Design/FTHB-Flyer-Featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -738,7 +738,7 @@
             {
               "name": "General-Programs-Overview-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/General-Programs-Overview-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -748,7 +748,7 @@
             {
               "name": "General-Programs-Overview-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/General-Programs-Overview-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -758,7 +758,7 @@
             {
               "name": "General-Programs-Overview-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/General-Programs-Overview-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/General-Programs-Overview-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -766,7 +766,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -778,7 +778,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -788,7 +788,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -798,7 +798,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -808,7 +808,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
               "label": "Style 01",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 01",
@@ -818,7 +818,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Style-02-scaled.jpg",
               "label": "Style 02",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-02-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Style-02-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 02",
@@ -828,7 +828,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Style-03-scaled.jpg",
               "label": "Style 03",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-03-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Style-03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 03",
@@ -838,7 +838,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-01-scaled.jpg",
               "label": "Cobranded · Style 01",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-01-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-01-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 01",
@@ -848,7 +848,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-02-scaled.jpg",
               "label": "Cobranded · Style 02",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-02-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-02-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 02",
@@ -858,7 +858,7 @@
             {
               "name": "ITIN-Loan-Program-Flyer_Cobrand_Style-03-scaled.jpg",
               "label": "Cobranded · Style 03",
-              "url": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-03-scaled.jpg",
+              "url": "Program-Flyers/ITIN-Loan-Program-Flyer_Cobrand_Style-03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 03",
@@ -866,7 +866,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
+          "thumbnail": "Program-Flyers/ITIN-Loan-Program-Flyer_Style-01-1-scaled.jpg",
           "types": [
             "pdf",
             "image"
@@ -879,7 +879,7 @@
             {
               "name": "NJHMFA-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/NJHMFA-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -889,7 +889,7 @@
             {
               "name": "NJHMFA-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/NJHMFA-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -899,7 +899,7 @@
             {
               "name": "NJHMFA-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/NJHMFA-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/NJHMFA-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -907,7 +907,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/NJHMFA-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/NJHMFA-Flyer__featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -919,7 +919,7 @@
             {
               "name": "NON-QM-Overview-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/NON-QM-Overview-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -929,7 +929,7 @@
             {
               "name": "NON-QM-Overview-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/NON-QM-Overview-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -939,7 +939,7 @@
             {
               "name": "NON-QM-Overview-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/NON-QM-Overview-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/NON-QM-Overview-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -947,7 +947,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/NON-QM-Overview-Flyer__featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -959,7 +959,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -969,7 +969,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -979,7 +979,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -989,7 +989,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -999,7 +999,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1009,7 +1009,7 @@
             {
               "name": "NY-Down-Payment-Assistance-Flyer_Style-01-scaled.jpg",
               "label": "Style 01",
-              "url": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Style-01-scaled.jpg",
+              "url": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Style-01-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Style 01",
@@ -1017,7 +1017,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
+          "thumbnail": "Program-Flyers/NY-Down-Payment-Assistance-Flyer_Color-Pop-scaled.jpg",
           "types": [
             "pdf",
             "image"
@@ -1030,7 +1030,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
               "label": "Classic",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -1040,7 +1040,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -1050,7 +1050,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -1060,7 +1060,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -1070,7 +1070,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -1080,7 +1080,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1090,7 +1090,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Classic-scaled.jpg",
               "label": "Cobranded · Classic",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Classic-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -1100,7 +1100,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Color-Pop-scaled.jpg",
               "label": "Cobranded · Color-Pop",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -1110,7 +1110,7 @@
             {
               "name": "Rate-and-Term-Refinance-Flyer_Cobrand_Illustration-scaled.jpg",
               "label": "Cobranded · Illustration",
-              "url": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Cobrand_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1118,7 +1118,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
+          "thumbnail": "Program-Flyers/Rate-and-Term-Refinance-Flyer_Classic_page-1-scaled.jpg",
           "types": [
             "image",
             "pdf"
@@ -1131,7 +1131,7 @@
             {
               "name": "Renovation-Overview-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/Renovation-Overview-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -1141,7 +1141,7 @@
             {
               "name": "Renovation-Overview-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/Renovation-Overview-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -1151,7 +1151,7 @@
             {
               "name": "Renovation-Overview-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Renovation-Overview-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/Renovation-Overview-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -1159,7 +1159,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Renovation-Overview-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/Renovation-Overview-Flyer__featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -1171,7 +1171,7 @@
             {
               "name": "Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
               "label": "Cobranded · Classic",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -1181,7 +1181,7 @@
             {
               "name": "Reverse-Mortgage-Cobrand-Flyer_Color-Pop-scaled.jpg",
               "label": "Cobranded · Color-Pop",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -1191,7 +1191,7 @@
             {
               "name": "Reverse-Mortgage-Cobrand-Flyer_Illustration-scaled.jpg",
               "label": "Cobranded · Illustration",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1199,7 +1199,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
+          "thumbnail": "Program-Flyers/Reverse-Mortgage-Cobrand-Flyer_Classic-scaled.jpg",
           "types": [
             "image"
           ]
@@ -1211,7 +1211,7 @@
             {
               "name": "Reverse-Mortgage-Flyer_Classic-scaled.jpg",
               "label": "Classic",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -1221,7 +1221,7 @@
             {
               "name": "Reverse-Mortgage-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -1231,7 +1231,7 @@
             {
               "name": "Reverse-Mortgage-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Reverse-Mortgage-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1239,7 +1239,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
+          "thumbnail": "Program-Flyers/Reverse-Mortgage-Flyer_Classic-scaled.jpg",
           "types": [
             "image"
           ]
@@ -1251,7 +1251,7 @@
             {
               "name": "Reverse-Mortgage-Generic-Flyer_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Classic.pdf",
+              "url": "Program-Flyers/Reverse-Mortgage-Generic-Flyer_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -1261,7 +1261,7 @@
             {
               "name": "Reverse-Mortgage-Generic-Flyer_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Color-Pop.pdf",
+              "url": "Program-Flyers/Reverse-Mortgage-Generic-Flyer_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -1271,7 +1271,7 @@
             {
               "name": "Reverse-Mortgage-Generic-Flyer_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Reverse-Mortgage-Generic-Flyer_Illustration.pdf",
+              "url": "Program-Flyers/Reverse-Mortgage-Generic-Flyer_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -1279,7 +1279,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Reverse-Mortgage-Flyer-Featured-Image.png",
+          "thumbnail": "Site-Design/Reverse-Mortgage-Flyer-Featured-Image.png",
           "types": [
             "pdf"
           ]
@@ -1291,7 +1291,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
               "label": "Classic",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Classic",
@@ -1301,7 +1301,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -1311,7 +1311,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Color-Pop-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Color-Pop-scaled.jpg",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Color-Pop-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -1321,7 +1321,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -1331,7 +1331,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -1341,7 +1341,7 @@
             {
               "name": "Second-Mortgage-Program-Flyer_Illustration-scaled.jpg",
               "label": "Illustration",
-              "url": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Illustration-scaled.jpg",
+              "url": "Program-Flyers/Second-Mortgage-Program-Flyer_Illustration-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Illustration",
@@ -1349,7 +1349,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
+          "thumbnail": "Program-Flyers/Second-Mortgage-Program-Flyer_Classic-scaled.jpg",
           "types": [
             "image",
             "pdf"
@@ -1362,7 +1362,7 @@
             {
               "name": "VA-Program-Flyer_Generic_Classic.pdf",
               "label": "Generic · Classic",
-              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Classic.pdf",
+              "url": "Program-Flyers/VA-Program-Flyer_Generic_Classic.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Classic",
@@ -1372,7 +1372,7 @@
             {
               "name": "VA-Program-Flyer_Generic_Color-Pop.pdf",
               "label": "Generic · Color-Pop",
-              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Color-Pop.pdf",
+              "url": "Program-Flyers/VA-Program-Flyer_Generic_Color-Pop.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Color-Pop",
@@ -1382,7 +1382,7 @@
             {
               "name": "VA-Program-Flyer_Generic_Illustration.pdf",
               "label": "Generic · Illustration",
-              "url": "/assets/Program-Flyers/VA-Program-Flyer_Generic_Illustration.pdf",
+              "url": "Program-Flyers/VA-Program-Flyer_Generic_Illustration.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": "Illustration",
@@ -1390,7 +1390,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
+          "thumbnail": "Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
           "types": [
             "pdf"
           ]
@@ -1407,7 +1407,7 @@
       "description": "Ready-to-share program explainer videos in English and Spanish, covering 2-Family, VA, DSCR, ITIN, Bank Statement, P&L, No Down Payment, 2-1 Buydown, and Renovation programs.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Site-Design/DSCR-Program_featured-Image-1.png",
+      "image": "Site-Design/DSCR-Program_featured-Image-1.png",
       "items": [
         {
           "slug": "2-1-buydown-program",
@@ -1416,7 +1416,7 @@
             {
               "name": "2-1-Buydown-Program-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/2-1-Buydown-Program-English.mp4",
+              "url": "Program-Videos/2-1-Buydown-Program-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1426,7 +1426,7 @@
             {
               "name": "2-1-Buydown-Program-Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/2-1-Buydown-Program-Spanish.mp4",
+              "url": "Program-Videos/2-1-Buydown-Program-Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1446,7 +1446,7 @@
             {
               "name": "2-Family-Program-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/2-Family-Program-English.mp4",
+              "url": "Program-Videos/2-Family-Program-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1456,7 +1456,7 @@
             {
               "name": "2-Family-Program-Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/2-Family-Program-Spanish.mp4",
+              "url": "Program-Videos/2-Family-Program-Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1476,7 +1476,7 @@
             {
               "name": "Bank-Statement-Program_English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/Bank-Statement-Program_English.mp4",
+              "url": "Program-Videos/Bank-Statement-Program_English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1486,7 +1486,7 @@
             {
               "name": "Bank-Statement-Program_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/Bank-Statement-Program_Spanish.mp4",
+              "url": "Program-Videos/Bank-Statement-Program_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1506,7 +1506,7 @@
             {
               "name": "Bank-Statement-Refi-Program_English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/Bank-Statement-Refi-Program_English.mp4",
+              "url": "Program-Videos/Bank-Statement-Refi-Program_English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1516,7 +1516,7 @@
             {
               "name": "Bank-Statement-Refi-Program_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/Bank-Statement-Refi-Program_Spanish.mp4",
+              "url": "Program-Videos/Bank-Statement-Refi-Program_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1536,7 +1536,7 @@
             {
               "name": "Brendan-Skrocki-Bank-Statement-Refi-Program-Video.mp4",
               "label": "Download",
-              "url": "/assets/Program-Videos/Brendan-Skrocki-Bank-Statement-Refi-Program-Video.mp4",
+              "url": "Program-Videos/Brendan-Skrocki-Bank-Statement-Refi-Program-Video.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1556,7 +1556,7 @@
             {
               "name": "DSCR-1-United-Mortage-Corp-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/DSCR-1-United-Mortage-Corp-English.mp4",
+              "url": "Program-Videos/DSCR-1-United-Mortage-Corp-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1576,7 +1576,7 @@
             {
               "name": "DSCR-Program_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/DSCR-Program_Spanish.mp4",
+              "url": "Program-Videos/DSCR-Program_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1584,7 +1584,7 @@
               "lang": "Spanish"
             }
           ],
-          "thumbnail": "/assets/Site-Design/DSCR-Program_featured-Image-1.png",
+          "thumbnail": "Site-Design/DSCR-Program_featured-Image-1.png",
           "types": [
             "video"
           ]
@@ -1596,7 +1596,7 @@
             {
               "name": "Investor-Program-United-Mortgage.mp4",
               "label": "Download",
-              "url": "/assets/Program-Videos/Investor-Program-United-Mortgage.mp4",
+              "url": "Program-Videos/Investor-Program-United-Mortgage.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1604,7 +1604,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Second-Mortgage-Program-Flyer_featured-Image.png",
+          "thumbnail": "Site-Design/Second-Mortgage-Program-Flyer_featured-Image.png",
           "types": [
             "video"
           ]
@@ -1616,7 +1616,7 @@
             {
               "name": "ITIN-Program_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/ITIN-Program_Spanish.mp4",
+              "url": "Program-Videos/ITIN-Program_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1624,7 +1624,7 @@
               "lang": "Spanish"
             }
           ],
-          "thumbnail": "/assets/Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
           "types": [
             "video"
           ]
@@ -1636,7 +1636,7 @@
             {
               "name": "ITIN-Program-United-Mortgage-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/ITIN-Program-United-Mortgage-English.mp4",
+              "url": "Program-Videos/ITIN-Program-United-Mortgage-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1644,7 +1644,7 @@
               "lang": "English"
             }
           ],
-          "thumbnail": "/assets/Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
+          "thumbnail": "Site-Design/ITIN-Loan-Program-Flyer__featured-Image.png",
           "types": [
             "video"
           ]
@@ -1656,7 +1656,7 @@
             {
               "name": "No-Down-Payment_English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/No-Down-Payment_English.mp4",
+              "url": "Program-Videos/No-Down-Payment_English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1666,7 +1666,7 @@
             {
               "name": "No-Down-Payment_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/No-Down-Payment_Spanish.mp4",
+              "url": "Program-Videos/No-Down-Payment_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1674,7 +1674,7 @@
               "lang": "Spanish"
             }
           ],
-          "thumbnail": "/assets/Site-Design/No-Down-Payment_Featured-Image.png",
+          "thumbnail": "Site-Design/No-Down-Payment_Featured-Image.png",
           "types": [
             "video"
           ]
@@ -1686,7 +1686,7 @@
             {
               "name": "PL-Program-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/PL-Program-English.mp4",
+              "url": "Program-Videos/PL-Program-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1696,7 +1696,7 @@
             {
               "name": "PL-Program-Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/PL-Program-Spanish.mp4",
+              "url": "Program-Videos/PL-Program-Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1716,7 +1716,7 @@
             {
               "name": "Renovation-Program-English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/Renovation-Program-English.mp4",
+              "url": "Program-Videos/Renovation-Program-English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1726,7 +1726,7 @@
             {
               "name": "Renovation-Program-Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/Renovation-Program-Spanish.mp4",
+              "url": "Program-Videos/Renovation-Program-Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1746,7 +1746,7 @@
             {
               "name": "VA-Program_English.mp4",
               "label": "English",
-              "url": "/assets/Program-Videos/VA-Program_English.mp4",
+              "url": "Program-Videos/VA-Program_English.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1756,7 +1756,7 @@
             {
               "name": "VA-Program_Spanish.mp4",
               "label": "Spanish",
-              "url": "/assets/Program-Videos/VA-Program_Spanish.mp4",
+              "url": "Program-Videos/VA-Program_Spanish.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1764,7 +1764,7 @@
               "lang": "Spanish"
             }
           ],
-          "thumbnail": "/assets/Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
+          "thumbnail": "Site-Design/VA-Program-Flyer_featured-Image-scaled.png",
           "types": [
             "video"
           ]
@@ -1781,7 +1781,7 @@
       "description": "Social graphics and reels: program posts, holiday content, new-hire and team spotlights, testimonials, and seasonal campaigns.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Site-Design/Social-Media.jpg",
+      "image": "Site-Design/Social-Media.jpg",
       "items": [
         {
           "slug": "2-1-buy-down-program",
@@ -1790,7 +1790,7 @@
             {
               "name": "2-1-Buy-Down-Program.png",
               "label": "Download",
-              "url": "/assets/Social-Media/2-1-Buy-Down-Program.png",
+              "url": "Social-Media/2-1-Buy-Down-Program.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1798,7 +1798,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/2-1-Buy-Down-Program.png",
+          "thumbnail": "Social-Media/2-1-Buy-Down-Program.png",
           "types": [
             "image"
           ]
@@ -1810,7 +1810,7 @@
             {
               "name": "4th-of-July_Holiday.png",
               "label": "Download",
-              "url": "/assets/Social-Media/4th-of-July_Holiday.png",
+              "url": "Social-Media/4th-of-July_Holiday.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1818,7 +1818,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/4th-of-July_Holiday.png",
+          "thumbnail": "Social-Media/4th-of-July_Holiday.png",
           "types": [
             "image"
           ]
@@ -1830,7 +1830,7 @@
             {
               "name": "4th-of-July_Holidays-Illustration.png",
               "label": "Illustration",
-              "url": "/assets/Social-Media/4th-of-July_Holidays-Illustration.png",
+              "url": "Social-Media/4th-of-July_Holidays-Illustration.png",
               "type": "image",
               "ext": "png",
               "style": "Illustration",
@@ -1838,7 +1838,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/4th-of-July_Holidays-Illustration.png",
+          "thumbnail": "Social-Media/4th-of-July_Holidays-Illustration.png",
           "types": [
             "image"
           ]
@@ -1850,7 +1850,7 @@
             {
               "name": "4th-of-July-reel.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/4th-of-July-reel.mp4",
+              "url": "Social-Media/4th-of-July-reel.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1870,7 +1870,7 @@
             {
               "name": "aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc.mp4",
+              "url": "Social-Media/aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -1890,7 +1890,7 @@
             {
               "name": "Air-Force_Holiday.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Air-Force_Holiday.png",
+              "url": "Social-Media/Air-Force_Holiday.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1898,7 +1898,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Air-Force_Holiday.png",
+          "thumbnail": "Social-Media/Air-Force_Holiday.png",
           "types": [
             "image"
           ]
@@ -1910,7 +1910,7 @@
             {
               "name": "Air-Force_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Air-Force_Holidays.png",
+              "url": "Social-Media/Air-Force_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1918,7 +1918,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Air-Force_Holidays.png",
+          "thumbnail": "Social-Media/Air-Force_Holidays.png",
           "types": [
             "image"
           ]
@@ -1930,7 +1930,7 @@
             {
               "name": "Bank-Statement-Program.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Bank-Statement-Program.png",
+              "url": "Social-Media/Bank-Statement-Program.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1938,7 +1938,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Bank-Statement-Program.png",
+          "thumbnail": "Social-Media/Bank-Statement-Program.png",
           "types": [
             "image"
           ]
@@ -1950,7 +1950,7 @@
             {
               "name": "Brendan-Skrocki_New-Hire-03.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
+              "url": "Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -1958,7 +1958,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
+          "thumbnail": "Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
           "types": [
             "image"
           ]
@@ -1970,7 +1970,7 @@
             {
               "name": "Brendan-Skrocko-headshot-circle.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Brendan-Skrocko-headshot-circle.png",
+              "url": "Social-Media/Brendan-Skrocko-headshot-circle.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1978,7 +1978,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Brendan-Skrocko-headshot-circle.png",
+          "thumbnail": "Social-Media/Brendan-Skrocko-headshot-circle.png",
           "types": [
             "image"
           ]
@@ -1990,7 +1990,7 @@
             {
               "name": "Carousel-Cartoon-holidays-scaled.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Carousel-Cartoon-holidays-scaled.png",
+              "url": "Social-Media/Carousel-Cartoon-holidays-scaled.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -1998,7 +1998,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Carousel-Cartoon-holidays-scaled.png",
+          "thumbnail": "Social-Media/Carousel-Cartoon-holidays-scaled.png",
           "types": [
             "image"
           ]
@@ -2010,7 +2010,7 @@
             {
               "name": "Christmas-Holidays-Colors-Ball.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Christmas-Holidays-Colors-Ball.mp4",
+              "url": "Social-Media/Christmas-Holidays-Colors-Ball.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2030,7 +2030,7 @@
             {
               "name": "Christmas-Holidays-House.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Christmas-Holidays-House.mp4",
+              "url": "Social-Media/Christmas-Holidays-House.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2050,7 +2050,7 @@
             {
               "name": "Christmas-Holidays-Personalised.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Christmas-Holidays-Personalised.mp4",
+              "url": "Social-Media/Christmas-Holidays-Personalised.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2060,7 +2060,7 @@
             {
               "name": "Christmas-Holidays-Personalised-Cobrand.mp4",
               "label": "Cobranded",
-              "url": "/assets/Social-Media/Christmas-Holidays-Personalised-Cobrand.mp4",
+              "url": "Social-Media/Christmas-Holidays-Personalised-Cobrand.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2080,7 +2080,7 @@
             {
               "name": "Cinco-de-Mayo.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Cinco-de-Mayo.mp4",
+              "url": "Social-Media/Cinco-de-Mayo.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2100,7 +2100,7 @@
             {
               "name": "Coast-Guard_Holiday.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Coast-Guard_Holiday.png",
+              "url": "Social-Media/Coast-Guard_Holiday.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2108,7 +2108,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Coast-Guard_Holiday.png",
+          "thumbnail": "Social-Media/Coast-Guard_Holiday.png",
           "types": [
             "image"
           ]
@@ -2120,7 +2120,7 @@
             {
               "name": "Coast-Guard_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Coast-Guard_Holidays.png",
+              "url": "Social-Media/Coast-Guard_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2128,7 +2128,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Coast-Guard_Holidays.png",
+          "thumbnail": "Social-Media/Coast-Guard_Holidays.png",
           "types": [
             "image"
           ]
@@ -2140,7 +2140,7 @@
             {
               "name": "DSCR-Cartoon_1.png",
               "label": "Download",
-              "url": "/assets/Social-Media/DSCR-Cartoon_1.png",
+              "url": "Social-Media/DSCR-Cartoon_1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2150,7 +2150,7 @@
             {
               "name": "DSCR-Cartoon-Featured-Image.png",
               "label": "Download",
-              "url": "/assets/Social-Media/DSCR-Cartoon-Featured-Image.png",
+              "url": "Social-Media/DSCR-Cartoon-Featured-Image.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2158,7 +2158,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/DSCR-Cartoon_1.png",
+          "thumbnail": "Social-Media/DSCR-Cartoon_1.png",
           "types": [
             "image"
           ]
@@ -2170,7 +2170,7 @@
             {
               "name": "Erika-Martinez-Personalized-Slide-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
+              "url": "Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2178,7 +2178,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
+          "thumbnail": "Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
           "types": [
             "image"
           ]
@@ -2190,7 +2190,7 @@
             {
               "name": "for-Personalized-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/for-Personalized-scaled.jpg",
+              "url": "Social-Media/for-Personalized-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2198,7 +2198,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/for-Personalized-scaled.jpg",
+          "thumbnail": "Social-Media/for-Personalized-scaled.jpg",
           "types": [
             "image"
           ]
@@ -2210,7 +2210,7 @@
             {
               "name": "Happy-Fathers-Day.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-Fathers-Day.mp4",
+              "url": "Social-Media/Happy-Fathers-Day.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2230,7 +2230,7 @@
             {
               "name": "Happy-Fathers-Day-_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-Fathers-Day-_Holidays.png",
+              "url": "Social-Media/Happy-Fathers-Day-_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2238,7 +2238,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Happy-Fathers-Day-_Holidays.png",
+          "thumbnail": "Social-Media/Happy-Fathers-Day-_Holidays.png",
           "types": [
             "image"
           ]
@@ -2250,7 +2250,7 @@
             {
               "name": "Happy-Fathers-Day-_Illustration-Post.png",
               "label": "Illustration",
-              "url": "/assets/Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
+              "url": "Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
               "type": "image",
               "ext": "png",
               "style": "Illustration",
@@ -2258,7 +2258,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
+          "thumbnail": "Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
           "types": [
             "image"
           ]
@@ -2270,7 +2270,7 @@
             {
               "name": "Happy-Holidays_Generic.mp4",
               "label": "Generic",
-              "url": "/assets/Social-Media/Happy-Holidays_Generic.mp4",
+              "url": "Social-Media/Happy-Holidays_Generic.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2280,7 +2280,7 @@
             {
               "name": "Happy-Holidays.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-Holidays.jpg",
+              "url": "Social-Media/Happy-Holidays.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2288,7 +2288,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Happy-Holidays.jpg",
+          "thumbnail": "Social-Media/Happy-Holidays.jpg",
           "types": [
             "video",
             "image"
@@ -2301,7 +2301,7 @@
             {
               "name": "Happy-Juneteenth.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-Juneteenth.mp4",
+              "url": "Social-Media/Happy-Juneteenth.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2321,7 +2321,7 @@
             {
               "name": "Happy-Mothers-Day.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-Mothers-Day.mp4",
+              "url": "Social-Media/Happy-Mothers-Day.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2341,7 +2341,7 @@
             {
               "name": "Happy-National-Moving-Month.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-National-Moving-Month.mp4",
+              "url": "Social-Media/Happy-National-Moving-Month.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2361,7 +2361,7 @@
             {
               "name": "Happy-New-Year_Generic.mp4",
               "label": "Generic",
-              "url": "/assets/Social-Media/Happy-New-Year_Generic.mp4",
+              "url": "Social-Media/Happy-New-Year_Generic.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2371,7 +2371,7 @@
             {
               "name": "Happy-New-Year.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/Happy-New-Year.jpg",
+              "url": "Social-Media/Happy-New-Year.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2379,7 +2379,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Happy-New-Year.jpg",
+          "thumbnail": "Social-Media/Happy-New-Year.jpg",
           "types": [
             "video",
             "image"
@@ -2392,7 +2392,7 @@
             {
               "name": "Juneteenth-_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Juneteenth-_Holidays.png",
+              "url": "Social-Media/Juneteenth-_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2400,7 +2400,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Juneteenth-_Holidays.png",
+          "thumbnail": "Social-Media/Juneteenth-_Holidays.png",
           "types": [
             "image"
           ]
@@ -2412,7 +2412,7 @@
             {
               "name": "Juneteenth-_Holidays-Cartoon.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Juneteenth-_Holidays-Cartoon.png",
+              "url": "Social-Media/Juneteenth-_Holidays-Cartoon.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2420,7 +2420,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Juneteenth-_Holidays-Cartoon.png",
+          "thumbnail": "Social-Media/Juneteenth-_Holidays-Cartoon.png",
           "types": [
             "image"
           ]
@@ -2432,7 +2432,7 @@
             {
               "name": "Memorial-Day.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Memorial-Day.mp4",
+              "url": "Social-Media/Memorial-Day.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2452,7 +2452,7 @@
             {
               "name": "Mockup-Cartoon-Posts-scaled.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Mockup-Cartoon-Posts-scaled.png",
+              "url": "Social-Media/Mockup-Cartoon-Posts-scaled.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2460,7 +2460,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Mockup-Cartoon-Posts-scaled.png",
+          "thumbnail": "Social-Media/Mockup-Cartoon-Posts-scaled.png",
           "types": [
             "image"
           ]
@@ -2472,7 +2472,7 @@
             {
               "name": "Mothers-Day_Holidays-Template-1.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Mothers-Day_Holidays-Template-1.png",
+              "url": "Social-Media/Mothers-Day_Holidays-Template-1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2482,7 +2482,7 @@
             {
               "name": "Mothers-Day_Holidays-Template-2.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Mothers-Day_Holidays-Template-2.png",
+              "url": "Social-Media/Mothers-Day_Holidays-Template-2.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2490,7 +2490,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Mothers-Day_Holidays-Template-1.png",
+          "thumbnail": "Social-Media/Mothers-Day_Holidays-Template-1.png",
           "types": [
             "image"
           ]
@@ -2502,7 +2502,7 @@
             {
               "name": "National-Military-Appreciation-Month_Holiday.png",
               "label": "Download",
-              "url": "/assets/Social-Media/National-Military-Appreciation-Month_Holiday.png",
+              "url": "Social-Media/National-Military-Appreciation-Month_Holiday.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2510,7 +2510,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/National-Military-Appreciation-Month_Holiday.png",
+          "thumbnail": "Social-Media/National-Military-Appreciation-Month_Holiday.png",
           "types": [
             "image"
           ]
@@ -2522,7 +2522,7 @@
             {
               "name": "National-Military-Appreciation-Month_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/National-Military-Appreciation-Month_Holidays.png",
+              "url": "Social-Media/National-Military-Appreciation-Month_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2530,7 +2530,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/National-Military-Appreciation-Month_Holidays.png",
+          "thumbnail": "Social-Media/National-Military-Appreciation-Month_Holidays.png",
           "types": [
             "image"
           ]
@@ -2542,7 +2542,7 @@
             {
               "name": "Navy_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Navy_Holidays.png",
+              "url": "Social-Media/Navy_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2550,7 +2550,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Navy_Holidays.png",
+          "thumbnail": "Social-Media/Navy_Holidays.png",
           "types": [
             "image"
           ]
@@ -2562,7 +2562,7 @@
             {
               "name": "Navy_Holidays-Template.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Navy_Holidays-Template.png",
+              "url": "Social-Media/Navy_Holidays-Template.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2570,7 +2570,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Navy_Holidays-Template.png",
+          "thumbnail": "Social-Media/Navy_Holidays-Template.png",
           "types": [
             "image"
           ]
@@ -2582,7 +2582,7 @@
             {
               "name": "News-Announcement-02.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/News-Announcement-02.jpg",
+              "url": "Social-Media/News-Announcement-02.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2590,7 +2590,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/News-Announcement-02.jpg",
+          "thumbnail": "Social-Media/News-Announcement-02.jpg",
           "types": [
             "image"
           ]
@@ -2602,7 +2602,7 @@
             {
               "name": "Promo-Product_Corporate.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Promo-Product_Corporate.mp4",
+              "url": "Social-Media/Promo-Product_Corporate.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2622,7 +2622,7 @@
             {
               "name": "Renovation-Loan-Program-Featured-Image.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Renovation-Loan-Program-Featured-Image.png",
+              "url": "Social-Media/Renovation-Loan-Program-Featured-Image.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2632,7 +2632,7 @@
             {
               "name": "Renovation-Loan-Program.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Renovation-Loan-Program.png",
+              "url": "Social-Media/Renovation-Loan-Program.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2640,7 +2640,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Renovation-Loan-Program-Featured-Image.png",
+          "thumbnail": "Social-Media/Renovation-Loan-Program-Featured-Image.png",
           "types": [
             "image"
           ]
@@ -2652,7 +2652,7 @@
             {
               "name": "0-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/0-scaled.jpg",
+              "url": "Social-Media/0-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2660,7 +2660,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/0-scaled.jpg",
+          "thumbnail": "Social-Media/0-scaled.jpg",
           "types": [
             "image"
           ]
@@ -2672,7 +2672,7 @@
             {
               "name": "1-1.png",
               "label": "Download",
-              "url": "/assets/Social-Media/1-1.png",
+              "url": "Social-Media/1-1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2682,7 +2682,7 @@
             {
               "name": "1.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/1.jpg",
+              "url": "Social-Media/1.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2692,7 +2692,7 @@
             {
               "name": "1.png",
               "label": "Download",
-              "url": "/assets/Social-Media/1.png",
+              "url": "Social-Media/1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2700,7 +2700,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/1-1.png",
+          "thumbnail": "Social-Media/1-1.png",
           "types": [
             "image"
           ]
@@ -2712,7 +2712,7 @@
             {
               "name": "2-1.png",
               "label": "Download",
-              "url": "/assets/Social-Media/2-1.png",
+              "url": "Social-Media/2-1.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2722,7 +2722,7 @@
             {
               "name": "2.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/2.jpg",
+              "url": "Social-Media/2.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2732,7 +2732,7 @@
             {
               "name": "2.png",
               "label": "Download",
-              "url": "/assets/Social-Media/2.png",
+              "url": "Social-Media/2.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2740,7 +2740,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/2-1.png",
+          "thumbnail": "Social-Media/2-1.png",
           "types": [
             "image"
           ]
@@ -2752,7 +2752,7 @@
             {
               "name": "3.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/3.jpg",
+              "url": "Social-Media/3.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -2760,7 +2760,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/3.jpg",
+          "thumbnail": "Social-Media/3.jpg",
           "types": [
             "image"
           ]
@@ -2772,7 +2772,7 @@
             {
               "name": "socialpost222555222.png",
               "label": "Download",
-              "url": "/assets/Social-Media/socialpost222555222.png",
+              "url": "Social-Media/socialpost222555222.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2780,7 +2780,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/socialpost222555222.png",
+          "thumbnail": "Social-Media/socialpost222555222.png",
           "types": [
             "image"
           ]
@@ -2792,7 +2792,7 @@
             {
               "name": "Space-Force_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Space-Force_Holidays.png",
+              "url": "Social-Media/Space-Force_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2800,7 +2800,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Space-Force_Holidays.png",
+          "thumbnail": "Social-Media/Space-Force_Holidays.png",
           "types": [
             "image"
           ]
@@ -2812,7 +2812,7 @@
             {
               "name": "Space-Force_Holidays-Template.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Space-Force_Holidays-Template.png",
+              "url": "Social-Media/Space-Force_Holidays-Template.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2820,7 +2820,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Space-Force_Holidays-Template.png",
+          "thumbnail": "Social-Media/Space-Force_Holidays-Template.png",
           "types": [
             "image"
           ]
@@ -2832,7 +2832,7 @@
             {
               "name": "Summers_Holidays.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Summers_Holidays.png",
+              "url": "Social-Media/Summers_Holidays.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2840,7 +2840,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Summers_Holidays.png",
+          "thumbnail": "Social-Media/Summers_Holidays.png",
           "types": [
             "image"
           ]
@@ -2852,7 +2852,7 @@
             {
               "name": "Summers-Illustration-Holidays.png",
               "label": "Illustration",
-              "url": "/assets/Social-Media/Summers-Illustration-Holidays.png",
+              "url": "Social-Media/Summers-Illustration-Holidays.png",
               "type": "image",
               "ext": "png",
               "style": "Illustration",
@@ -2860,7 +2860,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Summers-Illustration-Holidays.png",
+          "thumbnail": "Social-Media/Summers-Illustration-Holidays.png",
           "types": [
             "image"
           ]
@@ -2872,7 +2872,7 @@
             {
               "name": "Testimonial-Reel_William-Maier-IV.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Testimonial-Reel_William-Maier-IV.mp4",
+              "url": "Social-Media/Testimonial-Reel_William-Maier-IV.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2892,7 +2892,7 @@
             {
               "name": "Testimonial-Thumbnail-3.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Testimonial-Thumbnail-3.png",
+              "url": "Social-Media/Testimonial-Thumbnail-3.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2900,7 +2900,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Testimonial-Thumbnail-3.png",
+          "thumbnail": "Social-Media/Testimonial-Thumbnail-3.png",
           "types": [
             "image"
           ]
@@ -2912,7 +2912,7 @@
             {
               "name": "U.S-Army_Holiday.png",
               "label": "Download",
-              "url": "/assets/Social-Media/U.S-Army_Holiday.png",
+              "url": "Social-Media/U.S-Army_Holiday.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2920,7 +2920,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/U.S-Army_Holiday.png",
+          "thumbnail": "Social-Media/U.S-Army_Holiday.png",
           "types": [
             "image"
           ]
@@ -2932,7 +2932,7 @@
             {
               "name": "U.S-Army_Holiday-Cartoon.png",
               "label": "Download",
-              "url": "/assets/Social-Media/U.S-Army_Holiday-Cartoon.png",
+              "url": "Social-Media/U.S-Army_Holiday-Cartoon.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2940,7 +2940,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/U.S-Army_Holiday-Cartoon.png",
+          "thumbnail": "Social-Media/U.S-Army_Holiday-Cartoon.png",
           "types": [
             "image"
           ]
@@ -2952,7 +2952,7 @@
             {
               "name": "Veterans-Program-Featured-Image.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Veterans-Program-Featured-Image.png",
+              "url": "Social-Media/Veterans-Program-Featured-Image.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -2960,7 +2960,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Veterans-Program-Featured-Image.png",
+          "thumbnail": "Social-Media/Veterans-Program-Featured-Image.png",
           "types": [
             "image"
           ]
@@ -2972,7 +2972,7 @@
             {
               "name": "Welcoming-Spring.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Welcoming-Spring.mp4",
+              "url": "Social-Media/Welcoming-Spring.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -2992,7 +2992,7 @@
             {
               "name": "Welcoming-Spring-Homebuyer-Season-Clasic.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
+              "url": "Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3000,7 +3000,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
+          "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
           "types": [
             "image"
           ]
@@ -3012,7 +3012,7 @@
             {
               "name": "Welcoming-Spring-Homebuyer-Season-Ilustration.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
+              "url": "Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3020,7 +3020,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
+          "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
           "types": [
             "image"
           ]
@@ -3032,7 +3032,7 @@
             {
               "name": "Welcoming-Spring-Homebuyer-Season-Pets.png",
               "label": "Download",
-              "url": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
+              "url": "Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3040,7 +3040,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
+          "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
           "types": [
             "image"
           ]
@@ -3052,7 +3052,7 @@
             {
               "name": "Welcoming-Summer.mp4",
               "label": "Download",
-              "url": "/assets/Social-Media/Welcoming-Summer.mp4",
+              "url": "Social-Media/Welcoming-Summer.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3072,7 +3072,7 @@
             {
               "name": "Winters-Holiday.jpg",
               "label": "Download",
-              "url": "/assets/Social-Media/Winters-Holiday.jpg",
+              "url": "Social-Media/Winters-Holiday.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3080,7 +3080,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Social-Media/Winters-Holiday.jpg",
+          "thumbnail": "Social-Media/Winters-Holiday.jpg",
           "types": [
             "image"
           ]
@@ -3097,7 +3097,7 @@
       "description": "Everything for an open house: flyer styles, visitor sign-in sheet, and animated \"This Home is For Sale\" video templates.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Site-Design/Open-House.jpg",
+      "image": "Site-Design/Open-House.jpg",
       "items": [
         {
           "slug": "dancing-this-home-is-for-sale-video",
@@ -3106,7 +3106,7 @@
             {
               "name": "Dancing-This-Home-is-For-Sale-Video.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Dancing-This-Home-is-For-Sale-Video.mp4",
+              "url": "Open-House/Dancing-This-Home-is-For-Sale-Video.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3126,7 +3126,7 @@
             {
               "name": "Open-House-Blue_LOs-Template.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Blue_LOs-Template.mp4",
+              "url": "Open-House/Open-House-Blue_LOs-Template.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3134,7 +3134,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "thumbnail": "Site-Design/Open-House.jpg",
           "types": [
             "video"
           ]
@@ -3146,7 +3146,7 @@
             {
               "name": "Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
               "label": "Color-Pop",
-              "url": "/assets/Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Color-Pop",
@@ -3154,7 +3154,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Color-Pop1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3166,7 +3166,7 @@
             {
               "name": "Open-House-Flyer_Collage1Rltr-scaled.jpg",
               "label": "Collage",
-              "url": "/assets/Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Collage",
@@ -3174,7 +3174,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Collage1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3186,7 +3186,7 @@
             {
               "name": "Open-House-Flyer_Informational1Rltr-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3194,7 +3194,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Informational1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3206,7 +3206,7 @@
             {
               "name": "Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3214,7 +3214,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Insert-Page1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3226,7 +3226,7 @@
             {
               "name": "Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
               "label": "Minimalist",
-              "url": "/assets/Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": "Minimalist",
@@ -3234,7 +3234,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Minimalist1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3246,7 +3246,7 @@
             {
               "name": "Open-House-Flyer_Open-House1Rltr-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3254,7 +3254,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Open-House1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3266,7 +3266,7 @@
             {
               "name": "Open-House-Flyer_Original1Rltr-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
+              "url": "Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3274,7 +3274,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
+          "thumbnail": "Open-House/Open-House-Flyer_Original1Rltr-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3286,7 +3286,7 @@
             {
               "name": "Open-House-Flyer_Visitor-Sign-in.pdf",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-Flyer_Visitor-Sign-in.pdf",
+              "url": "Open-House/Open-House-Flyer_Visitor-Sign-in.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": null,
@@ -3294,7 +3294,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "thumbnail": "Site-Design/Open-House.jpg",
           "types": [
             "pdf"
           ]
@@ -3306,7 +3306,7 @@
             {
               "name": "Open-House_LOs-Template.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House_LOs-Template.mp4",
+              "url": "Open-House/Open-House_LOs-Template.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3314,7 +3314,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "thumbnail": "Site-Design/Open-House.jpg",
           "types": [
             "video"
           ]
@@ -3326,7 +3326,7 @@
             {
               "name": "Open-House-White_LOs-Template.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Open-House-White_LOs-Template.mp4",
+              "url": "Open-House/Open-House-White_LOs-Template.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3334,7 +3334,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Site-Design/Open-House.jpg",
+          "thumbnail": "Site-Design/Open-House.jpg",
           "types": [
             "video"
           ]
@@ -3346,7 +3346,7 @@
             {
               "name": "Revealing-This-Home-if-For-Sale.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Revealing-This-Home-if-For-Sale.mp4",
+              "url": "Open-House/Revealing-This-Home-if-For-Sale.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3366,7 +3366,7 @@
             {
               "name": "Standard-This-Home-Is-For-Sale.mp4",
               "label": "Download",
-              "url": "/assets/Open-House/Standard-This-Home-Is-For-Sale.mp4",
+              "url": "Open-House/Standard-This-Home-Is-For-Sale.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3391,7 +3391,7 @@
       "description": "Video templates to celebrate a closing — polaroid, collage, map, and listing-photo styles ready to personalize.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+      "image": "Closing-Posts/Listing-Photo_Featured-Image.png",
       "items": [
         {
           "slug": "blurred-house",
@@ -3400,7 +3400,7 @@
             {
               "name": "Blurred-House.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Blurred-House.mp4",
+              "url": "Closing-Posts/Blurred-House.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3420,7 +3420,7 @@
             {
               "name": "Collage.mp4",
               "label": "Collage",
-              "url": "/assets/Closing-Posts/Collage.mp4",
+              "url": "Closing-Posts/Collage.mp4",
               "type": "video",
               "ext": "mp4",
               "style": "Collage",
@@ -3440,7 +3440,7 @@
             {
               "name": "Gisela-Pratt_241-S-Main-Street-Pittston-PA-18640_2026.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Gisela-Pratt_241-S-Main-Street-Pittston-PA-18640_2026.mp4",
+              "url": "Closing-Posts/Gisela-Pratt_241-S-Main-Street-Pittston-PA-18640_2026.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3460,7 +3460,7 @@
             {
               "name": "Google-Map.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Google-Map.mp4",
+              "url": "Closing-Posts/Google-Map.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3480,7 +3480,7 @@
             {
               "name": "Keith-Michael-Chabot_1794-Morven-Court-Deltona-FL-32738.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Keith-Michael-Chabot_1794-Morven-Court-Deltona-FL-32738.mp4",
+              "url": "Closing-Posts/Keith-Michael-Chabot_1794-Morven-Court-Deltona-FL-32738.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3500,7 +3500,7 @@
             {
               "name": "Listing-MLO-Split.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Listing-MLO-Split.mp4",
+              "url": "Closing-Posts/Listing-MLO-Split.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3520,7 +3520,7 @@
             {
               "name": "Listing-Photo_Featured-Image.png",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+              "url": "Closing-Posts/Listing-Photo_Featured-Image.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3528,7 +3528,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Closing-Posts/Listing-Photo_Featured-Image.png",
+          "thumbnail": "Closing-Posts/Listing-Photo_Featured-Image.png",
           "types": [
             "image"
           ]
@@ -3540,7 +3540,7 @@
             {
               "name": "Listing-Photo_Louis-Trocchio_1-Kara-Court-Yaphank-NY-11980.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Listing-Photo_Louis-Trocchio_1-Kara-Court-Yaphank-NY-11980.mp4",
+              "url": "Closing-Posts/Listing-Photo_Louis-Trocchio_1-Kara-Court-Yaphank-NY-11980.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3560,7 +3560,7 @@
             {
               "name": "News-Map.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/News-Map.mp4",
+              "url": "Closing-Posts/News-Map.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3580,7 +3580,7 @@
             {
               "name": "Polaroid-Frame.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Polaroid-Frame.mp4",
+              "url": "Closing-Posts/Polaroid-Frame.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3600,7 +3600,7 @@
             {
               "name": "Richard-Hernandez_44-Pepperbush-Pl-Malta-NY-12020.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Richard-Hernandez_44-Pepperbush-Pl-Malta-NY-12020.mp4",
+              "url": "Closing-Posts/Richard-Hernandez_44-Pepperbush-Pl-Malta-NY-12020.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3620,7 +3620,7 @@
             {
               "name": "Stephanie-Taddeo_Closing-LO-V012-63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Stephanie-Taddeo_Closing-LO-V012-63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "url": "Closing-Posts/Stephanie-Taddeo_Closing-LO-V012-63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3640,7 +3640,7 @@
             {
               "name": "Stephanie-Taddeo_Closing-LO-V032_63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Stephanie-Taddeo_Closing-LO-V032_63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
+              "url": "Closing-Posts/Stephanie-Taddeo_Closing-LO-V032_63-Villa-Street-Roslyn-Heights-NY-11577.mp4",
               "type": "video",
               "ext": "mp4",
               "style": null,
@@ -3660,7 +3660,7 @@
             {
               "name": "Thumbnail.png",
               "label": "Download",
-              "url": "/assets/Closing-Posts/Thumbnail.png",
+              "url": "Closing-Posts/Thumbnail.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3668,7 +3668,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Closing-Posts/Thumbnail.png",
+          "thumbnail": "Closing-Posts/Thumbnail.png",
           "types": [
             "image"
           ]
@@ -3685,7 +3685,7 @@
       "description": "Direct-mail and door-to-door pieces: cobranded postcards, door hangers in three styles, the Direct Lender brochure, Loanopoly, and Rent-vs-Own flyers.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+      "image": "Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
       "items": [
         {
           "slug": "direct-lender-brochure-85inx14in-4panel-rollfold",
@@ -3694,7 +3694,7 @@
             {
               "name": "Direct-Lender-brochure-85inx14in-4panel-rollfold.pdf",
               "label": "Download",
-              "url": "/assets/Marketing/Direct-Lender-brochure-85inx14in-4panel-rollfold.pdf",
+              "url": "Marketing/Direct-Lender-brochure-85inx14in-4panel-rollfold.pdf",
               "type": "pdf",
               "ext": "pdf",
               "style": null,
@@ -3714,7 +3714,7 @@
             {
               "name": "Doorhanger_classic-1.png",
               "label": "Classic",
-              "url": "/assets/Marketing/Doorhanger_classic-1.png",
+              "url": "Marketing/Doorhanger_classic-1.png",
               "type": "image",
               "ext": "png",
               "style": "Classic",
@@ -3724,7 +3724,7 @@
             {
               "name": "Doorhanger_color-pop-1.png",
               "label": "Color-Pop",
-              "url": "/assets/Marketing/Doorhanger_color-pop-1.png",
+              "url": "Marketing/Doorhanger_color-pop-1.png",
               "type": "image",
               "ext": "png",
               "style": "Color-Pop",
@@ -3734,7 +3734,7 @@
             {
               "name": "Doorhanger_Illustration-1.png",
               "label": "Illustration",
-              "url": "/assets/Marketing/Doorhanger_Illustration-1.png",
+              "url": "Marketing/Doorhanger_Illustration-1.png",
               "type": "image",
               "ext": "png",
               "style": "Illustration",
@@ -3742,7 +3742,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Doorhanger_classic-1.png",
+          "thumbnail": "Marketing/Doorhanger_classic-1.png",
           "types": [
             "image"
           ]
@@ -3754,7 +3754,7 @@
             {
               "name": "doorhanger-thickness-examples.jpg",
               "label": "Download",
-              "url": "/assets/Marketing/doorhanger-thickness-examples.jpg",
+              "url": "Marketing/doorhanger-thickness-examples.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3762,7 +3762,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/doorhanger-thickness-examples.jpg",
+          "thumbnail": "Marketing/doorhanger-thickness-examples.jpg",
           "types": [
             "image"
           ]
@@ -3774,7 +3774,7 @@
             {
               "name": "Home-For-Sale-Cobrand-postcard_Style-01.png",
               "label": "Cobranded · Style 01",
-              "url": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+              "url": "Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
               "type": "image",
               "ext": "png",
               "style": "Style 01",
@@ -3782,7 +3782,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
+          "thumbnail": "Marketing/Home-For-Sale-Cobrand-postcard_Style-01.png",
           "types": [
             "image"
           ]
@@ -3794,7 +3794,7 @@
             {
               "name": "Home-for-Sale_Color-Pop_Door-hanger.png",
               "label": "Color-Pop",
-              "url": "/assets/Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
+              "url": "Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
               "type": "image",
               "ext": "png",
               "style": "Color-Pop",
@@ -3802,7 +3802,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
+          "thumbnail": "Marketing/Home-for-Sale_Color-Pop_Door-hanger.png",
           "types": [
             "image"
           ]
@@ -3814,7 +3814,7 @@
             {
               "name": "Home-for-Sale_Minimalist_Door-hanger.png",
               "label": "Minimalist",
-              "url": "/assets/Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
+              "url": "Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
               "type": "image",
               "ext": "png",
               "style": "Minimalist",
@@ -3822,7 +3822,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
+          "thumbnail": "Marketing/Home-for-Sale_Minimalist_Door-hanger.png",
           "types": [
             "image"
           ]
@@ -3834,7 +3834,7 @@
             {
               "name": "Just-Sold-Cobrand-Postcard_Style-01.png",
               "label": "Cobranded · Style 01",
-              "url": "/assets/Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
+              "url": "Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
               "type": "image",
               "ext": "png",
               "style": "Style 01",
@@ -3842,7 +3842,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
+          "thumbnail": "Marketing/Just-Sold-Cobrand-Postcard_Style-01.png",
           "types": [
             "image"
           ]
@@ -3854,7 +3854,7 @@
             {
               "name": "Loanopoly-Flyer_2024-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Marketing/Loanopoly-Flyer_2024-scaled.jpg",
+              "url": "Marketing/Loanopoly-Flyer_2024-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3862,7 +3862,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Loanopoly-Flyer_2024-scaled.jpg",
+          "thumbnail": "Marketing/Loanopoly-Flyer_2024-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3874,7 +3874,7 @@
             {
               "name": "Neighborhood-Specialists_Door-Hanger.png",
               "label": "Download",
-              "url": "/assets/Marketing/Neighborhood-Specialists_Door-Hanger.png",
+              "url": "Marketing/Neighborhood-Specialists_Door-Hanger.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3882,7 +3882,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Neighborhood-Specialists_Door-Hanger.png",
+          "thumbnail": "Marketing/Neighborhood-Specialists_Door-Hanger.png",
           "types": [
             "image"
           ]
@@ -3894,7 +3894,7 @@
             {
               "name": "Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
               "label": "Cobranded · Style 01 · Spanish",
-              "url": "/assets/Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
+              "url": "Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
               "type": "image",
               "ext": "png",
               "style": "Style 01",
@@ -3902,7 +3902,7 @@
               "lang": "Spanish"
             }
           ],
-          "thumbnail": "/assets/Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
+          "thumbnail": "Marketing/Property-Listing-Cobrand-postcard_Style-01-for-Avery5689_English-Spanish.png",
           "types": [
             "image"
           ]
@@ -3914,7 +3914,7 @@
             {
               "name": "Property-Worth_Door-Hanger.png",
               "label": "Download",
-              "url": "/assets/Marketing/Property-Worth_Door-Hanger.png",
+              "url": "Marketing/Property-Worth_Door-Hanger.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3922,7 +3922,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Property-Worth_Door-Hanger.png",
+          "thumbnail": "Marketing/Property-Worth_Door-Hanger.png",
           "types": [
             "image"
           ]
@@ -3934,7 +3934,7 @@
             {
               "name": "Rent-vs-Own-Flyer-01.png",
               "label": "Download",
-              "url": "/assets/Marketing/Rent-vs-Own-Flyer-01.png",
+              "url": "Marketing/Rent-vs-Own-Flyer-01.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3944,7 +3944,7 @@
             {
               "name": "Rent-vs-Own-Flyer-02.png",
               "label": "Download",
-              "url": "/assets/Marketing/Rent-vs-Own-Flyer-02.png",
+              "url": "Marketing/Rent-vs-Own-Flyer-02.png",
               "type": "image",
               "ext": "png",
               "style": null,
@@ -3952,7 +3952,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Marketing/Rent-vs-Own-Flyer-01.png",
+          "thumbnail": "Marketing/Rent-vs-Own-Flyer-01.png",
           "types": [
             "image"
           ]
@@ -3969,7 +3969,7 @@
       "description": "Large-format branding for events and listings — retractable banners and yard signs.",
       "card": true,
       "requestForm": false,
-      "image": "/assets/Site-Design/Branding-Signanges.jpg",
+      "image": "Site-Design/Branding-Signanges.jpg",
       "items": [
         {
           "slug": "branding-signage-01",
@@ -3978,7 +3978,7 @@
             {
               "name": "01-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Branding-and-Signage/01-scaled.jpg",
+              "url": "Branding-and-Signage/01-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -3986,7 +3986,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Branding-and-Signage/01-scaled.jpg",
+          "thumbnail": "Branding-and-Signage/01-scaled.jpg",
           "types": [
             "image"
           ]
@@ -3998,7 +3998,7 @@
             {
               "name": "02-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Branding-and-Signage/02-scaled.jpg",
+              "url": "Branding-and-Signage/02-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4006,7 +4006,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Branding-and-Signage/02-scaled.jpg",
+          "thumbnail": "Branding-and-Signage/02-scaled.jpg",
           "types": [
             "image"
           ]
@@ -4018,7 +4018,7 @@
             {
               "name": "03-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Branding-and-Signage/03-scaled.jpg",
+              "url": "Branding-and-Signage/03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4026,7 +4026,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Branding-and-Signage/03-scaled.jpg",
+          "thumbnail": "Branding-and-Signage/03-scaled.jpg",
           "types": [
             "image"
           ]
@@ -4038,7 +4038,7 @@
             {
               "name": "04-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Branding-and-Signage/04-scaled.jpg",
+              "url": "Branding-and-Signage/04-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4046,7 +4046,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Branding-and-Signage/04-scaled.jpg",
+          "thumbnail": "Branding-and-Signage/04-scaled.jpg",
           "types": [
             "image"
           ]
@@ -4058,7 +4058,7 @@
             {
               "name": "Yard-Sign-Featured-Image-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
+              "url": "Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4066,7 +4066,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
+          "thumbnail": "Branding-and-Signage/Yard-Sign-Featured-Image-scaled.jpg",
           "types": [
             "image"
           ]
@@ -4083,7 +4083,7 @@
       "description": "Flyers and graphics to promote United Mortgage events.",
       "card": false,
       "requestForm": false,
-      "image": "/assets/Event-Promotion/Example-graphics-scaled.jpg",
+      "image": "Event-Promotion/Example-graphics-scaled.jpg",
       "items": [
         {
           "slug": "combine-flyer",
@@ -4092,7 +4092,7 @@
             {
               "name": "Combine-Flyer-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Event-Promotion/Combine-Flyer-scaled.jpg",
+              "url": "Event-Promotion/Combine-Flyer-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4100,7 +4100,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Event-Promotion/Combine-Flyer-scaled.jpg",
+          "thumbnail": "Event-Promotion/Combine-Flyer-scaled.jpg",
           "types": [
             "image"
           ]
@@ -4112,7 +4112,7 @@
             {
               "name": "Example-graphics-02-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Event-Promotion/Example-graphics-02-scaled.jpg",
+              "url": "Event-Promotion/Example-graphics-02-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4122,7 +4122,7 @@
             {
               "name": "Example-graphics-03-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Event-Promotion/Example-graphics-03-scaled.jpg",
+              "url": "Event-Promotion/Example-graphics-03-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4132,7 +4132,7 @@
             {
               "name": "Example-graphics-04-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Event-Promotion/Example-graphics-04-scaled.jpg",
+              "url": "Event-Promotion/Example-graphics-04-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4142,7 +4142,7 @@
             {
               "name": "Example-graphics-scaled.jpg",
               "label": "Download",
-              "url": "/assets/Event-Promotion/Example-graphics-scaled.jpg",
+              "url": "Event-Promotion/Example-graphics-scaled.jpg",
               "type": "image",
               "ext": "jpg",
               "style": null,
@@ -4150,7 +4150,7 @@
               "lang": null
             }
           ],
-          "thumbnail": "/assets/Event-Promotion/Example-graphics-02-scaled.jpg",
+          "thumbnail": "Event-Promotion/Example-graphics-02-scaled.jpg",
           "types": [
             "image"
           ]

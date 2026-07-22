@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { assetUrl } from '@/lib/asset';
 
 /**
  * Circular category card for the homepage grid — recreates the current site's
@@ -11,7 +12,7 @@ export default function CategoryCard({ category }) {
         {category.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={category.image}
+            src={assetUrl(category.image)}
             alt={category.title}
             loading="lazy"
             className="h-full w-full object-cover transition duration-500 group-hover:scale-105"

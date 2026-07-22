@@ -3,6 +3,8 @@
  * the current site's no-login, direct-download behavior. `download` attribute +
  * the immutable cache header on /assets means clicks pull the file straight down.
  */
+import { assetUrl } from '@/lib/asset';
+
 export default function DownloadList({ files }) {
   return (
     <ul className="divide-y divide-navy-100 overflow-hidden rounded-xl border border-navy-100">
@@ -16,7 +18,7 @@ export default function DownloadList({ files }) {
           <div className="flex shrink-0 gap-2">
             {(f.type === 'pdf' || f.type === 'image' || f.type === 'video') && (
               <a
-                href={f.url}
+                href={assetUrl(f.url)}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-lg border border-navy-200 px-3 py-1.5 text-xs font-medium text-navy-600 transition hover:border-brand-400 hover:text-brand-600"
@@ -25,7 +27,7 @@ export default function DownloadList({ files }) {
               </a>
             )}
             <a
-              href={f.url}
+              href={assetUrl(f.url)}
               download={f.name}
               className="rounded-lg bg-brand-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-brand-600"
             >

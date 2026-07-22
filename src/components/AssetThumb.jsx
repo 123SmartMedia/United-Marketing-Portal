@@ -1,3 +1,5 @@
+import { assetUrl } from '@/lib/asset';
+
 /**
  * Renders a preview for a catalog item. Uses the item's thumbnail image when
  * available; otherwise falls back to a typed placeholder (video / PDF / file)
@@ -15,7 +17,7 @@ export default function AssetThumb({ item, className = '', rounded = 'rounded-xl
         <>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={item.thumbnail}
+            src={assetUrl(item.thumbnail)}
             alt={item.title}
             loading="lazy"
             className="h-full w-full object-cover"

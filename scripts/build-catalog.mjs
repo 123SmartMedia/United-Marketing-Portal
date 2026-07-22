@@ -23,12 +23,14 @@ const ROOT = path.resolve(__dirname, '..');
 const ASSETS_DIR = path.join(ROOT, 'UnitedMarketingDesk-Assets');
 const OUT_FILE = path.join(ROOT, 'src', 'content', 'catalog.json');
 
-// Public URL base for assets.
-//  - Local dev / no env: '/assets' (served via the public/assets junction).
-//  - Production: set ASSET_BASE_URL to the R2 public bucket URL (e.g.
-//    https://assets.marketing.unitedmortgage.com) and the catalog bakes
-//    absolute CDN URLs. Vercel runs prebuild, so the deploy picks this up.
-const ASSET_URL_BASE = (process.env.ASSET_BASE_URL || '/assets').replace(/\/+$/, '');
+// The catalog stores asset paths RELATIVE to the library root (e.g.
+// "Program-Flyers/DSCR-...pdf"). The public base URL is applied at runtime by
+// src/lib/asset.js (assetUrl) using NEXT_PUBLIC_ASSET_BASE_URL, so one committed
+// catalog works both locally (/assets junction) and in production (R2 CDN).
+// (No base baked in — see assetUrl() note above.)
+function assetPath(...segments) {
+  return segments.map((s) => s.split('/').map(encodeURIComponent).join('/')).join('/');
+}
 
 /**
  * Curated category metadata. `folder` maps to a directory in the asset library.
@@ -248,7 +250,7 @@ async function buildFeaturedIndex() {
     const key = normalizeItemKey(base.replace(/featured|image|hook/gi, ''));
     index.push({
       tokens: tokenSet(key),
-      url: `${ASSET_URL_BASE}/${encodeURIComponent(FEATURED_DIR)}/${encodeURIComponent(e.name)}`,
+      url: assetPath(FEATURED_DIR, e.name),
     });
   }
   return index;
@@ -295,7 +297,7 @@ async function scanCategory(cat, featuredIndex) {
     const ext = path.extname(name).toLowerCase();
     const base = path.basename(name, ext);
     const key = normalizeItemKey(base);
-    const url = `${ASSET_URL_BASE}/${encodeURIComponent(cat.folder)}/${encodeURIComponent(name)}`;
+    const url = assetPath(cat.folder, name);
     const desc = describeFile(base);
 
     if (!itemMap.has(key)) {
@@ -340,7 +342,7 @@ async function scanCategory(cat, featuredIndex) {
     description: cat.description,
     card: cat.card,
     requestForm: cat.requestForm || false,
-    image: cat.image ? `${ASSET_URL_BASE}/${cat.image.split('/').map(encodeURIComponent).join('/')}` : null,
+    image: cat.image ? assetPath(cat.image) : null,
     items,
     fileCount: files.length,
     itemCount: items.length,
@@ -381,6 +383,18 @@ function slugify(str) {
 }
 
 async function main() {
+  // The asset library is not committed to the repo. On hosts without it (e.g.
+  // Vercel), keep the committed catalog.json rather than regenerating an empty
+  // one. Regeneration only happens where the source assets are present.
+  try {
+    await fs.access(ASSETS_DIR);
+  } catch {
+    console.log(
+      `[catalog] asset library not found (${path.relative(ROOT, ASSETS_DIR)}) — keeping committed catalog.json`
+    );
+    return;
+  }
+
   const featuredIndex = await buildFeaturedIndex();
   const categories = [];
   for (const cat of CATEGORIES) {
