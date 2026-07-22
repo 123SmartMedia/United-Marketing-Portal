@@ -411,7 +411,7 @@ async function main() {
   );
 
   const catalog = {
-    generatedAt: new Date().toISOString(),
+    // (no build timestamp — keeps catalog.json diffs meaningful, not churny)
     site: {
       name: 'United Marketing Desk',
       org: 'United Mortgage Corp',
