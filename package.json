@@ -5,6 +5,7 @@
   "description": "United Mortgage marketing hub — rebuild of unitedmarketingdesk.com for marketing.unitedmortgage.com",
   "scripts": {
     "catalog": "node scripts/build-catalog.mjs",
+    "upload-assets": "node scripts/upload-to-r2.mjs",
     "predev": "node scripts/build-catalog.mjs",
     "dev": "next dev",
     "prebuild": "node scripts/build-catalog.mjs",
@@ -18,8 +19,10 @@
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
+    "@aws-sdk/client-s3": "^3.1092.0",
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.20",
+    "mime-types": "^3.0.2",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.0.0"
   }

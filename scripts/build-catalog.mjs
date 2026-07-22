@@ -23,8 +23,12 @@ const ROOT = path.resolve(__dirname, '..');
 const ASSETS_DIR = path.join(ROOT, 'UnitedMarketingDesk-Assets');
 const OUT_FILE = path.join(ROOT, 'src', 'content', 'catalog.json');
 
-// Public URL base for assets (served via the public/assets junction).
-const ASSET_URL_BASE = '/assets';
+// Public URL base for assets.
+//  - Local dev / no env: '/assets' (served via the public/assets junction).
+//  - Production: set ASSET_BASE_URL to the R2 public bucket URL (e.g.
+//    https://assets.marketing.unitedmortgage.com) and the catalog bakes
+//    absolute CDN URLs. Vercel runs prebuild, so the deploy picks this up.
+const ASSET_URL_BASE = (process.env.ASSET_BASE_URL || '/assets').replace(/\/+$/, '');
 
 /**
  * Curated category metadata. `folder` maps to a directory in the asset library.
