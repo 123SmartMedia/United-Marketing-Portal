@@ -1,9 +1,8 @@
 import { NextResponse } from 'next/server';
 import { deliverSubmission } from '@/lib/submissions';
+import { requestSchema, simpleSchema } from '@/lib/requestSchema';
 
 export const runtime = 'nodejs';
-
-const MAX_LEN = 5000;
 
 export async function POST(request) {
   let body;
@@ -18,31 +17,21 @@ export async function POST(request) {
     return NextResponse.json({ ok: true });
   }
 
-  const submission = {
-    requestType: clip(body.requestType) || 'Custom Request',
-    name: clip(body.name),
-    email: clip(body.email),
-    phone: clip(body.phone),
-    nmls: clip(body.nmls),
-    asset: clip(body.asset),
-    details: clip(body.details),
-  };
-
-  if (!submission.name || !submission.email) {
-    return NextResponse.json({ ok: false, error: 'missing_required' }, { status: 400 });
-  }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(submission.email)) {
-    return NextResponse.json({ ok: false, error: 'invalid_email' }, { status: 400 });
+  // The multi-step wizard sends source:'wizard' → validate the full schema
+  // (conditional requirements enforced server-side). The lightweight inline
+  // forms send fewer fields → validate the lenient schema.
+  const schema = body.source === 'wizard' ? requestSchema : simpleSchema;
+  const parsed = schema.safeParse(body);
+  if (!parsed.success) {
+    return NextResponse.json(
+      { ok: false, error: 'validation', issues: parsed.error.issues.map((i) => i.path.join('.')) },
+      { status: 400 }
+    );
   }
 
-  const result = await deliverSubmission(submission);
+  const result = await deliverSubmission(parsed.data);
   if (!result.delivered) {
     return NextResponse.json({ ok: false, error: 'delivery_failed' }, { status: 502 });
   }
   return NextResponse.json({ ok: true });
-}
-
-function clip(v) {
-  if (typeof v !== 'string') return '';
-  return v.trim().slice(0, MAX_LEN);
 }

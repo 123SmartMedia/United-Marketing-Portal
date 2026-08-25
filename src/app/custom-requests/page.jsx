@@ -1,4 +1,4 @@
-import RequestForm from '@/components/RequestForm';
+import RequestWizard from '@/components/RequestWizard';
 import { SITE } from '@/lib/catalog';
 
 export const metadata = {
@@ -49,7 +49,7 @@ export default function CustomRequestsPage() {
 
         <div className="lg:col-span-3">
           <div className="rounded-2xl border border-navy-100 bg-white p-6 shadow-sm sm:p-8">
-            <RequestForm defaultType="Custom / Other" />
+            <RequestWizard defaultType="Custom / Other" />
           </div>
         </div>
       </div>
