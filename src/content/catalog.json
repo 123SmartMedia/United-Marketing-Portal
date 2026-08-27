@@ -314,6 +314,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 15,
       "itemCount": 14
     },
@@ -1395,6 +1396,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 87,
       "itemCount": 19
     },
@@ -1769,6 +1771,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 22,
       "itemCount": 14
     },
@@ -1800,7 +1803,8 @@
           "thumbnail": "Social-Media/2-1-Buy-Down-Program.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "programs"
         },
         {
           "slug": "4th-of-july-holiday",
@@ -1820,7 +1824,8 @@
           "thumbnail": "Social-Media/4th-of-July_Holiday.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "4th-of-july-holidays",
@@ -1840,7 +1845,8 @@
           "thumbnail": "Social-Media/4th-of-July_Holidays-Illustration.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "4th-of-july-reel",
@@ -1860,7 +1866,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "aerial-push-in-shot-of-modern-single-story-duplex-2023-11-27-04-56-03-utc",
@@ -1880,7 +1887,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "air-force-holiday",
@@ -1900,7 +1908,8 @@
           "thumbnail": "Social-Media/Air-Force_Holiday.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "air-force-holidays",
@@ -1920,7 +1929,8 @@
           "thumbnail": "Social-Media/Air-Force_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "bank-statement-program",
@@ -1940,7 +1950,8 @@
           "thumbnail": "Social-Media/Bank-Statement-Program.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "programs"
         },
         {
           "slug": "brendan-skrocki-new-hire",
@@ -1960,7 +1971,8 @@
           "thumbnail": "Social-Media/Brendan-Skrocki_New-Hire-03.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "team"
         },
         {
           "slug": "brendan-skrocko-headshot-circle",
@@ -1980,7 +1992,8 @@
           "thumbnail": "Social-Media/Brendan-Skrocko-headshot-circle.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "team"
         },
         {
           "slug": "carousel-cartoon-holidays",
@@ -2000,7 +2013,8 @@
           "thumbnail": "Social-Media/Carousel-Cartoon-holidays-scaled.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "christmas-holidays-colors-ball",
@@ -2020,7 +2034,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "christmas-holidays-house",
@@ -2040,7 +2055,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "christmas-holidays-personalised",
@@ -2070,7 +2086,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "cinco-de-mayo",
@@ -2090,7 +2107,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "coast-guard-holiday",
@@ -2110,7 +2128,8 @@
           "thumbnail": "Social-Media/Coast-Guard_Holiday.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "coast-guard-holidays",
@@ -2130,7 +2149,8 @@
           "thumbnail": "Social-Media/Coast-Guard_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "dscr-cartoon",
@@ -2160,7 +2180,8 @@
           "thumbnail": "Social-Media/DSCR-Cartoon_1.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "programs"
         },
         {
           "slug": "erika-martinez-personalized-slide",
@@ -2180,7 +2201,8 @@
           "thumbnail": "Social-Media/Erika-Martinez-Personalized-Slide-scaled.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "personalized"
         },
         {
           "slug": "for-personalized",
@@ -2200,7 +2222,8 @@
           "thumbnail": "Social-Media/for-Personalized-scaled.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "personalized"
         },
         {
           "slug": "happy-fathers-day",
@@ -2220,7 +2243,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-fathers-day-holidays",
@@ -2240,7 +2264,8 @@
           "thumbnail": "Social-Media/Happy-Fathers-Day-_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-fathers-day-illustration-post",
@@ -2260,7 +2285,8 @@
           "thumbnail": "Social-Media/Happy-Fathers-Day-_Illustration-Post.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-holidays",
@@ -2291,7 +2317,8 @@
           "types": [
             "video",
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-juneteenth",
@@ -2311,7 +2338,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-mothers-day",
@@ -2331,7 +2359,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-national-moving-month",
@@ -2351,7 +2380,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "happy-new-year",
@@ -2382,7 +2412,8 @@
           "types": [
             "video",
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "juneteenth-holidays",
@@ -2402,7 +2433,8 @@
           "thumbnail": "Social-Media/Juneteenth-_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "juneteenth-holidays-cartoon",
@@ -2422,7 +2454,8 @@
           "thumbnail": "Social-Media/Juneteenth-_Holidays-Cartoon.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "memorial-day",
@@ -2442,7 +2475,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "mockup-cartoon-posts",
@@ -2462,7 +2496,8 @@
           "thumbnail": "Social-Media/Mockup-Cartoon-Posts-scaled.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "mothers-day-holidays-template",
@@ -2492,7 +2527,8 @@
           "thumbnail": "Social-Media/Mothers-Day_Holidays-Template-1.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "national-military-appreciation-month-holiday",
@@ -2512,7 +2548,8 @@
           "thumbnail": "Social-Media/National-Military-Appreciation-Month_Holiday.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "national-military-appreciation-month-holidays",
@@ -2532,7 +2569,8 @@
           "thumbnail": "Social-Media/National-Military-Appreciation-Month_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "navy-holidays",
@@ -2552,7 +2590,8 @@
           "thumbnail": "Social-Media/Navy_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "navy-holidays-template",
@@ -2572,7 +2611,8 @@
           "thumbnail": "Social-Media/Navy_Holidays-Template.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "news-announcement",
@@ -2592,7 +2632,8 @@
           "thumbnail": "Social-Media/News-Announcement-02.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "news"
         },
         {
           "slug": "promo-product-corporate",
@@ -2612,7 +2653,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "news"
         },
         {
           "slug": "renovation-loan-program",
@@ -2642,7 +2684,8 @@
           "thumbnail": "Social-Media/Renovation-Loan-Program-Featured-Image.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "programs"
         },
         {
           "slug": "social-media-0",
@@ -2662,7 +2705,8 @@
           "thumbnail": "Social-Media/0-scaled.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "social-media-1",
@@ -2702,7 +2746,8 @@
           "thumbnail": "Social-Media/1-1.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "social-media-2",
@@ -2742,7 +2787,8 @@
           "thumbnail": "Social-Media/2-1.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "social-media-3",
@@ -2762,7 +2808,8 @@
           "thumbnail": "Social-Media/3.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "socialpost222555222",
@@ -2782,7 +2829,8 @@
           "thumbnail": "Social-Media/socialpost222555222.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "other"
         },
         {
           "slug": "space-force-holidays",
@@ -2802,7 +2850,8 @@
           "thumbnail": "Social-Media/Space-Force_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "space-force-holidays-template",
@@ -2822,7 +2871,8 @@
           "thumbnail": "Social-Media/Space-Force_Holidays-Template.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "summers-holidays",
@@ -2842,7 +2892,8 @@
           "thumbnail": "Social-Media/Summers_Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "summers-illustration-holidays",
@@ -2862,7 +2913,8 @@
           "thumbnail": "Social-Media/Summers-Illustration-Holidays.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "testimonial-reel-william-maier-iv",
@@ -2882,7 +2934,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "testimonials"
         },
         {
           "slug": "testimonial-thumbnail",
@@ -2902,7 +2955,8 @@
           "thumbnail": "Social-Media/Testimonial-Thumbnail-3.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "testimonials"
         },
         {
           "slug": "u-s-army-holiday",
@@ -2922,7 +2976,8 @@
           "thumbnail": "Social-Media/U.S-Army_Holiday.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "u-s-army-holiday-cartoon",
@@ -2942,7 +2997,8 @@
           "thumbnail": "Social-Media/U.S-Army_Holiday-Cartoon.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "veterans-program",
@@ -2962,7 +3018,8 @@
           "thumbnail": "Social-Media/Veterans-Program-Featured-Image.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "programs"
         },
         {
           "slug": "welcoming-spring",
@@ -2982,7 +3039,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "welcoming-spring-homebuyer-season-clasic",
@@ -3002,7 +3060,8 @@
           "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Clasic.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "welcoming-spring-homebuyer-season-ilustration",
@@ -3022,7 +3081,8 @@
           "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Ilustration.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "welcoming-spring-homebuyer-season-pets",
@@ -3042,7 +3102,8 @@
           "thumbnail": "Social-Media/Welcoming-Spring-Homebuyer-Season-Pets.png",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "welcoming-summer",
@@ -3062,7 +3123,8 @@
           "thumbnail": null,
           "types": [
             "video"
-          ]
+          ],
+          "group": "holidays"
         },
         {
           "slug": "winters-holiday",
@@ -3082,7 +3144,45 @@
           "thumbnail": "Social-Media/Winters-Holiday.jpg",
           "types": [
             "image"
-          ]
+          ],
+          "group": "holidays"
+        }
+      ],
+      "groups": [
+        {
+          "key": "testimonials",
+          "title": "Testimonials",
+          "count": 2
+        },
+        {
+          "key": "team",
+          "title": "Team & New Hires",
+          "count": 2
+        },
+        {
+          "key": "programs",
+          "title": "Program Posts",
+          "count": 5
+        },
+        {
+          "key": "holidays",
+          "title": "Holidays & Seasonal",
+          "count": 40
+        },
+        {
+          "key": "personalized",
+          "title": "Personalized & Custom",
+          "count": 2
+        },
+        {
+          "key": "news",
+          "title": "News & Announcements",
+          "count": 2
+        },
+        {
+          "key": "other",
+          "title": "Other",
+          "count": 7
         }
       ],
       "fileCount": 70,
@@ -3379,6 +3479,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 14,
       "itemCount": 14
     },
@@ -3673,6 +3774,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 14,
       "itemCount": 14
     },
@@ -3957,6 +4059,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 15,
       "itemCount": 12
     },
@@ -4071,6 +4174,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 5,
       "itemCount": 5
     },
@@ -4155,6 +4259,7 @@
           ]
         }
       ],
+      "groups": null,
       "fileCount": 5,
       "itemCount": 2
     }

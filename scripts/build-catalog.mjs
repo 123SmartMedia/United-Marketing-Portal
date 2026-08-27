@@ -134,6 +134,33 @@ const CATEGORIES = [
 // by leading-token overlap so PDF-only items still get a real thumbnail.
 const FEATURED_DIR = 'Site-Design';
 
+/**
+ * Sub-groups for categories that benefit from organization by meaning.
+ * Keyed by category slug. Each group's `test` runs against an item's filenames;
+ * first match wins, so order = priority. The last group is the catch-all.
+ */
+const CATEGORY_GROUPS = {
+  'social-media': [
+    { key: 'testimonials', title: 'Testimonials', test: /testimonial/i },
+    { key: 'team', title: 'Team & New Hires', test: /new-hire|headshot|spotlight/i },
+    { key: 'programs', title: 'Program Posts', test: /program|dscr|buy-down|bank-statement|renovation/i },
+    {
+      key: 'holidays',
+      title: 'Holidays & Seasonal',
+      test: /holiday|4th-of-july|christmas|cinco|father|mother|new-year|juneteenth|memorial|thanksgiving|moving-month|military-appreciation|welcoming|winter|summer|spring|air-force|coast-guard|navy|space-force|army/i,
+    },
+    { key: 'personalized', title: 'Personalized & Custom', test: /personali[sz]ed|custom/i },
+    { key: 'news', title: 'News & Announcements', test: /news|announcement|promo|corporate/i },
+    { key: 'other', title: 'Other', test: /.*/ },
+  ],
+};
+
+function classifyItem(item, groups) {
+  const haystack = item.files.map((f) => f.name).join(' ');
+  const match = groups.find((g) => g.test.test(haystack)) || groups[groups.length - 1];
+  return match.key;
+}
+
 const IMAGE_EXT = new Set(['.png', '.jpg', '.jpeg', '.webp', '.gif']);
 const VIDEO_EXT = new Set(['.mp4', '.mov', '.webm']);
 const DOC_EXT = new Set(['.pdf', '.docx', '.doc']);
@@ -334,6 +361,19 @@ async function scanCategory(cat, featuredIndex) {
 
   items.sort((a, b) => a.title.localeCompare(b.title));
 
+  // Optional sub-grouping by meaning (e.g. Social Media → Holidays, Programs…).
+  let groups = null;
+  const groupDefs = CATEGORY_GROUPS[cat.slug];
+  if (groupDefs) {
+    for (const item of items) item.group = classifyItem(item, groupDefs);
+    const counts = new Map();
+    for (const item of items) counts.set(item.group, (counts.get(item.group) || 0) + 1);
+    // Emit groups in the defined priority order, only those that have items.
+    groups = groupDefs
+      .filter((g) => counts.get(g.key))
+      .map((g) => ({ key: g.key, title: g.title, count: counts.get(g.key) }));
+  }
+
   return {
     slug: cat.slug,
     folder: cat.folder,
@@ -344,6 +384,7 @@ async function scanCategory(cat, featuredIndex) {
     requestForm: cat.requestForm || false,
     image: cat.image ? assetPath(cat.image) : null,
     items,
+    groups,
     fileCount: files.length,
     itemCount: items.length,
   };
