@@ -1,15 +1,22 @@
 import Link from 'next/link';
 import AssetThumb from './AssetThumb';
+import { isNew } from '@/lib/groups';
 
 /** Grid card linking to an item's detail page. Used on category and browse pages. */
 export default function ItemCard({ item, categorySlug }) {
   const fileCount = item.files.length;
   const badges = describeBadges(item);
+  const fresh = isNew(item.createdAt);
   return (
     <Link
       href={`/category/${categorySlug}/${item.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg"
+      className="group relative flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg"
     >
+      {fresh && (
+        <span className="absolute left-2 top-2 z-10 rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-amber-950 shadow">
+          New
+        </span>
+      )}
       <AssetThumb item={item} rounded="rounded-none" className="aspect-[4/3] w-full" />
       <div className="flex flex-1 flex-col p-4">
         <h3 className="line-clamp-2 text-sm font-semibold text-navy-900 group-hover:text-brand-600">
