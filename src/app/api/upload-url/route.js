@@ -15,9 +15,16 @@ export const runtime = 'nodejs';
  * NEXT_PUBLIC_ASSET_BASE_URL. If uploads aren't configured, returns a clear
  * error the client turns into a friendly "email them instead" message.
  */
+// Env values pasted into a dashboard can pick up stray whitespace or accidental
+// duplication across newlines. Take the first non-empty line, trimmed.
+const cleanEnv = (v) => (v || '').split(/[\r\n]+/).map((s) => s.trim()).filter(Boolean)[0] || '';
+
 export async function POST(request) {
-  const { R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_BUCKET } = process.env;
-  const publicBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+  const R2_ACCOUNT_ID = cleanEnv(process.env.R2_ACCOUNT_ID);
+  const R2_ACCESS_KEY_ID = cleanEnv(process.env.R2_ACCESS_KEY_ID);
+  const R2_SECRET_ACCESS_KEY = cleanEnv(process.env.R2_SECRET_ACCESS_KEY);
+  const R2_BUCKET = cleanEnv(process.env.R2_BUCKET);
+  const publicBase = cleanEnv(process.env.NEXT_PUBLIC_ASSET_BASE_URL);
   if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY || !R2_BUCKET || !publicBase) {
     return NextResponse.json({ ok: false, error: 'uploads_not_configured' }, { status: 503 });
   }
