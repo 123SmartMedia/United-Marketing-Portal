@@ -43,10 +43,16 @@ export const FINISHES = [
   'Not Sure - Recommend One',
 ];
 
-export const MAX_FILES = 5;
-export const MAX_TOTAL_BYTES = 10 * 1024 * 1024; // 10MB total
-export const ACCEPTED_UPLOAD_TYPES = ['application/pdf', 'image/png', 'image/jpeg'];
-export const ACCEPTED_UPLOAD_EXT = '.pdf,.png,.jpg,.jpeg';
+// Upload limits and the accepted-type list live in src/lib/uploadRules.js, which
+// the browser, /api/jira/requests/init and /api/jira/requests/finalize all read.
+// Re-exported here so existing importers keep working and the two can never drift.
+export {
+  MAX_FILES,
+  MAX_TOTAL_BYTES,
+  MAX_FILE_BYTES,
+  ACCEPTED_UPLOAD_TYPES,
+  ACCEPTED_UPLOAD_EXT,
+} from './uploadRules.js';
 
 const nonEmpty = (msg) => z.string().trim().min(1, msg);
 
@@ -88,14 +94,30 @@ export const requestSchema = z
     keyMessage: nonEmpty('Please describe the key message or call to action.'),
     additionalDetails: z.string().optional().default(''),
 
-    // Step 3 — uploads (metadata only; bytes go straight to R2)
+    // Step 3 — uploads. Metadata only; the bytes never pass through here.
+    //
+    // The two-stage flow means this array is validated TWICE with a different
+    // shape each time. At `/init` the files have not been uploaded yet and carry
+    // no `key` — the server mints one per file and returns it. At `/finalize`
+    // each file echoes back the key it was uploaded under, and the server checks
+    // that key against the signed token before touching the object.
+    //
+    // `key` is therefore optional here, and its real enforcement lives in
+    // finalize (token-permitted set + per-request namespace), never in the
+    // schema. No readable URL is ever held client-side.
     files: z
       .array(
         z.object({
           name: z.string(),
-          url: z.string(),
           size: z.number(),
           type: z.string(),
+          key: z.string().optional(),
+          // Browser-only. The live File object the dropzone is holding, kept in
+          // form state so the wizard can PUT the bytes once init returns a
+          // presigned URL. zodResolver strips unknown keys, so it must be
+          // declared here or it would be silently dropped before submit.
+          // It is never serialized: the wizard sends name/size/type only.
+          file: z.any().optional(),
         })
       )
       .optional()
