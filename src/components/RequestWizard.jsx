@@ -309,10 +309,21 @@ export default function RequestWizard({
   }
 
   const submitting = status === 'submitting';
-  // When Turnstile is configured, the submit button waits for a token. This is a
-  // convenience only — the server redeems the token regardless of what the
-  // browser did, so bypassing this check achieves nothing.
-  const challengePending = Boolean(turnstileSiteKey) && !turnstileToken;
+
+  // Submit waits for a token, ALWAYS — including when no site key is configured.
+  //
+  // This used to read `Boolean(turnstileSiteKey) && !turnstileToken`, which meant
+  // a missing TURNSTILE_SITE_KEY disabled the gate instead of the
+  // form: the widget rendered nothing, Submit was enabled, and the server
+  // rejected the finished submission with "Please complete the Verify you're
+  // human challenge". A misconfiguration must block early and visibly, not after
+  // the user has filled in three steps.
+  //
+  // This is a convenience gate only. The server redeems the token against
+  // Cloudflare regardless of what the browser did, so bypassing it achieves
+  // nothing — see /api/jira/requests/init.
+  const challengeUnavailable = !turnstileSiteKey;
+  const challengePending = !turnstileToken;
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate>
@@ -402,14 +413,6 @@ export default function RequestWizard({
               <TextareaField id="keyMessage" label="Key message / call to action" required registration={register('keyMessage')} error={errors.keyMessage?.message} placeholder="e.g., Call for a free home valuation, mention our 3.99% special…" />
               <TextareaField id="additionalDetails" label="Additional details" registration={register('additionalDetails')} placeholder="Any specific colors, layout preferences, or text to include?" rows={3} />
               <FileDropzone value={files} onChange={(f) => setValue('files', f, { shouldValidate: false })} />
-              <TurnstileWidget
-                siteKey={turnstileSiteKey}
-                action={turnstileAction}
-                resetSignal={challengeReset}
-                error={turnstileError}
-                onToken={setTurnstileToken}
-                onExpire={() => setTurnstileToken('')}
-              />
               <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900">
                 <span className="font-semibold">Do not include borrower information.</span> Marketing requests
                 are not a secure channel — never attach or describe Social Security numbers, bank statements,
@@ -419,6 +422,28 @@ export default function RequestWizard({
           )}
         </div>
       </fieldset>
+
+      {/* Verification — last step only, directly above Submit so the user sees the
+          challenge and the button it controls together. */}
+      {isLast && (
+        <section
+          aria-labelledby="verification-heading"
+          className="mt-8 rounded-2xl border border-navy-100 bg-navy-50/40 p-5"
+        >
+          <h2 id="verification-heading" className="mb-3 text-sm font-semibold text-navy-900">
+            Verification
+          </h2>
+          <TurnstileWidget
+            siteKey={turnstileSiteKey}
+            action={turnstileAction}
+            resetSignal={challengeReset}
+            error={turnstileError}
+            onToken={setTurnstileToken}
+            onExpire={() => setTurnstileToken('')}
+            onUnavailable={() => setTurnstileToken('')}
+          />
+        </section>
+      )}
 
       {/* Navigation */}
       <div className="mt-8 flex items-center justify-between gap-3">
@@ -438,9 +463,10 @@ export default function RequestWizard({
         {isLast ? (
           <button
             type="submit"
-            disabled={submitting || challengePending}
+            data-testid="submit-request"
+            disabled={submitting || challengePending || challengeUnavailable}
             aria-busy={submitting}
-            aria-describedby={challengePending ? 'challenge-pending' : undefined}
+            aria-describedby={challengePending || challengeUnavailable ? 'challenge-pending' : undefined}
             className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3 text-sm font-semibold text-white transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60"
           >
             {submitting && (
@@ -463,9 +489,14 @@ export default function RequestWizard({
         {submitting ? 'Submitting your request…' : ''}
       </div>
 
-      {challengePending && isLast && (
-        <p id="challenge-pending" className="mt-3 text-center text-xs text-navy-400">
-          Complete the verification above to enable Submit.
+      {isLast && (challengePending || challengeUnavailable) && (
+        <p
+          id="challenge-pending"
+          className={`mt-3 text-center text-xs ${challengeUnavailable ? 'text-red-600' : 'text-navy-400'}`}
+        >
+          {challengeUnavailable
+            ? 'Submission is unavailable until verification is restored.'
+            : 'Complete the verification above to enable Submit.'}
         </p>
       )}
 

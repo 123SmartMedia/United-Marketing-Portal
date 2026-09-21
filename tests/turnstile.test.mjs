@@ -58,7 +58,7 @@ test('verification is enforced exactly when a secret key is configured', () => {
 test('config tolerates the whitespace a dashboard paste can introduce', () => {
   const parsed = getTurnstileConfig({
     TURNSTILE_SECRET_KEY: `  ${TEST_KEYS.SECRET_ALWAYS_PASSES}  \n stray-second-line`,
-    NEXT_PUBLIC_TURNSTILE_SITE_KEY: TEST_KEYS.SITE_ALWAYS_PASSES,
+    TURNSTILE_SITE_KEY: TEST_KEYS.SITE_ALWAYS_PASSES,
     TURNSTILE_EXPECTED_HOSTNAME: HOSTNAME,
   });
   assert.equal(parsed.secretKey, TEST_KEYS.SECRET_ALWAYS_PASSES);

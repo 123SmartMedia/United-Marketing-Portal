@@ -31,6 +31,8 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.20",
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1",
     "mime-types": "^3.0.2",
     "postcss": "^8.5.1",
     "tailwindcss": "^4.0.0"

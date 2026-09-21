@@ -14,12 +14,38 @@ import { useCallback, useEffect, useId, useRef, useState } from 'react';
  * Cloudflare before doing any work. If the script cannot load, the field simply
  * has no token and the server rejects the submission with a clear message.
  *
+ * ## It never renders nothing
+ *
+ * This component previously returned `null` when `siteKey` was empty. Combined
+ * with a submit button that only waited for a token *when a site key existed*,
+ * a missing `TURNSTILE_SITE_KEY` produced a page with no visible
+ * challenge and an enabled Submit button — which then failed server-side with
+ * "Please complete the Verify you're human challenge". The failure was invisible
+ * until the user had filled in the whole form.
+ *
+ * So: a missing site key now renders a visible, explicit error, and reports
+ * `unavailable` to the parent so Submit is disabled. A misconfiguration is loud.
+ *
+ * ## Unmounting invalidates the token
+ *
+ * `turnstile.remove()` destroys the challenge, so any token it produced stops
+ * being redeemable. The wizard unmounts this component when the user navigates
+ * back a step, so the cleanup path clears the parent's token too — otherwise a
+ * user who solved the challenge, went back, and returned would hold a stale
+ * token that looks valid to the button and is rejected by Cloudflare.
+ *
  * Accessibility: the widget is labelled, its status is announced politely, and
  * errors are associated with it via aria-describedby.
  */
 
 const SCRIPT_ID = 'cf-turnstile-script';
 const SCRIPT_SRC = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+
+export const TURNSTILE_UNAVAILABLE_MESSAGE =
+  'Verification is temporarily unavailable. Please contact the marketing desk.';
+
+const SCRIPT_BLOCKED_MESSAGE =
+  'The verification challenge couldn’t load. Check your connection or disable content blocking, then try again.';
 
 /** Load the Turnstile script once per page. */
 function loadTurnstileScript() {
@@ -46,26 +72,45 @@ function loadTurnstileScript() {
   });
 }
 
-export default function TurnstileWidget({ siteKey, action, onToken, onExpire, resetSignal = 0, error }) {
+export default function TurnstileWidget({
+  siteKey,
+  action,
+  onToken,
+  onExpire,
+  onUnavailable,
+  resetSignal = 0,
+  error,
+}) {
   const containerRef = useRef(null);
   const widgetIdRef = useRef(null);
-  const callbacksRef = useRef({ onToken, onExpire });
+  const callbacksRef = useRef({ onToken, onExpire, onUnavailable });
   const [scriptError, setScriptError] = useState(false);
   const labelId = useId();
   const errorId = useId();
 
+  const configured = Boolean(siteKey);
+
   // Keep the latest callbacks reachable without re-rendering the widget.
-  callbacksRef.current = { onToken, onExpire };
+  callbacksRef.current = { onToken, onExpire, onUnavailable };
 
   const handleToken = useCallback((token) => callbacksRef.current.onToken?.(token), []);
   const handleExpire = useCallback(() => callbacksRef.current.onExpire?.(), []);
 
+  // Tell the parent the challenge cannot be completed, so Submit stays disabled
+  // rather than letting the user fill in a form that will be rejected.
   useEffect(() => {
-    if (!siteKey) return undefined;
+    if (!configured) callbacksRef.current.onUnavailable?.('missing_site_key');
+    else if (scriptError) callbacksRef.current.onUnavailable?.('script_blocked');
+  }, [configured, scriptError]);
+
+  useEffect(() => {
+    if (!configured) return undefined;
     let cancelled = false;
 
     loadTurnstileScript()
       .then((turnstile) => {
+        // The ref guard also covers React Strict Mode's double effect invocation
+        // in development, which would otherwise render two widgets.
         if (cancelled || !containerRef.current || widgetIdRef.current !== null) return;
         widgetIdRef.current = turnstile.render(containerRef.current, {
           sitekey: siteKey,
@@ -75,6 +120,8 @@ export default function TurnstileWidget({ siteKey, action, onToken, onExpire, re
           'timeout-callback': handleExpire,
           'error-callback': handleExpire,
           theme: 'light',
+          // Managed widget, always shown. Never 'invisible' or 'interaction-only':
+          // the user must be able to see that a challenge exists.
           appearance: 'always',
         });
       })
@@ -88,9 +135,12 @@ export default function TurnstileWidget({ siteKey, action, onToken, onExpire, re
       if (turnstile && widgetIdRef.current !== null) {
         turnstile.remove(widgetIdRef.current);
         widgetIdRef.current = null;
+        // Removing the widget invalidates whatever token it minted, so the
+        // parent must not keep holding one. Back-navigation lands here.
+        callbacksRef.current.onExpire?.();
       }
     };
-  }, [siteKey, action, handleToken, handleExpire]);
+  }, [configured, siteKey, action, handleToken, handleExpire]);
 
   // Parent bumps `resetSignal` after a submission completes or fails, so the
   // spent token is replaced rather than re-sent.
@@ -103,19 +153,30 @@ export default function TurnstileWidget({ siteKey, action, onToken, onExpire, re
     }
   }, [resetSignal]);
 
-  if (!siteKey) return null;
+  // A missing site key is a configuration fault, not a reason to render nothing.
+  if (!configured) {
+    return (
+      <div data-testid="turnstile-unavailable">
+        <span className="mb-1.5 block text-sm font-medium text-navy-800">
+          Verify you’re human <span className="text-brand-500">*</span>
+        </span>
+        <p role="alert" className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+          {TURNSTILE_UNAVAILABLE_MESSAGE}
+        </p>
+      </div>
+    );
+  }
 
-  const shownError = scriptError
-    ? 'The verification challenge couldn’t load. Check your connection or disable content blocking, then try again.'
-    : error;
+  const shownError = scriptError ? SCRIPT_BLOCKED_MESSAGE : error;
 
   return (
-    <div>
+    <div data-testid="turnstile-widget">
       <span id={labelId} className="mb-1.5 block text-sm font-medium text-navy-800">
         Verify you’re human <span className="text-brand-500">*</span>
       </span>
       <div
         ref={containerRef}
+        data-testid="turnstile-container"
         role="group"
         aria-labelledby={labelId}
         aria-describedby={shownError ? errorId : undefined}

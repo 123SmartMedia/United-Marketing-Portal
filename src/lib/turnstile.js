@@ -61,7 +61,10 @@ export const DEFAULT_TURNSTILE_ACTION = 'marketing_request';
 export function getTurnstileConfig(env = process.env) {
   return {
     secretKey: cleanEnv(env.TURNSTILE_SECRET_KEY),
-    siteKey: cleanEnv(env.NEXT_PUBLIC_TURNSTILE_SITE_KEY),
+    // Reported for diagnostics only — verification never needs the site key.
+    // Not NEXT_PUBLIC_*: Next inlines those at build time, which would freeze the
+    // value. See src/lib/turnstileClientConfig.js.
+    siteKey: cleanEnv(env.TURNSTILE_SITE_KEY),
     expectedHostname: cleanEnv(env.TURNSTILE_EXPECTED_HOSTNAME),
     // TURNSTILE_ACTION is the pre-hardening name, kept as a back-compat alias so
     // an existing deployment does not silently lose its action check.

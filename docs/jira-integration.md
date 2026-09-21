@@ -232,11 +232,47 @@ and `JIRA_SERVICE_ACCOUNT_EMAIL`.
 
 | Variable | Notes |
 | --- | --- |
-| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Public by design — identifies the widget |
-| `TURNSTILE_SECRET_KEY` | **Secret.** Server-side only |
+| `TURNSTILE_SITE_KEY` | **Public**, but supplied at runtime through the dynamic Server Component — see below |
+| `TURNSTILE_SECRET_KEY` | **Secret. Server-only.** Never a prop, never in a client component |
 | `TURNSTILE_EXPECTED_HOSTNAME` | `marketing.unitedmortgage.com` |
-| `TURNSTILE_ACTION` | Optional; enforced when set |
+| `TURNSTILE_EXPECTED_ACTION` | `marketing_request` (`TURNSTILE_ACTION` is a legacy alias) |
 | `TURNSTILE_TIMEOUT_MS` | Optional, default `10000` |
+| ~~`NEXT_PUBLIC_TURNSTILE_SITE_KEY`~~ | **Deprecated and no longer read.** Remove it from Vercel |
+
+#### Why the site key has no `NEXT_PUBLIC_` prefix
+
+`TURNSTILE_SITE_KEY` is **public** — it identifies the widget and is visible in the
+page source. The missing prefix is about *when* it is read, not about hiding it.
+
+Next.js replaces every `process.env.NEXT_PUBLIC_*` reference with a string literal
+during `next build`, **in server code as well as client code**. The value is frozen
+into the bundle, so marking a page `force-dynamic` does not make it re-readable: the
+page would still serve whatever string existed at build time.
+
+That is exactly how production served an empty site key. `/custom-requests` had been
+prerendered before the key was added in Vercel, so the deployed HTML carried
+`turnstileSiteKey=""`; adding the key afterwards changed nothing because no rebuild
+had happened.
+
+Without the prefix, the variable stays a real `process.env` lookup.
+`/custom-requests` is `export const dynamic = 'force-dynamic'` and reads it through
+`src/lib/turnstileClientConfig.js` **inside the component body** (not at module
+scope, which would only re-evaluate per lambda cold start). So:
+
+> **Rotating `TURNSTILE_SITE_KEY` does not require rebuilding**, once this dynamic
+> implementation is deployed. Change it in Vercel and the next request picks it up.
+> No rebuild, no redeploy.
+
+`TURNSTILE_SECRET_KEY` is read **only** by `src/lib/turnstile.js`, server-side, when
+redeeming a token against Cloudflare siteverify. It never becomes a prop and never
+reaches a client component; tests assert both.
+
+#### Fail-closed behaviour
+
+A missing `TURNSTILE_SITE_KEY` does **not** hide the widget. The page renders
+"Verification is temporarily unavailable. Please contact the marketing desk." and
+Submit stays disabled. The earlier code returned `null` and left Submit enabled,
+so the user only discovered the problem after filling in the whole form.
 
 ### Storage and access
 
@@ -697,7 +733,9 @@ the Vercel function logs for it.
 - [ ] `npm run jira:smoke -- --confirm` created a ticket in the right project/type
 
 **Bot protection and access**
-- [ ] Turnstile site created; `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` set
+- [ ] Turnstile site created; `TURNSTILE_SITE_KEY` and `TURNSTILE_SECRET_KEY` set
+- [ ] Deprecated `NEXT_PUBLIC_TURNSTILE_SITE_KEY` removed from Vercel
+- [ ] Loaded `/custom-requests` and confirmed the widget is VISIBLE above Submit
 - [ ] `TURNSTILE_EXPECTED_HOSTNAME` matches the production host
 - [ ] Verified the function logs show **no** "bot protection is DISABLED" warning
 - [ ] `ALLOWED_REQUEST_EMAIL_DOMAINS=unitedmortgage.com` set in production
