@@ -1,6 +1,21 @@
 import RequestWizard from '@/components/RequestWizard';
 import { SITE } from '@/lib/catalog';
 
+// Customer-facing Jira portal link. Not a secret — it is the same URL a loan
+// officer would be sent in a Jira notification. Read server-side so the value
+// stays configurable per environment without a NEXT_PUBLIC_ variable.
+const PORTAL_URL =
+  (process.env.JIRA_PORTAL_URL || '').trim() ||
+  'https://unitedmortgage.atlassian.net/servicedesk/customer/portal/68';
+
+// Cloudflare Turnstile. The SITE key is public by design — it identifies the
+// widget. The secret key stays server-side and is never referenced here.
+const TURNSTILE_SITE_KEY = (process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '').trim();
+// The action name the widget declares; the server requires the same value.
+// TURNSTILE_ACTION is the older name, kept as a fallback.
+const TURNSTILE_ACTION =
+  (process.env.TURNSTILE_EXPECTED_ACTION || process.env.TURNSTILE_ACTION || 'marketing_request').trim();
+
 export const metadata = {
   title: 'Custom Requests',
   description: 'Request custom or cobranded marketing materials from the United Mortgage marketing desk.',
@@ -45,11 +60,30 @@ export default function CustomRequestsPage() {
               <li>A new asset or program not yet in the library</li>
             </ul>
           </div>
+
+          <p className="mt-6 text-sm">
+            <a
+              href={PORTAL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-600 hover:text-brand-700"
+            >
+              Open Marketing Requests Portal &rarr;
+            </a>
+            <span className="mt-1 block text-xs text-navy-400">
+              Track the status of requests you&rsquo;ve already submitted.
+            </span>
+          </p>
         </div>
 
         <div className="lg:col-span-3">
           <div className="rounded-2xl border border-navy-100 bg-white p-6 shadow-sm sm:p-8">
-            <RequestWizard defaultType="Custom / Other" />
+            <RequestWizard
+              defaultType="Custom / Other"
+              portalUrl={PORTAL_URL}
+              turnstileSiteKey={TURNSTILE_SITE_KEY}
+              turnstileAction={TURNSTILE_ACTION}
+            />
           </div>
         </div>
       </div>

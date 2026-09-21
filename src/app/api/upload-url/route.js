@@ -1,72 +1,43 @@
 import { NextResponse } from 'next/server';
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
-import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
-import { randomUUID } from 'node:crypto';
-import { ACCEPTED_UPLOAD_TYPES, MAX_TOTAL_BYTES } from '@/lib/requestSchema';
 
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 /**
- * Issues a short-lived presigned PUT URL so the browser can upload a request
- * attachment straight to R2 — bypassing the 4.5MB serverless body limit. The
- * public URL (served from the R2 bucket) is returned for the request email.
+ * RETIRED — this endpoint no longer issues upload URLs.
+ * ------------------------------------------------------
+ * It used to presign a PUT for any same-origin caller that asked, before any bot
+ * check had run. That made the private bucket a free file host for anything that
+ * could find the route: Turnstile was verified at submission time, long after the
+ * bytes had already been written.
  *
- * Requires R2_* env vars (same creds as scripts/upload-to-r2.mjs) plus
- * NEXT_PUBLIC_ASSET_BASE_URL. If uploads aren't configured, returns a clear
- * error the client turns into a friendly "email them instead" message.
+ * Uploads now go through the two-stage flow, where a presigned PUT is only minted
+ * after the honeypot, the rate limit, form and attachment validation, the
+ * submitter allow-list and a redeemed Turnstile token have all passed:
+ *
+ *   POST /api/jira/requests/init      -> validates everything, then returns the
+ *                                        presigned PUTs and a signed finalize token
+ *   POST /api/jira/requests/finalize  -> verifies the token and the stored objects,
+ *                                        creates the Jira request, attaches, cleans up
+ *
+ * The route is kept (rather than deleted) so a stale cached bundle gets an
+ * explicit, actionable 410 instead of a confusing 404 that looks like an outage.
+ *
+ * NOTE: `/api/admin/upload-url` is a SEPARATE, authenticated endpoint used by the
+ * admin CMS to publish public assets. It is unaffected by this change.
  */
-// Env values pasted into a dashboard can pick up stray whitespace or accidental
-// duplication across newlines. Take the first non-empty line, trimmed.
-const cleanEnv = (v) => (v || '').split(/[\r\n]+/).map((s) => s.trim()).filter(Boolean)[0] || '';
 
-export async function POST(request) {
-  const R2_ACCOUNT_ID = cleanEnv(process.env.R2_ACCOUNT_ID);
-  const R2_ACCESS_KEY_ID = cleanEnv(process.env.R2_ACCESS_KEY_ID);
-  const R2_SECRET_ACCESS_KEY = cleanEnv(process.env.R2_SECRET_ACCESS_KEY);
-  const R2_BUCKET = cleanEnv(process.env.R2_BUCKET);
-  const publicBase = cleanEnv(process.env.NEXT_PUBLIC_ASSET_BASE_URL);
-  if (!R2_ACCOUNT_ID || !R2_ACCESS_KEY_ID || !R2_SECRET_ACCESS_KEY || !R2_BUCKET || !publicBase) {
-    return NextResponse.json({ ok: false, error: 'uploads_not_configured' }, { status: 503 });
-  }
+const GONE = {
+  ok: false,
+  error: 'endpoint_retired',
+  message:
+    'This upload endpoint has been replaced. Please refresh the page and submit your request again.',
+};
 
-  let body;
-  try {
-    body = await request.json();
-  } catch {
-    return NextResponse.json({ ok: false, error: 'invalid_json' }, { status: 400 });
-  }
+export async function POST() {
+  return NextResponse.json(GONE, { status: 410 });
+}
 
-  const { filename, contentType, size } = body || {};
-  if (!filename || typeof filename !== 'string') {
-    return NextResponse.json({ ok: false, error: 'missing_filename' }, { status: 400 });
-  }
-  if (!ACCEPTED_UPLOAD_TYPES.includes(contentType)) {
-    return NextResponse.json({ ok: false, error: 'unsupported_type' }, { status: 400 });
-  }
-  if (typeof size !== 'number' || size <= 0 || size > MAX_TOTAL_BYTES) {
-    return NextResponse.json({ ok: false, error: 'invalid_size' }, { status: 400 });
-  }
-
-  // Namespaced, collision-proof key under requests/. Sanitize the filename.
-  const safe = filename.replace(/[^a-zA-Z0-9._-]/g, '_').slice(0, 120);
-  const key = `requests/${new Date().toISOString().slice(0, 10)}/${randomUUID()}-${safe}`;
-
-  const client = new S3Client({
-    region: 'auto',
-    endpoint: `https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com`,
-    credentials: { accessKeyId: R2_ACCESS_KEY_ID, secretAccessKey: R2_SECRET_ACCESS_KEY },
-  });
-
-  try {
-    const uploadUrl = await getSignedUrl(
-      client,
-      new PutObjectCommand({ Bucket: R2_BUCKET, Key: key, ContentType: contentType }),
-      { expiresIn: 300 }
-    );
-    const publicUrl = `${publicBase.replace(/\/+$/, '')}/${key.split('/').map(encodeURIComponent).join('/')}`;
-    return NextResponse.json({ ok: true, uploadUrl, publicUrl, key });
-  } catch (err) {
-    console.error('[upload-url] presign failed:', err);
-    return NextResponse.json({ ok: false, error: 'presign_failed' }, { status: 500 });
-  }
+export async function GET() {
+  return NextResponse.json(GONE, { status: 410 });
 }

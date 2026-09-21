@@ -94,6 +94,13 @@ function sendEmail(submission) {
 }
 
 // Courtesy acknowledgment → the submitter, reply-to the marketing desk.
+// Exported so the Jira submission route can keep sending it: with the
+// integration account as Jira reporter, Jira itself does not notify the
+// submitter, and dropping the ack would be a regression.
+export function sendAcknowledgment(submission) {
+  return sendAck(submission);
+}
+
 function sendAck(submission) {
   return sendViaSendGrid(
     {

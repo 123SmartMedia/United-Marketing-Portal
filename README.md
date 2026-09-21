@@ -10,7 +10,9 @@ content instead of hard-coded pages. See `marketingportal_project.md` for the fu
 - **Next.js 16** (App Router) + **React 19**, deployed static-first on Vercel
 - **Tailwind CSS v4** for styling (navy + blue brand theme from the UM logo)
 - Catalog generated from the asset library into `src/content/catalog.json`
-- Request forms post to a serverless route (`/api/requests`) → email via SendGrid
+- `/custom-requests` posts to `/api/jira/requests` → **Jira Service Management**
+  (see [docs/jira-integration.md](docs/jira-integration.md))
+- The lightweight inline forms post to `/api/requests` → email via SendGrid
 
 ## How it's wired
 
@@ -46,6 +48,18 @@ npm run dev            # regenerates catalog, starts dev server on :3000
 
 Copy `.env.example` → `.env.local`. Without `SENDGRID_API_KEY`, form submissions
 are logged to the server console instead of emailed — the UX still works end to end.
+
+Without the `JIRA_*` variables, `/custom-requests` returns a clear "not available"
+message rather than guessing Jira IDs. To configure it:
+
+```bash
+npm run jira:discover            # find the verified service desk / request type IDs
+npm test                         # unit + endpoint tests (Jira mocked, creates nothing)
+npm run jira:smoke -- --confirm  # create one labelled test ticket, once configured
+```
+
+See [docs/jira-integration.md](docs/jira-integration.md) for the full setup,
+field mapping, security notes and launch checklist.
 
 ## Building
 

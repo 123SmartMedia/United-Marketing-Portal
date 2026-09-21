@@ -2,29 +2,41 @@
 
 import { useRef, useState, useCallback } from 'react';
 import {
-  ACCEPTED_UPLOAD_TYPES,
   ACCEPTED_UPLOAD_EXT,
   MAX_FILES,
   MAX_TOTAL_BYTES,
-} from '@/lib/requestSchema';
+  MAX_FILE_BYTES,
+  validateFileMetadata,
+  messageForUploadError,
+} from '@/lib/uploadRules';
 
 /**
- * Drag-and-drop upload zone. Files go straight to R2 via a short-lived presigned
- * PUT URL (keeps large files off the 4.5MB serverless body limit); only the
- * resulting {name, url, size, type} metadata is stored in the form and emailed.
+ * Drag-and-drop upload zone.
+ *
+ * Nothing is uploaded here. Selecting a file only validates it and holds the
+ * browser's File object in form state; the bytes are not sent anywhere until the
+ * user actually submits and `/api/jira/requests/init` has redeemed a Turnstile
+ * token and handed back a presigned PUT.
+ *
+ * That ordering is the point. Uploading on selection meant a bot that never
+ * submitted the form could still write to the bucket, because the bot check ran
+ * at submission time — after the bytes had landed.
+ *
+ * Each entry is { name, size, type, file }. `file` is the live File object and
+ * never leaves the browser as JSON; only name/size/type are sent to the server.
+ * No readable URL and no object key exists on the client until init returns one.
  *
  * Controlled: `value` is the files array, `onChange` replaces it.
  */
 export default function FileDropzone({ value = [], onChange, error }) {
   const inputRef = useRef(null);
   const [dragging, setDragging] = useState(false);
-  const [busy, setBusy] = useState(false);
   const [localError, setLocalError] = useState('');
 
   const totalBytes = value.reduce((n, f) => n + f.size, 0);
 
   const addFiles = useCallback(
-    async (fileList) => {
+    (fileList) => {
       setLocalError('');
       const incoming = Array.from(fileList);
       if (!incoming.length) return;
@@ -33,51 +45,26 @@ export default function FileDropzone({ value = [], onChange, error }) {
         setLocalError(`You can attach up to ${MAX_FILES} files.`);
         return;
       }
-      for (const f of incoming) {
-        if (!ACCEPTED_UPLOAD_TYPES.includes(f.type)) {
-          setLocalError(`“${f.name}” isn’t a supported type. Use PDF, PNG, or JPG.`);
+
+      // Same rules the server enforces — both read src/lib/uploadRules.js, so the
+      // browser can never be more permissive than /init and /finalize.
+      const accepted = [];
+      let projected = totalBytes;
+      for (const file of incoming) {
+        const check = validateFileMetadata({ name: file.name, size: file.size, type: file.type });
+        if (!check.ok) {
+          setLocalError(messageForUploadError(check.error, check.fileName));
           return;
         }
-      }
-      const projected = totalBytes + incoming.reduce((n, f) => n + f.size, 0);
-      if (projected > MAX_TOTAL_BYTES) {
-        setLocalError(`Total upload size must stay under ${(MAX_TOTAL_BYTES / 1024 / 1024).toFixed(0)}MB.`);
-        return;
+        projected += file.size;
+        if (projected > MAX_TOTAL_BYTES) {
+          setLocalError(`Total upload size must stay under ${(MAX_TOTAL_BYTES / 1024 / 1024).toFixed(0)}MB.`);
+          return;
+        }
+        accepted.push({ name: check.file.name, size: check.file.size, type: check.file.type, file });
       }
 
-      setBusy(true);
-      const uploaded = [];
-      try {
-        for (const file of incoming) {
-          // 1) Ask the server for a presigned PUT URL.
-          const presignRes = await fetch('/api/upload-url', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ filename: file.name, contentType: file.type, size: file.size }),
-          });
-          const presign = await presignRes.json();
-          if (!presignRes.ok || !presign.uploadUrl) {
-            throw new Error(presign.error || 'presign_failed');
-          }
-          // 2) Upload the bytes straight to R2.
-          const putRes = await fetch(presign.uploadUrl, {
-            method: 'PUT',
-            headers: { 'Content-Type': file.type },
-            body: file,
-          });
-          if (!putRes.ok) throw new Error('upload_failed');
-          uploaded.push({ name: file.name, url: presign.publicUrl, size: file.size, type: file.type });
-        }
-        onChange([...value, ...uploaded]);
-      } catch (err) {
-        setLocalError(
-          err.message === 'uploads_not_configured'
-            ? 'File uploads aren’t enabled yet. You can submit without files and email them to marketing@unitedmortgage.com.'
-            : 'Upload failed. Please try again, or submit without files.'
-        );
-      } finally {
-        setBusy(false);
-      }
+      onChange([...value, ...accepted]);
     },
     [value, onChange, totalBytes]
   );
@@ -101,7 +88,10 @@ export default function FileDropzone({ value = [], onChange, error }) {
       <span className="mb-1.5 block text-sm font-medium text-navy-800">
         Upload headshots, logos, or reference examples
       </span>
-      <p className="mb-2 text-xs text-navy-400">PDF, PNG, or JPG · up to {MAX_FILES} files · 10MB total · optional</p>
+      <p className="mb-2 text-xs text-navy-400">
+        PDF, PNG, or JPG · up to {MAX_FILES} files · {(MAX_TOTAL_BYTES / 1024 / 1024).toFixed(0)}MB total · optional
+        — files are sent when you submit
+      </p>
 
       <button
         type="button"
@@ -121,7 +111,7 @@ export default function FileDropzone({ value = [], onChange, error }) {
           <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
         <span className="text-sm font-medium text-navy-700">
-          {busy ? 'Uploading…' : 'Drag & drop files here, or tap to browse'}
+          Drag &amp; drop files here, or tap to browse
         </span>
       </button>
 
@@ -140,7 +130,7 @@ export default function FileDropzone({ value = [], onChange, error }) {
       {value.length > 0 && (
         <ul className="mt-3 space-y-2">
           {value.map((f, i) => (
-            <li key={f.url} className="flex items-center gap-3 rounded-xl border border-navy-100 bg-white px-3 py-2">
+            <li key={`${f.name}-${f.size}-${i}`} className="flex items-center gap-3 rounded-xl border border-navy-100 bg-white px-3 py-2">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-50 text-[10px] font-bold uppercase text-emerald-600">
                 {(f.name.split('.').pop() || '?').slice(0, 4)}
               </span>

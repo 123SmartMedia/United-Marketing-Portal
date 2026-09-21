@@ -2,6 +2,7 @@
   "name": "united-marketing-desk",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "description": "United Mortgage marketing hub — rebuild of unitedmarketingdesk.com for marketing.unitedmortgage.com",
   "scripts": {
     "catalog": "node scripts/build-catalog.mjs",
@@ -11,7 +12,10 @@
     "prebuild": "node scripts/build-catalog.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --import ./tests/setup.mjs --test \"tests/**/*.test.mjs\"",
+    "jira:discover": "node scripts/jira-discover.mjs",
+    "jira:smoke": "node scripts/jira-smoke-test.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1118.0",
