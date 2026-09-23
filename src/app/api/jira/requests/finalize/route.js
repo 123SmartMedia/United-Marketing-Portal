@@ -18,6 +18,7 @@ import {
   deleteUploadObject,
   keyBelongsToRequest,
 } from '@/lib/r2Uploads';
+import { logFailure, logRejection, logSuccess, ROUTES, STAGES } from '@/lib/observability';
 import {
   verifyFinalizeToken,
   hashPayload,
@@ -105,7 +106,14 @@ export async function POST(request) {
   }
 
   if (!isFinalizeConfigured()) {
-    console.error('[jira-finalize] UPLOAD_FINALIZE_SECRET is not set (or is too short)', { correlationId });
+    logFailure({
+      route: ROUTES.FINALIZE,
+      stage: STAGES.UPLOAD_CONFIGURATION,
+      category: 'uploads_not_configured',
+      status: 503,
+      correlationId,
+      missingEnv: ['UPLOAD_FINALIZE_SECRET'],
+    });
     return reject(
       503,
       {
@@ -119,7 +127,13 @@ export async function POST(request) {
   // 1. The signed token: signature, structure and expiry.
   const verified = verifyFinalizeToken(body.finalizeToken);
   if (!verified.ok) {
-    console.warn('[jira-finalize] token rejected', { correlationId, reason: verified.error });
+    logRejection({
+      route: ROUTES.FINALIZE,
+      stage: STAGES.FINALIZE_TOKEN_VERIFICATION,
+      category: verified.error,
+      status: 400,
+      correlationId,
+    });
     return reject(400, { ...TOKEN_REJECTED, resetChallenge: true }, correlationId);
   }
   const { rid: requestId, keys: permittedKeys, hash: expectedHash, idem } = verified.payload;
@@ -151,7 +165,14 @@ export async function POST(request) {
   // 3. The payload hash. Any edited field between init and finalize lands here.
   const actualHash = hashPayload({ ...submission, files }, getFinalizeSecret());
   if (!hashesMatch(actualHash, expectedHash)) {
-    console.warn('[jira-finalize] payload hash mismatch', { correlationId, requestId });
+    logRejection({
+      route: ROUTES.FINALIZE,
+      stage: STAGES.PAYLOAD_HASH_VERIFICATION,
+      category: 'payload_hash_mismatch',
+      status: 400,
+      correlationId,
+      requestId,
+    });
     return reject(400, { ...TOKEN_REJECTED, resetChallenge: true }, correlationId);
   }
 
@@ -166,7 +187,14 @@ export async function POST(request) {
   }
   for (const key of submittedKeys) {
     if (!permitted.has(key) || !keyBelongsToRequest(key, requestId)) {
-      console.warn('[jira-finalize] unexpected object key rejected', { correlationId, requestId });
+      logRejection({
+        route: ROUTES.FINALIZE,
+        stage: STAGES.OBJECT_KEY_VERIFICATION,
+        category: 'unexpected_object_key',
+        status: 400,
+        correlationId,
+        requestId,
+      });
       return reject(400, { ...TOKEN_REJECTED }, correlationId);
     }
   }
@@ -220,7 +248,14 @@ export async function POST(request) {
       // Size must match exactly. A larger object than declared is how a caller
       // would try to turn a 10MB allowance into unbounded storage.
       if (head.size !== file.size || head.size <= 0 || head.size > MAX_FILE_BYTES) {
-        console.warn('[jira-finalize] size mismatch', { correlationId, fileName: file.name });
+        logRejection({
+          route: ROUTES.FINALIZE,
+          stage: STAGES.R2_VERIFICATION,
+          category: 'upload_size_mismatch',
+          status: 400,
+          correlationId,
+          requestId,
+        });
         await purge(allKeys, uploadsConfig, r2Client);
         return reject(
           400,
@@ -232,7 +267,14 @@ export async function POST(request) {
       // signature was bypassed or the object was replaced.
       const storedType = head.contentType.split(';')[0].trim().toLowerCase();
       if (storedType !== file.type || !ALLOWED_TYPES[storedType]) {
-        console.warn('[jira-finalize] content-type mismatch', { correlationId, fileName: file.name });
+        logRejection({
+          route: ROUTES.FINALIZE,
+          stage: STAGES.R2_VERIFICATION,
+          category: 'upload_type_mismatch',
+          status: 400,
+          correlationId,
+          requestId,
+        });
         await purge(allKeys, uploadsConfig, r2Client);
         return reject(
           400,
@@ -245,9 +287,16 @@ export async function POST(request) {
     // 7. Jira.
     const config = getJiraConfig();
     if (!isJiraConfigured(config)) {
-      console.error('[jira-finalize] integration not configured', {
+      // The missing variable NAMES are the whole point of this line: an
+       // operator with only the Reference ID can see exactly what to set.
+      logFailure({
+        route: ROUTES.FINALIZE,
+        stage: STAGES.JIRA_CONFIGURATION,
+        category: JIRA_ERRORS.NOT_CONFIGURED,
+        status: statusForError(JIRA_ERRORS.NOT_CONFIGURED),
         correlationId,
-        missing: missingJiraConfig(config),
+        requestId,
+        missingEnv: missingJiraConfig(config),
       });
       await purge(allKeys, uploadsConfig, r2Client);
       return reject(
@@ -278,7 +327,15 @@ export async function POST(request) {
       if (config.emailFallbackEnabled) {
         const delivery = await deliverSubmission(submission);
         if (delivery.delivered) {
-          console.warn('[jira-finalize] fell back to email delivery', { correlationId, reason: result.error });
+          logRejection({
+            route: ROUTES.FINALIZE,
+            stage: STAGES.JIRA_REQUEST_CREATION,
+            category: result.error,
+            status: 200,
+            upstreamStatus: result.status,
+            correlationId,
+            outcome: 'email_fallback',
+          });
           const payload = {
             ok: true,
             requestKey: null,
@@ -324,10 +381,16 @@ export async function POST(request) {
       // Anything Jira never accepted stays private until the lifecycle rule
       // expires it, which keeps a short manual-retry window open.
       if (outcome.attached === 0) {
-        console.error('[jira-finalize] all attachments failed after retries', {
+        logFailure({
+          route: ROUTES.FINALIZE,
+          stage: STAGES.JIRA_ATTACHMENT,
+          category: outcome.error || 'attachment_upload_failed',
+          status: 201,
           correlationId,
-          issueKey: result.issueKey,
           attempts: outcome.attempts,
+          fileCount: staged.length,
+          attachedCount: 0,
+          failedCount: staged.length,
         });
       }
     }
@@ -336,7 +399,14 @@ export async function POST(request) {
       try {
         await sendAcknowledgment({ ...submission, requestKey: result.issueKey });
       } catch (err) {
-        console.error('[jira-finalize] acknowledgment email failed', { correlationId, reason: err?.message });
+        logFailure({
+          route: ROUTES.FINALIZE,
+          stage: STAGES.ACKNOWLEDGMENT_EMAIL,
+          category: 'ack_email_failed',
+          status: 201,
+          correlationId,
+          reason: err?.message,
+        });
       }
     }
 
@@ -351,7 +421,14 @@ export async function POST(request) {
     store.remember(submissionId, payload);
     return NextResponse.json(payload, { status: 201 });
   } catch (err) {
-    console.error('[jira-finalize] unhandled error', { correlationId, reason: err?.message });
+    logFailure({
+      route: ROUTES.FINALIZE,
+      stage: STAGES.UNHANDLED,
+      category: JIRA_ERRORS.UNAVAILABLE,
+      status: statusForError(JIRA_ERRORS.UNAVAILABLE),
+      correlationId,
+      reason: err?.message,
+    });
     // An unknown failure leaves objects behind rather than deleting files that
     // may already belong to a created ticket. The lifecycle rule collects them.
     return reject(

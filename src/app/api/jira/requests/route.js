@@ -15,6 +15,7 @@ import { verifyTurnstileToken, TURNSTILE_RESULTS } from '@/lib/turnstile';
 import { checkRateLimit, clientIp, isSameOrigin } from '@/lib/rateLimit';
 import { getIdempotencyStore } from '@/lib/idempotencyStore';
 import { deliverSubmission, sendAcknowledgment } from '@/lib/submissions';
+import { logFailure, logRejection, ROUTES, STAGES } from '@/lib/observability';
 
 export const runtime = 'nodejs';
 // Never prerender or cache a submission endpoint.
@@ -121,7 +122,13 @@ export async function POST(request) {
   // This form is for United Mortgage personnel. The HTML email field proves
   // nothing on a public page, so the domain gate is enforced here.
   if (!isAllowedSubmitterEmail(submission.email)) {
-    console.warn('[jira] submission rejected — email domain not allowed', { correlationId });
+    logRejection({
+      route: ROUTES.SUBMIT,
+      stage: STAGES.EMAIL_DOMAIN_VALIDATION,
+      category: 'email_domain_not_allowed',
+      status: 403,
+      correlationId,
+    });
     return NextResponse.json(
       {
         ok: false,
@@ -172,7 +179,17 @@ export async function POST(request) {
     });
     if (!turnstile.ok) {
       // The result code is safe to log; the token itself never is.
-      console.warn('[jira] submission rejected by Turnstile', { correlationId, result: turnstile.result });
+      logRejection({
+        route: ROUTES.SUBMIT,
+        stage: STAGES.TURNSTILE_VALIDATION,
+        category: turnstile.result,
+        status:
+          turnstile.result === TURNSTILE_RESULTS.UNAVAILABLE ||
+          turnstile.result === TURNSTILE_RESULTS.TIMEOUT
+            ? 503
+            : 400,
+        correlationId,
+      });
       return NextResponse.json(
         {
           ok: false,
@@ -197,9 +214,13 @@ export async function POST(request) {
 
     const config = getJiraConfig();
     if (!isJiraConfigured(config)) {
-      console.error('[jira] submission rejected — integration not configured', {
+      logFailure({
+        route: ROUTES.SUBMIT,
+        stage: STAGES.JIRA_CONFIGURATION,
+        category: JIRA_ERRORS.NOT_CONFIGURED,
+        status: statusForError(JIRA_ERRORS.NOT_CONFIGURED),
         correlationId,
-        missing: missingJiraConfig(config),
+        missingEnv: missingJiraConfig(config),
       });
       return fail(JIRA_ERRORS.NOT_CONFIGURED, { correlationId });
     }
@@ -215,7 +236,15 @@ export async function POST(request) {
       if (config.emailFallbackEnabled) {
         const delivery = await deliverSubmission(submission);
         if (delivery.delivered) {
-          console.warn('[jira] fell back to email delivery', { correlationId, reason: result.error });
+          logRejection({
+          route: ROUTES.SUBMIT,
+          stage: STAGES.JIRA_REQUEST_CREATION,
+          category: result.error,
+          status: 200,
+          upstreamStatus: result.status,
+          correlationId,
+          outcome: 'email_fallback',
+        });
           const payload = {
             ok: true,
             requestKey: null,
@@ -243,7 +272,14 @@ export async function POST(request) {
       try {
         await sendAcknowledgment({ ...submission, requestKey: result.issueKey });
       } catch (err) {
-        console.error('[jira] acknowledgment email failed', { correlationId, reason: err?.message });
+        logFailure({
+          route: ROUTES.SUBMIT,
+          stage: STAGES.ACKNOWLEDGMENT_EMAIL,
+          category: 'ack_email_failed',
+          status: 201,
+          correlationId,
+          reason: err?.message,
+        });
       }
     }
 
@@ -258,7 +294,14 @@ export async function POST(request) {
     store.remember(submissionId, payload);
     return NextResponse.json(payload, { status: 201 });
   } catch (err) {
-    console.error('[jira] unhandled submission error', { correlationId, reason: err?.message });
+    logFailure({
+      route: ROUTES.SUBMIT,
+      stage: STAGES.UNHANDLED,
+      category: JIRA_ERRORS.UNAVAILABLE,
+      status: statusForError(JIRA_ERRORS.UNAVAILABLE),
+      correlationId,
+      reason: err?.message,
+    });
     return fail(JIRA_ERRORS.UNAVAILABLE, { correlationId });
   } finally {
     store.release(submissionId);

@@ -13,6 +13,7 @@ import {
   createR2Client,
   createRequestUploadKey,
 } from '@/lib/r2Uploads';
+import { logFailure, logRejection, logSuccess, ROUTES, STAGES } from '@/lib/observability';
 import {
   createFinalizeToken,
   hashPayload,
@@ -147,7 +148,13 @@ export async function POST(request) {
 
   // 5. Submitter allow-list.
   if (!isAllowedSubmitterEmail(submission.email)) {
-    console.warn('[jira-init] rejected — email domain not allowed', { correlationId });
+    logRejection({
+      route: ROUTES.INIT,
+      stage: STAGES.EMAIL_DOMAIN_VALIDATION,
+      category: 'email_domain_not_allowed',
+      status: 403,
+      correlationId,
+    });
     return NextResponse.json(
       {
         ok: false,
@@ -172,8 +179,22 @@ export async function POST(request) {
     idempotencyKey: submissionId || correlationId,
   });
   if (!turnstile.ok) {
+    // A timeout and an unreachable siteverify are both OUR problem, not the
+    // caller's input: answer 503 so a monitor sees a dependency failure and the
+    // browser does not report it as a validation error.
+    const turnstileStatus =
+      turnstile.result === TURNSTILE_RESULTS.UNAVAILABLE ||
+      turnstile.result === TURNSTILE_RESULTS.TIMEOUT
+        ? 503
+        : 400;
     // The outcome code is safe to log. The token never is.
-    console.warn('[jira-init] rejected by Turnstile', { correlationId, result: turnstile.result });
+    logRejection({
+      route: ROUTES.INIT,
+      stage: STAGES.TURNSTILE_VALIDATION,
+      category: turnstile.result,
+      status: turnstileStatus,
+      correlationId,
+    });
     return NextResponse.json(
       {
         ok: false,
@@ -182,23 +203,21 @@ export async function POST(request) {
         correlationId,
         resetChallenge: true,
       },
-      {
-        // A timeout and an unreachable siteverify are both OUR problem, not the
-        // caller's input: answer 503 so a monitor sees a dependency failure and
-        // the browser does not report it as a validation error.
-        status:
-          turnstile.result === TURNSTILE_RESULTS.UNAVAILABLE ||
-          turnstile.result === TURNSTILE_RESULTS.TIMEOUT
-            ? 503
-            : 400,
-      }
+      { status: turnstileStatus }
     );
   }
 
   // ---- Past every gate. Only now do we mint anything. ----
 
   if (!isFinalizeConfigured()) {
-    console.error('[jira-init] UPLOAD_FINALIZE_SECRET is not set (or is too short)', { correlationId });
+    logFailure({
+      route: ROUTES.INIT,
+      stage: STAGES.FINALIZE_TOKEN_SIGNING,
+      category: 'uploads_not_configured',
+      status: 503,
+      correlationId,
+      missingEnv: ['UPLOAD_FINALIZE_SECRET'],
+    });
     return NextResponse.json(
       {
         ok: false,
@@ -231,10 +250,15 @@ export async function POST(request) {
   if (files.length && uploadsConfig.usingPublicAssetBucket) {
     // Staging attachments in the public catalog bucket would make them readable
     // by URL. The keys are still random, but this is a misconfiguration.
-    console.warn(
-      '[jira-init] R2_UPLOADS_BUCKET is not set — staging request attachments in the PUBLIC asset bucket. ' +
-        'Create a dedicated private bucket before launch.'
-    );
+    logRejection({
+      route: ROUTES.INIT,
+      stage: STAGES.UPLOAD_CONFIGURATION,
+      category: 'staging_in_public_bucket',
+      status: 200,
+      correlationId,
+      requestId,
+      missingEnv: ['R2_UPLOADS_BUCKET'],
+    });
   }
 
   let uploads = [];
@@ -260,7 +284,15 @@ export async function POST(request) {
         })
       );
     } catch (err) {
-      console.error('[jira-init] presign failed', { correlationId, reason: err?.name || 'unknown' });
+      logFailure({
+        route: ROUTES.INIT,
+        stage: STAGES.R2_PRESIGN,
+        category: 'presign_failed',
+        status: 500,
+        correlationId,
+        requestId,
+        reason: err?.name || 'unknown',
+      });
       return NextResponse.json(
         {
           ok: false,
@@ -281,11 +313,15 @@ export async function POST(request) {
     ttlSeconds: FINALIZE_TOKEN_TTL_SECONDS,
   });
 
-  console.info('[jira-init] issued upload plan', {
+  // Never the keys, never the URLs — only how many were issued.
+  logSuccess({
+    route: ROUTES.INIT,
+    stage: STAGES.R2_PRESIGN,
+    category: 'upload_plan_issued',
+    status: 200,
     correlationId,
     requestId,
     fileCount: files.length,
-    // Never the keys, never the URLs.
   });
 
   return NextResponse.json(
