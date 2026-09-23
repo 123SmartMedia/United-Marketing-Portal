@@ -352,23 +352,60 @@ else, and none appears in a UI component.
 - The description lists attachment **filenames and sizes only**. No object key, no
   URL, no storage host — see §9.
 
-**Verified IDs.** Read-only Atlassian MCP discovery ran on 2026-09-21. Full record,
-including every option ID and the reasoning behind each mapping decision:
-[`jira-mcp-discovery.md`](jira-mcp-discovery.md).
+**Verified IDs.** Confirmed against live service desk 68 with
+`npm run jira:discover`. Full record: [`jira-mcp-discovery.md`](jira-mcp-discovery.md).
 
 | Fact | Value | Status |
 | --- | --- | --- |
-| Cloud ID | `638ffe69-6618-4145-b60c-144cfb581ff6` | **verified (MCP)** |
-| Project | Marketing Requests / `MKT` / id `10100` / `service_desk` | **verified (MCP)** |
-| Service desk ID | `68` | **verified (MCP)** |
-| Portal ID | `68` | **verified (MCP)** |
-| Target issue type | `10078` — *Submit a request or incident* | **verified (MCP)** |
-| Request type ID | — | **NOT verified** |
-| `dateNeeded` → MKT – Requested Due Date | `customfield_10301` | **verified (MCP)** |
+| Cloud ID | `638ffe69-6618-4145-b60c-144cfb581ff6` | **verified** |
+| Project | Marketing Requests / `MKT` / id `10100` / `service_desk` | **verified** |
+| Service desk ID | `68` | **verified** |
+| Portal ID | `68` | **verified** |
+| Target issue type | `10078` — *Submit a request or incident* | **verified** |
+| Default request type | `123` — General / Other | **verified (REST)** |
+| Print route | `117` — Flyer / Print / Co-branded Piece | **verified (REST)** |
+| Digital route | `116` — Social Media Post / Graphic | **verified (REST)** |
+| `dateNeeded` → MKT – Requested Due Date | `customfield_10301` | **verified (REST)** |
 
-On this instance the portal ID and the service desk ID are both `68` — the general
-warning above still holds elsewhere, but here Jira itself reports
-`serviceDeskId: "68"` on every MKT request.
+### Category routing
+
+The form's six categories are routed server-side to the request type that
+matches, so work lands in the right portal queue:
+
+| Website category | Request type | Portal group |
+| --- | --- | --- |
+| Business Cards | `117` Flyer / Print / Co-branded Piece | 82 Print & Co-brand |
+| Letterhead / Stationery | `117` | 82 |
+| Co-branded Flyer / Folder | `117` | 82 |
+| Print Order (Banner, Yard Sign, Door Hanger) | `117` | 82 |
+| Digital Asset Creation | `116` Social Media Post / Graphic | 81 Content |
+| Custom / Other | `123` General / Other | 88 Other |
+
+All routing lives in `src/lib/jira/requestTypeRouting.js`.
+
+**The browser can never choose a request type.** The routing key is the
+`requestType` enum value, already validated by `requestSchema.js`; the ID itself
+always comes from the environment. Nothing reads a request type ID from the
+request body, and a value that looks like one routes to the default as an
+unknown category. A test asserts this end to end.
+
+**Routing is optional and fails safe.** `JIRA_REQUEST_TYPE_PRINT` and
+`JIRA_REQUEST_TYPE_DIGITAL` may be unset; that category then uses
+`JIRA_REQUEST_TYPE_ID` and logs a safe warning naming the variable to set. The
+warning carries a route name, a variable name and a reason code — never form
+content or personal data.
+
+Falling back is always safe because discovery proved request types 116, 117 and
+123 are **field-identical**: same fields, `summary` the only required one,
+attachments enabled on all three, and all three accept `customfield_10301`. No
+category can produce a field error another would not. Routing therefore changes
+which queue a ticket lands in and nothing else.
+
+> Why not one request type plus a "Marketing Request Category" field? Because the
+> eight portal-visible types differ in **no** field, workflow or required-field
+> respect — only in name and portal group. A category field would duplicate a
+> taxonomy the Jira admin already built, in a second place, guaranteeing drift.
+> SLAs key off *priority*, not request type, so routing does not affect them.
 
 > **Still open.** The Atlassian MCP catalog contains **no `/rest/servicedeskapi/`
 > operations**, so the portal's request type list, each request type's own field

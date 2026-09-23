@@ -32,7 +32,10 @@ const ENV = {
   JIRA_CLOUD_ID: 'cloud-id-1234',
   JIRA_API_TOKEN: 'jira-token-placeholder',
   JIRA_SERVICE_DESK_ID: '68',
-  JIRA_REQUEST_TYPE_ID: '118',
+  JIRA_REQUEST_TYPE_ID: '123',
+  JIRA_REQUEST_TYPE_PRINT: '117',
+  JIRA_REQUEST_TYPE_DIGITAL: '116',
+  JIRA_FIELD_DATE_NEEDED: 'customfield_10301',
   JIRA_ACK_EMAIL: 'false',
   JIRA_EMAIL_FALLBACK: 'false',
   JIRA_ATTACHMENTS_ENABLED: 'true',
@@ -817,4 +820,133 @@ test('rate limiting still applies to the init stage', async () => {
     }
     assert.equal(last.status, 429);
   });
+});
+
+// ============================================================================
+// Category routing and the structured requested date
+// ============================================================================
+
+/** Run the full two-stage flow and return the body Jira was asked to create. */
+async function capturedCreateBody(overrides = {}, envOverrides = {}) {
+  let created = null;
+  const r2Log = mockR2({});
+  try {
+    return await withEnv(
+      mockNetwork({
+        turnstile: turnstilePasses,
+        jira: (href, init) => {
+          if (href.endsWith('/rest/servicedeskapi/request')) {
+            created = JSON.parse(init.body);
+            return jiraCreated('MKT-777');
+          }
+          if (href.includes('attachTemporaryFile')) {
+            return new Response(JSON.stringify({ temporaryAttachments: [{ temporaryAttachmentId: 't' }] }), {
+              status: 201, headers: { 'Content-Type': 'application/json' },
+            });
+          }
+          return new Response(JSON.stringify({}), { status: 201, headers: { 'Content-Type': 'application/json' } });
+        },
+      }),
+      async () => {
+        const { json: init } = await runInit({
+          ...BASE_FORM, ...overrides, files: [], submissionId: `sub-${Math.random().toString(36).slice(2, 10)}`,
+          turnstileToken: 'token',
+        });
+        assert.ok(init.ok, `init failed: ${init.error}`);
+        const response = await FINALIZE(post('/api/jira/requests/finalize', {
+          ...BASE_FORM, ...overrides, files: [], finalizeToken: init.finalizeToken,
+        }));
+        return { response, json: await response.json(), created };
+      },
+      envOverrides
+    );
+  } finally {
+    r2Log.restore();
+  }
+}
+
+for (const [category, expected] of [
+  ['Business Cards', '117'],
+  ['Letterhead / Stationery', '117'],
+  ['Co-branded Flyer / Folder', '117'],
+  ['Print Order (Banner, Yard Sign, Door Hanger)', '117'],
+  ['Digital Asset Creation', '116'],
+  ['Custom / Other', '123'],
+]) {
+  test(`"${category}" reaches Jira as request type ${expected}`, async () => {
+    // The print categories open a Step 2 that requires printingNeeded.
+    const extra = /Business Cards|Letterhead|Print Order/.test(category) ? { printingNeeded: 'No' } : {};
+    const { response, created } = await capturedCreateBody({ requestType: category, ...extra });
+    assert.equal(response.status, 201);
+    assert.equal(created.requestTypeId, expected);
+    assert.equal(created.serviceDeskId, '68');
+  });
+}
+
+test('the selected website category still appears in the Jira description', async () => {
+  const { created } = await capturedCreateBody({
+    requestType: 'Business Cards',
+    printingNeeded: 'No',
+  });
+  assert.match(created.requestFieldValues.description, /Request type: Business Cards/);
+});
+
+test('missing routing configuration sends the default request type', async () => {
+  const { created } = await capturedCreateBody(
+    { requestType: 'Business Cards', printingNeeded: 'No' },
+    { JIRA_REQUEST_TYPE_PRINT: undefined, JIRA_REQUEST_TYPE_DIGITAL: undefined }
+  );
+  assert.equal(created.requestTypeId, '123', 'must fall back, not fail');
+});
+
+test('an invalid routing value sends the default request type', async () => {
+  const { created } = await capturedCreateBody(
+    { requestType: 'Digital Asset Creation' },
+    { JIRA_REQUEST_TYPE_DIGITAL: 'not-an-id' }
+  );
+  assert.equal(created.requestTypeId, '123');
+});
+
+test('a browser-supplied requestTypeId is ignored end to end', async () => {
+  // The payload carries a hostile requestTypeId; routing must ignore it and use
+  // the environment value for the submitted category.
+  const { created } = await capturedCreateBody({
+    requestType: 'Digital Asset Creation',
+    requestTypeId: '999',
+    jiraRequestTypeId: '999',
+  });
+  assert.equal(created.requestTypeId, '116', 'the injected id must not be honoured');
+  assert.notEqual(created.requestTypeId, '999');
+});
+
+test('the requested date is sent as a bare ISO string in customfield_10301', async () => {
+  const { created } = await capturedCreateBody({ requestType: 'Custom / Other' });
+  assert.equal(created.requestFieldValues.customfield_10301, FUTURE);
+  assert.equal(typeof created.requestFieldValues.customfield_10301, 'string');
+  assert.match(created.requestFieldValues.customfield_10301, /^\d{4}-\d{2}-\d{2}$/);
+});
+
+test('a malformed date stays in the description and is never sent structurally', async () => {
+  // zod rejects a non-ISO dateNeeded at init, so drive fieldMap directly with
+  // the same env the route uses.
+  const { buildRequestFieldValues } = await import('../src/lib/jira/fieldMap.js');
+  const { requestFieldValues, unmapped } = buildRequestFieldValues(
+    { ...BASE_FORM, dateNeeded: '12/01/2026' },
+    { env: { JIRA_FIELD_DATE_NEEDED: 'customfield_10301' } }
+  );
+  assert.equal(requestFieldValues.customfield_10301, undefined, 'no invalid date may reach Jira');
+  assert.ok(unmapped.includes('dateNeeded'));
+  assert.match(requestFieldValues.description, /12\/01\/2026/);
+});
+
+test('routing does not disturb attachment handling or R2 cleanup', async () => {
+  const log = {};
+  const { response, json, r2Log } = await initThenFinalize({
+    jira: jiraHappyPath(log),
+    submissionId: 'sub-routing-attach',
+  });
+  assert.equal(response.status, 201);
+  assert.deepEqual(json.attachments, { total: 1, attached: 1, failed: 0, warning: null });
+  assert.equal(r2Log.deletes.length, 1, 'the staged object must still be deleted');
+  assert.equal(r2Log.deletes[0], r2Log.heads[0]);
 });

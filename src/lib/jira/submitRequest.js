@@ -10,6 +10,8 @@ import {
 import { getJiraConfig, isJiraConfigured, isAllowedReporterEmail, REPORTER_MODES } from './config.js';
 import { buildRequestFieldValues } from './fieldMap.js';
 import { validateAttachments, attachFilesToRequest } from './attachments.js';
+import { resolveRequestTypeId, ROUTING_REASONS } from './requestTypeRouting.js';
+import { logRejection, ROUTES as LOG_ROUTES, STAGES } from '../observability.js';
 
 /**
  * Orchestrates one marketing request: UMC submission -> Jira Service Management.
@@ -94,9 +96,33 @@ export async function submitJiraRequest(
     submittedFrom,
   });
 
+  // Route to the request type that matches the submitted category, so work lands
+  // in the right portal queue. The category is the validated enum value; no Jira
+  // request type ID is ever read from the browser.
+  const routing = resolveRequestTypeId(submission.requestType, {
+    env,
+    defaultRequestTypeId: config.requestTypeId,
+  });
+
+  if (routing.fallback) {
+    // Safe to log: a route name, an env var NAME and a reason code. No form
+    // content, no personal data, no credential.
+    logRejection({
+      route: LOG_ROUTES.SUBMIT,
+      stage: STAGES.JIRA_CONFIGURATION,
+      category: `request_type_${routing.reason}`,
+      status: 200,
+      correlationId,
+      outcome: `fell_back_to_default_request_type:${routing.route}`,
+      missingEnv:
+        routing.reason === ROUTING_REASONS.ROUTE_NOT_CONFIGURED ? [routing.envVar] : undefined,
+    });
+  }
+
   const payload = {
     serviceDeskId: config.serviceDeskId,
-    requestTypeId: config.requestTypeId,
+    // Never `body.requestTypeId` — always the environment, selected by route.
+    requestTypeId: routing.requestTypeId || config.requestTypeId,
     requestFieldValues,
   };
   if (reporter.accountId) payload.raiseOnBehalfOf = reporter.accountId;
@@ -144,6 +170,8 @@ export async function submitJiraRequest(
     issueKey,
     reporterMode: reporter.mode,
     reporterReason: reporter.reason,
+    requestTypeRoute: routing.route,
+    requestTypeFallback: routing.fallback,
     mappedFieldCount: mapped.length,
     unmappedFields: unmapped,
     attachmentsTotal: files.length,
