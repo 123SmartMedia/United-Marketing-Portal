@@ -8,7 +8,10 @@ import {
   MAX_FILE_BYTES,
   validateFileMetadata,
   messageForUploadError,
+  UPLOAD_ERRORS,
 } from '@/lib/uploadRules';
+
+const kb = (bytes) => `${Math.max(1, Math.round(bytes / 1024))} KB`;
 
 /**
  * Drag-and-drop upload zone.
@@ -32,6 +35,8 @@ export default function FileDropzone({ value = [], onChange, error }) {
   const inputRef = useRef(null);
   const [dragging, setDragging] = useState(false);
   const [localError, setLocalError] = useState('');
+  // Polite announcements for screen readers: drag state, adds, removals.
+  const [announcement, setAnnouncement] = useState('');
 
   const totalBytes = value.reduce((n, f) => n + f.size, 0);
 
@@ -42,7 +47,7 @@ export default function FileDropzone({ value = [], onChange, error }) {
       if (!incoming.length) return;
 
       if (value.length + incoming.length > MAX_FILES) {
-        setLocalError(`You can attach up to ${MAX_FILES} files.`);
+        setLocalError(messageForUploadError(UPLOAD_ERRORS.TOO_MANY));
         return;
       }
 
@@ -58,13 +63,17 @@ export default function FileDropzone({ value = [], onChange, error }) {
         }
         projected += file.size;
         if (projected > MAX_TOTAL_BYTES) {
-          setLocalError(`Total upload size must stay under ${(MAX_TOTAL_BYTES / 1024 / 1024).toFixed(0)}MB.`);
+          setLocalError(messageForUploadError(UPLOAD_ERRORS.TOTAL_TOO_LARGE));
           return;
         }
         accepted.push({ name: check.file.name, size: check.file.size, type: check.file.type, file });
       }
 
       onChange([...value, ...accepted]);
+      const next = value.length + accepted.length;
+      setAnnouncement(
+        `Added ${accepted.map((f) => f.name).join(', ')}. ${next} of ${MAX_FILES} files attached.`
+      );
     },
     [value, onChange, totalBytes]
   );
@@ -76,31 +85,41 @@ export default function FileDropzone({ value = [], onChange, error }) {
   }
 
   function removeAt(i) {
-    const next = value.slice();
-    next.splice(i, 1);
+    const removed = value[i];
+    const next = value.filter((_, j) => j !== i);
     onChange(next);
+    setAnnouncement(`Removed ${removed?.name}. ${next.length} of ${MAX_FILES} files attached.`);
   }
 
   const shownError = localError || error;
 
   return (
     <div>
-      <span className="mb-1.5 block text-sm font-medium text-navy-800">
+      <span id="files-label" className="mb-1.5 block text-sm font-medium text-navy-800">
         Upload headshots, logos, or reference examples
       </span>
-      <p className="mb-2 text-xs text-navy-400">
-        PDF, PNG, or JPG · up to {MAX_FILES} files · {(MAX_TOTAL_BYTES / 1024 / 1024).toFixed(0)}MB total · optional
+      <p id="files-hint" className="mb-2 text-xs text-navy-500">
+        PDF, PNG, or JPG · up to {MAX_FILES} files · {MAX_FILE_BYTES / 1024 / 1024}MB each, {MAX_TOTAL_BYTES / 1024 / 1024}MB total · optional
         — files are sent when you submit
       </p>
 
       <button
         type="button"
+        id="files"
+        aria-labelledby="files-label"
+        aria-describedby={['files-hint', shownError && 'files-error'].filter(Boolean).join(' ')}
         onClick={() => inputRef.current?.click()}
         onDragOver={(e) => {
           e.preventDefault();
-          setDragging(true);
+          if (!dragging) {
+            setDragging(true);
+            setAnnouncement('Drop to attach your files.');
+          }
         }}
-        onDragLeave={() => setDragging(false)}
+        onDragLeave={() => {
+          setDragging(false);
+          setAnnouncement('');
+        }}
         onDrop={onDrop}
         className={`flex w-full flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed px-6 py-8 text-center transition ${
           dragging ? 'border-brand-500 bg-brand-50' : 'border-navy-200 bg-navy-50/40 hover:border-brand-300'
@@ -111,7 +130,7 @@ export default function FileDropzone({ value = [], onChange, error }) {
           <path d="M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
         </svg>
         <span className="text-sm font-medium text-navy-700">
-          Drag &amp; drop files here, or tap to browse
+          {dragging ? 'Drop to attach' : 'Drag & drop files here, or tap to browse'}
         </span>
       </button>
 
@@ -135,7 +154,7 @@ export default function FileDropzone({ value = [], onChange, error }) {
                 {(f.name.split('.').pop() || '?').slice(0, 4)}
               </span>
               <span className="min-w-0 flex-1 truncate text-sm text-navy-700">{f.name}</span>
-              <span className="shrink-0 text-xs text-navy-400">{(f.size / 1024).toFixed(0)} KB</span>
+              <span className="shrink-0 text-xs text-navy-500">{kb(f.size)}</span>
               <button
                 type="button"
                 onClick={() => removeAt(i)}
@@ -152,10 +171,13 @@ export default function FileDropzone({ value = [], onChange, error }) {
       )}
 
       {shownError && (
-        <p role="alert" className="mt-2 text-xs font-medium text-red-600">
+        <p id="files-error" role="alert" className="mt-2 text-xs font-medium text-red-600">
           {shownError}
         </p>
       )}
+      <p aria-live="polite" aria-atomic="true" className="sr-only" data-testid="dropzone-announcer">
+        {announcement}
+      </p>
     </div>
   );
 }

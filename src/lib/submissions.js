@@ -48,7 +48,7 @@ export async function deliverSubmission(submission) {
  * Low-level SendGrid send. Returns {ok, mode|error}. When SENDGRID_API_KEY is
  * unset (local/dev) it logs and reports mode:'logged' so flows still work.
  */
-async function sendViaSendGrid({ to, toName, subject, html, replyTo }, label) {
+async function sendViaSendGrid({ to, toName, subject, html, replyTo, attachments }, label) {
   const key = process.env.SENDGRID_API_KEY;
   if (!key) {
     console.log(`\n[submission] SENDGRID_API_KEY not set — logging ${label} instead of sending:`);
@@ -60,11 +60,15 @@ async function sendViaSendGrid({ to, toName, subject, html, replyTo }, label) {
       method: 'POST',
       headers: { Authorization: `Bearer ${key}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        personalizations: [{ to: [{ email: to, name: toName }] }],
+        // `to` may be one address or a list (e.g. several booking notification recipients).
+        personalizations: [
+          { to: Array.isArray(to) ? to.map((email) => ({ email })) : [{ email: to, name: toName }] },
+        ],
         from: parseFrom(FROM_EMAIL),
         reply_to: replyTo,
         subject,
         content: [{ type: 'text/html', value: html }],
+        ...(attachments?.length ? { attachments } : {}),
       }),
     });
     if (res.status !== 202) {
@@ -78,6 +82,16 @@ async function sendViaSendGrid({ to, toName, subject, html, replyTo }, label) {
     return { channel: label, ok: false, error: 'network' };
   }
 }
+
+/**
+ * General-purpose send for other features (e.g. podcast room bookings).
+ * `attachments` uses SendGrid's shape: [{ content: base64, filename, type }].
+ */
+export function sendMail(message, label = 'mail') {
+  return sendViaSendGrid(message, label);
+}
+
+export const DESK_EMAIL = REQUEST_EMAIL;
 
 // Desk notification → marketing@, reply-to the submitter.
 function sendEmail(submission) {

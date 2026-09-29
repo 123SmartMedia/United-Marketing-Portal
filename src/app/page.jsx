@@ -1,9 +1,15 @@
 import Link from 'next/link';
 import CategoryCard from '@/components/CategoryCard';
 import ItemCard from '@/components/ItemCard';
+import BookingCalendar from '@/components/booking/BookingCalendar';
 import { getCardCategories, getFeaturedItems, getAllItems, TOTALS } from '@/lib/catalog';
+import { getRecentPosts } from '@/lib/recentPosts';
 
-export default function HomePage() {
+// Refreshes so newly added pieces appear in "Just added" without a redeploy.
+export const revalidate = 30;
+
+export default async function HomePage() {
+  const justAdded = await getRecentPosts(4);
   const categories = getCardCategories();
   const featured = getFeaturedItems(8);
   const totalItems = getAllItems().length;
@@ -41,6 +47,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Podcast room availability + Total Expert — right under the hero */}
+      <section className="mx-auto max-w-7xl px-4 pt-14 sm:px-6 lg:px-8" aria-labelledby="podcast-heading">
+        <div className="mb-6 flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-600">United Studio</p>
+            <h2 id="podcast-heading" className="mt-1 text-2xl font-bold text-navy-900 sm:text-3xl">
+              Podcast room availability
+            </h2>
+            <p className="mt-1 text-navy-600">See when the room is free, then click an open time to book it.</p>
+          </div>
+          <Link href="/podcast-studio" className="text-sm font-semibold text-brand-600 hover:text-brand-700">
+            Room details &amp; full calendar <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <BookingCalendar />
+
+        <Link
+          href="/total-expert"
+          className="group mt-8 flex flex-col gap-4 rounded-2xl border border-navy-100 bg-gradient-to-r from-brand-50 to-white p-6 transition hover:border-brand-400 hover:shadow-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 sm:flex-row sm:items-center sm:justify-between"
+        >
+          <span>
+            <span className="block text-xs font-semibold uppercase tracking-widest text-brand-600">
+              CRM &amp; marketing automation
+            </span>
+            <span className="mt-1 block text-lg font-bold text-navy-900">Get a Total Expert account</span>
+            <span className="mt-1 block text-sm text-navy-600">
+              New to United, or need access reactivated? Request your account and marketing will set you up.
+            </span>
+          </span>
+          <span className="shrink-0 rounded-full bg-brand-600 px-5 py-2.5 text-sm font-semibold text-white transition group-hover:bg-brand-700">
+            Sign up for Total Expert <span aria-hidden="true">→</span>
+          </span>
+        </Link>
+      </section>
+
       {/* Category grid */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="mb-10 text-center">
@@ -54,6 +95,26 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Just added — the latest admin-added pieces, only when there are any */}
+      {justAdded.length > 0 && (
+        <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8" aria-labelledby="just-added-heading">
+          <div className="mb-8 flex items-end justify-between">
+            <div>
+              <h2 id="just-added-heading" className="text-2xl font-bold text-navy-900">Just added</h2>
+              <p className="mt-1 text-navy-600">The newest pieces from the marketing team.</p>
+            </div>
+            <Link href="/whats-new" className="text-sm font-semibold text-brand-600 hover:text-brand-700">
+              See what’s new <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
+            {justAdded.map((item) => (
+              <ItemCard key={`${item.category}/${item.slug}`} item={item} categorySlug={item.category} />
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Featured strip */}
       {featured.length > 0 && (
         <section className="bg-navy-50/60 py-16">
@@ -61,7 +122,7 @@ export default function HomePage() {
             <div className="mb-8 flex items-end justify-between">
               <div>
                 <h2 className="text-2xl font-bold text-navy-900">Featured assets</h2>
-                <p className="mt-1 text-navy-500">A sample of what's in the library.</p>
+                <p className="mt-1 text-navy-500">A sample of what’s in the library.</p>
               </div>
               <Link href="/browse" className="text-sm font-semibold text-brand-600 hover:text-brand-700">
                 View all →

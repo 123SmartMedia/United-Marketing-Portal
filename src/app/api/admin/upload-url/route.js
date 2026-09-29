@@ -37,7 +37,7 @@ export async function POST(request) {
   if (!filename || !ACCEPTED[contentType]) {
     return NextResponse.json({ ok: false, error: 'unsupported_type' }, { status: 400 });
   }
-  if (typeof size !== 'number' || size <= 0 || size > MAX_BYTES) {
+  if (!Number.isInteger(size) || size <= 0 || size > MAX_BYTES) {
     return NextResponse.json({ ok: false, error: 'invalid_size' }, { status: 400 });
   }
 
@@ -54,7 +54,9 @@ export async function POST(request) {
   try {
     const uploadUrl = await getSignedUrl(
       s3,
-      new PutObjectCommand({ Bucket: bucket, Key: key, ContentType: contentType }),
+      // ContentType and ContentLength are both pinned into the signature, so the
+      // browser cannot PUT a different type or a larger file than it declared.
+      new PutObjectCommand({ Bucket: bucket, Key: key, ContentType: contentType, ContentLength: size }),
       { expiresIn: 600 }
     );
     const publicUrl = `${publicBase.replace(/\/+$/, '')}/${key.split('/').map(encodeURIComponent).join('/')}`;

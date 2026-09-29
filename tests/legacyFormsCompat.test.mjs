@@ -1,7 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
-import { POST as LEGACY_REQUESTS } from '../src/app/api/requests/route.js';
 import { POST as ADMIN_UPLOAD_URL } from '../src/app/api/admin/upload-url/route.js';
 import { simpleSchema, requestSchema } from '../src/lib/requestSchema.js';
 
@@ -11,7 +10,6 @@ import { simpleSchema, requestSchema } from '../src/lib/requestSchema.js';
  * notice, because none of these surfaces is part of the wizard.
  *
  * Covered here:
- *   - /api/requests          (Get Started + category-page forms -> SendGrid)
  *   - /api/admin/upload-url  (admin CMS, authenticated, public asset bucket)
  *   - the shared schemas both the old and new flows parse with
  */
@@ -27,106 +25,8 @@ function post(path, body, headers = {}) {
   });
 }
 
-async function withEnv(env, fn) {
-  const saved = {};
-  for (const [key, value] of Object.entries(env)) {
-    saved[key] = process.env[key];
-    if (value === undefined) delete process.env[key];
-    else process.env[key] = value;
-  }
-  try {
-    return await fn();
-  } finally {
-    for (const [key, value] of Object.entries(saved)) {
-      if (value === undefined) delete process.env[key];
-      else process.env[key] = value;
-    }
-  }
-}
-
 // --- the inline forms -------------------------------------------------------
-
-test('the Get Started / category-page form still submits through /api/requests', async () => {
-  // No SENDGRID_API_KEY: deliverSubmission logs to the console and reports
-  // delivered, which is the documented local/staging behavior.
-  await withEnv({ SENDGRID_API_KEY: undefined }, async () => {
-    const response = await LEGACY_REQUESTS(
-      post('/api/requests', {
-        source: 'get-started',
-        requestType: 'Custom Request',
-        name: 'Sam Officer',
-        email: 'sofficer@unitedmortgage.com',
-        phone: '631-555-0100',
-        asset: 'Business Cards',
-        details: 'Need 500 cards for a new hire.',
-      })
-    );
-    const json = await response.json();
-    assert.equal(response.status, 200);
-    assert.equal(json.ok, true);
-  });
-});
-
-test('/api/requests needs no Turnstile token and no finalize secret', async () => {
-  // The inline forms have no Turnstile widget. Requiring one here would break
-  // them silently, so this asserts the legacy path stayed independent.
-  await withEnv(
-    {
-      SENDGRID_API_KEY: undefined,
-      TURNSTILE_SECRET_KEY: '1x0000000000000000000000000000000AA',
-      UPLOAD_FINALIZE_SECRET: undefined,
-    },
-    async () => {
-      const response = await LEGACY_REQUESTS(
-        post('/api/requests', {
-          requestType: 'Custom Request',
-          name: 'Sam',
-          email: 'sam@unitedmortgage.com',
-          details: 'Something small.',
-        })
-      );
-      assert.equal(response.status, 200);
-      assert.equal((await response.json()).ok, true);
-    }
-  );
-});
-
-test('/api/requests still honours its honeypot', async () => {
-  const response = await LEGACY_REQUESTS(
-    post('/api/requests', { company: 'Bot Co', name: 'x', email: 'x@y.com', details: 'z' })
-  );
-  assert.equal(response.status, 200);
-  assert.equal((await response.json()).ok, true);
-});
-
-test('/api/requests still rejects an invalid payload', async () => {
-  const response = await LEGACY_REQUESTS(post('/api/requests', { name: '', email: 'nope', details: '' }));
-  assert.equal(response.status, 400);
-  assert.equal((await response.json()).error, 'validation');
-});
-
-test('/api/requests still accepts a full wizard-shaped payload', async () => {
-  // The email fallback path posts this shape, so it must keep parsing.
-  await withEnv({ SENDGRID_API_KEY: undefined }, async () => {
-    const response = await LEGACY_REQUESTS(
-      post('/api/requests', {
-        source: 'wizard',
-        name: 'Jane Officer',
-        email: 'jofficer@unitedmortgage.com',
-        phone: '631-203-7480',
-        nmls: '1234567',
-        branch: 'Melville, NY',
-        requestType: 'Custom / Other',
-        dateNeeded: FUTURE,
-        cobrand: 'No',
-        projectTitle: 'Fall postcard',
-        keyMessage: 'Book a valuation.',
-        files: [],
-      })
-    );
-    assert.equal(response.status, 200);
-  });
-});
+// /api/requests is now Turnstile-gated and covered in tests/requestsRoute.test.mjs.
 
 // --- the admin CMS ----------------------------------------------------------
 

@@ -39,8 +39,8 @@ registerHooks({
       }
       return nextResolve(new URL(`${target}.js`, srcRoot).href, context);
     }
-    if (specifier === 'next/server') {
-      return nextResolve('next/server.js', context);
+    if (specifier === 'next/server' || specifier === 'next/cache') {
+      return nextResolve(`${specifier}.js`, context);
     }
     return nextResolve(specifier, context);
   },
@@ -51,6 +51,13 @@ registerHooks({
    *    (not a copy of it) is what the tests render.
    */
   load(url, context, nextLoad) {
+    // 5. JSON imported without `with { type: 'json' }` (Next's bundler allows
+    //    it; src/lib/catalog.js does it) — serve it as an ES module instead.
+    //    Scoped to ./src so CommonJS `require()` of JSON in node_modules is untouched.
+    if (url.startsWith(srcRoot) && url.endsWith('.json') && !context.importAttributes?.type) {
+      const json = readFileSync(fileURLToPath(url), 'utf8');
+      return { format: 'module', source: `export default ${json};`, shortCircuit: true };
+    }
     if (!url.startsWith('file:') || !url.endsWith('.jsx')) return nextLoad(url, context);
     const source = readFileSync(fileURLToPath(url), 'utf8');
     const { code } = transformSync(source, {

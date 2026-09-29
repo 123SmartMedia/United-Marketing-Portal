@@ -19,9 +19,12 @@ export default function AssetPreview({ item }) {
   ];
   const [active, setActive] = useState(ordered[0] || null);
 
+  // "Classic", "Color-Pop · Spanish"… so each variant's image has its own alt text.
+  const variantName = (f) => [f.style, f.brand, f.lang].filter(Boolean).join(' · ') || f.label;
+
   if (!active) {
     return (
-      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-navy-50 text-navy-400">
+      <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-navy-50 text-navy-600">
         Preview unavailable — use the download buttons.
       </div>
     );
@@ -32,7 +35,7 @@ export default function AssetPreview({ item }) {
       <div className="overflow-hidden rounded-2xl border border-navy-100 bg-navy-50">
         {active.type === 'image' && (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={assetUrl(active.url)} alt={item.title} className="h-full w-full object-contain" />
+          <img src={assetUrl(active.url)} alt={ordered.length > 1 ? `${item.title} — ${variantName(active)}` : item.title} className="h-full w-full object-contain" />
         )}
         {active.type === 'video' && (
           <video src={assetUrl(active.url)} controls playsInline className="h-full w-full bg-black">
@@ -41,8 +44,8 @@ export default function AssetPreview({ item }) {
         )}
         {active.type === 'pdf' && (
           <object data={`${assetUrl(active.url)}#view=FitH`} type="application/pdf" className="h-[520px] w-full">
-            <div className="flex h-[520px] flex-col items-center justify-center gap-3 text-navy-400">
-              <p>PDF preview isn't available in this browser.</p>
+            <div className="flex h-[520px] flex-col items-center justify-center gap-3 text-navy-600">
+              <p>PDF preview isn’t available in this browser.</p>
               <a
                 href={assetUrl(active.url)}
                 target="_blank"
@@ -57,15 +60,17 @@ export default function AssetPreview({ item }) {
       </div>
 
       {ordered.length > 1 && (
-        <div className="mt-3 flex flex-wrap gap-2">
+        <div className="mt-3 flex flex-wrap gap-2" role="group" aria-label="Preview style">
           {ordered.map((f) => (
             <button
               key={f.url}
+              type="button"
+              aria-pressed={active.url === f.url}
               onClick={() => setActive(f)}
-              className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition ${
+              className={`min-h-11 rounded-lg border px-3 py-1.5 text-xs sm:min-h-9 font-medium transition ${
                 active.url === f.url
                   ? 'border-brand-500 bg-brand-50 text-brand-700'
-                  : 'border-navy-200 text-navy-500 hover:border-brand-300'
+                  : 'border-navy-200 text-navy-700 hover:border-brand-300'
               }`}
             >
               {f.label}

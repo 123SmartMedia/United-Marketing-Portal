@@ -26,6 +26,12 @@ const STEPS = [
     href: '/category/social-media',
     cta: 'Social Media',
   },
+  {
+    title: 'Get your Total Expert account',
+    body: 'Request access to Total Expert, United’s CRM and marketing automation platform.',
+    href: '/total-expert',
+    cta: 'Total Expert sign-up',
+  },
 ];
 
 export default function GetStartedPage() {
@@ -43,7 +49,7 @@ export default function GetStartedPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step, i) => (
             <div key={step.title} className="flex flex-col rounded-2xl border border-navy-100 p-6">
               <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-500 text-sm font-bold text-white">

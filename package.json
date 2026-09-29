@@ -12,7 +12,7 @@
     "prebuild": "node scripts/build-catalog.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test": "node --import ./tests/setup.mjs --test \"tests/**/*.test.mjs\"",
     "jira:discover": "node scripts/jira-discover.mjs",
     "jira:smoke": "node scripts/jira-smoke-test.mjs"
@@ -32,6 +32,8 @@
     "@tailwindcss/postcss": "^4.0.0",
     "autoprefixer": "^10.4.20",
     "esbuild": "^0.28.2",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.7",
     "jsdom": "^29.1.1",
     "mime-types": "^3.0.2",
     "postcss": "^8.5.1",
