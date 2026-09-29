@@ -3,25 +3,23 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import {
-  requestSchema,
-  REQUEST_TYPES,
-  PRINT_TYPES,
-  COBRAND_TYPES,
-  YES_NO,
-  QUANTITIES,
-  SIZES,
-  FINISHES,
-  hasStep2,
-} from '@/lib/requestSchema';
-import { TextField, SelectField, TextareaField, CheckboxField } from '@/components/wizard/fields';
-import FileDropzone from '@/components/wizard/FileDropzone';
+import { requestSchema, PRINT_TYPES, COBRAND_TYPES, hasStep2 } from '@/lib/requestSchema';
 import TurnstileWidget from '@/components/wizard/TurnstileWidget';
+import { BasicsStep, DetailsStep, CreativeStep } from '@/components/wizard/WizardSteps';
+import WizardProgress from '@/components/wizard/WizardProgress';
+import ErrorSummary from '@/components/wizard/ErrorSummary';
+import SuccessPanel from '@/components/wizard/SuccessPanel';
+import { DraftNotice, WizardNav } from '@/components/wizard/WizardNav';
+import { useWizardDraft } from '@/components/wizard/useWizardDraft';
+import { writeContact } from '@/components/wizard/wizardStorage';
+import { isRushDate, localTodayIso } from '@/components/wizard/businessDays';
 
-const todayISO = () => {
-  const d = new Date();
-  d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
-  return d.toISOString().slice(0, 10);
+const DEFAULT_VALUES = {
+  name: '', email: '', phone: '', nmls: '', branch: '',
+  requestType: '', dateNeeded: '', rush: false,
+  printingNeeded: '', quantity: '', size: '', finish: '',
+  cobrand: '', partnerName: '', complianceApproved: false,
+  projectTitle: '', keyMessage: '', additionalDetails: '', files: [], company: '',
 };
 
 // One id per form instance. The server returns the original ticket for a repeat
@@ -37,43 +35,50 @@ export default function RequestWizard({
 }) {
   const [stepIndex, setStepIndex] = useState(0);
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
-  const [submitError, setSubmitError] = useState(null); // { message, correlationId }
+  const [submitError, setSubmitError] = useState(null); // { message, correlationId, fields }
   const [result, setResult] = useState(null); // { requestKey, requestUrl, portalUrl, attachments }
   // Single-use Turnstile token. Cleared and re-minted after every attempt.
   const [turnstileToken, setTurnstileToken] = useState('');
   const [turnstileError, setTurnstileError] = useState('');
   const [challengeReset, setChallengeReset] = useState(0);
-  const minDate = useMemo(() => todayISO(), []);
+  // Fields that failed "Continue" validation, listed in the error summary.
+  const [stepErrors, setStepErrors] = useState([]);
+  const [announceStep, setAnnounceStep] = useState(false);
+  const minDate = useMemo(() => localTodayIso(), []);
 
   const submissionIdRef = useRef(null);
   const inFlightRef = useRef(false);
   const errorSummaryRef = useRef(null);
   const successRef = useRef(null);
+  const headingRef = useRef(null);
+  const pendingFocusRef = useRef(null); // field to focus after a step change
+  const focusHeadingRef = useRef(false); // focus the heading after "Submit another"
+  const firstRenderRef = useRef(true);
+  const autoRushDateRef = useRef('');
+
+  const defaultValues = useMemo(() => ({ ...DEFAULT_VALUES, requestType: defaultType || '' }), [defaultType]);
 
   const {
     register,
     handleSubmit,
     watch,
     trigger,
+    reset,
     setValue,
     setError,
+    setFocus,
+    getFieldState,
     formState: { errors },
-  } = useForm({
-    resolver: zodResolver(requestSchema),
-    mode: 'onTouched',
-    defaultValues: {
-      name: '', email: '', phone: '', nmls: '', branch: '',
-      requestType: defaultType || '', dateNeeded: '', rush: false,
-      printingNeeded: '', quantity: '', size: '', finish: '',
-      cobrand: '', partnerName: '', complianceApproved: false,
-      projectTitle: '', keyMessage: '', additionalDetails: '', files: [], company: '',
-    },
-  });
+  } = useForm({ resolver: zodResolver(requestSchema), mode: 'onTouched', defaultValues });
+
+  const draft = useWizardDraft({ watch, reset, defaultValues });
 
   const requestType = watch('requestType');
   const printingNeeded = watch('printingNeeded');
   const cobrand = watch('cobrand');
   const files = watch('files');
+  const dateNeeded = watch('dateNeeded');
+  const rushSuggested = isRushDate(dateNeeded, minDate);
 
   const showPrint = PRINT_TYPES.has(requestType);
   const showCobrand = COBRAND_TYPES.has(requestType);
@@ -90,12 +95,44 @@ export default function RequestWizard({
   const step = steps[clampedIndex];
   const isLast = clampedIndex === steps.length - 1;
 
+  // Auto-check Rush once per newly chosen short-notice date. The user can turn
+  // it off again; we only re-check it if they pick a different date.
+  useEffect(() => {
+    if (rushSuggested && dateNeeded !== autoRushDateRef.current) {
+      autoRushDateRef.current = dateNeeded;
+      setValue('rush', true);
+    }
+  }, [rushSuggested, dateNeeded, setValue]);
+
   // Move focus to the summary when a submission fails, and to the confirmation
   // when it succeeds, so screen-reader and keyboard users land on the outcome.
   useEffect(() => {
     if (status === 'error') errorSummaryRef.current?.focus();
     if (status === 'success') successRef.current?.focus();
+    if (status === 'idle' && focusHeadingRef.current) {
+      focusHeadingRef.current = false;
+      headingRef.current?.focus();
+    }
   }, [status]);
+
+  // On a step change, focus the field the user jumped to from the error
+  // summary, or else the new step's heading (and announce it). Skipped on the
+  // first render so the page doesn't steal focus on load.
+  useEffect(() => {
+    if (firstRenderRef.current) {
+      firstRenderRef.current = false;
+      return;
+    }
+    const target = pendingFocusRef.current;
+    pendingFocusRef.current = null;
+    if (target) {
+      focusField(target);
+    } else {
+      headingRef.current?.focus();
+      setAnnounceStep(true);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [clampedIndex]);
 
   function fieldsForStep(key) {
     if (key === 'basics') return ['name', 'email', 'phone', 'nmls', 'branch', 'requestType', 'dateNeeded'];
@@ -114,13 +151,76 @@ export default function RequestWizard({
     return ['projectTitle', 'keyMessage'];
   }
 
+  function stepIndexForField(name) {
+    const found = steps.findIndex((s) => fieldsForStep(s.key).includes(name));
+    return found >= 0 ? found : steps.length - 1; // files, additionalDetails → last step
+  }
+
+  function focusField(name) {
+    try {
+      setFocus(name);
+    } catch {
+      // Not a registered input (e.g. files) — fall back to the DOM id.
+    }
+    if (document.activeElement?.id !== name) document.getElementById(name)?.focus();
+  }
+
+  /** Error-summary link: go to the step that owns `name`, then focus it. */
+  function goToField(name) {
+    const target = stepIndexForField(name);
+    if (target === clampedIndex) {
+      focusField(name);
+      return;
+    }
+    pendingFocusRef.current = name;
+    setStepIndex(target);
+  }
+
   async function next() {
-    const valid = await trigger(fieldsForStep(step.key), { shouldFocus: true });
-    if (valid) setStepIndex(clampedIndex + 1);
+    const names = fieldsForStep(step.key);
+    const valid = await trigger(names);
+    if (valid) {
+      setStepErrors([]);
+      setStepIndex(clampedIndex + 1);
+      return;
+    }
+    const failed = names
+      .map((name) => ({ name, state: getFieldState(name) }))
+      .filter(({ state }) => state.invalid)
+      .map(({ name, state }) => ({ name, message: state.error?.message }));
+    setStepErrors(failed);
+    // Focus the summary so the user hears every problem, not just the first.
+    requestAnimationFrame(() => errorSummaryRef.current?.focus());
   }
 
   function back() {
+    setStepErrors([]);
     setStepIndex(Math.max(0, clampedIndex - 1));
+  }
+
+  function succeed(values, payload) {
+    writeContact(values);
+    draft.finish();
+    setResult(payload);
+    setStepErrors([]);
+    setStatus('success');
+  }
+
+  function submitAnother() {
+    reset(draft.freshValues());
+    draft.resume();
+    submissionIdRef.current = null;
+    autoRushDateRef.current = '';
+    setResult(null);
+    setSubmitError(null);
+    setTurnstileToken('');
+    setTurnstileError('');
+    setChallengeReset((n) => n + 1);
+    setAnnounceStep(false);
+    firstRenderRef.current = true;
+    focusHeadingRef.current = true;
+    setStepIndex(0);
+    setStatus('idle');
   }
 
   async function onSubmit(values) {
@@ -132,6 +232,7 @@ export default function RequestWizard({
 
     setStatus('submitting');
     setSubmitError(null);
+    setStepErrors([]);
     setTurnstileError('');
     try {
       // File objects live only in the browser. The server is sent metadata, and
@@ -157,8 +258,7 @@ export default function RequestWizard({
       // submission always carries one, so treat its absence as "done" rather
       // than calling finalize with nothing to present.
       if (initRes.ok && json.ok && !json.finalizeToken) {
-        setResult({ requestKey: null, portalUrl });
-        setStatus('success');
+        succeed(values, { requestKey: null, portalUrl });
         return;
       }
 
@@ -193,8 +293,7 @@ export default function RequestWizard({
         const finalizeJson = await finalizeRes.json().catch(() => ({}));
 
         if (finalizeRes.ok && finalizeJson.ok) {
-          setResult(finalizeJson);
-          setStatus('success');
+          succeed(values, finalizeJson);
           return;
         }
         json = finalizeJson;
@@ -208,14 +307,11 @@ export default function RequestWizard({
         setTurnstileError(json.message || 'Verification failed. Please try again.');
       }
 
-      // Server-side validation: surface the offending fields inline and send the
-      // user back to the step that owns the first one.
-      if (Array.isArray(json.fields) && json.fields.length) {
-        for (const field of json.fields) {
-          setError(field, { type: 'server', message: 'Please check this field.' });
-        }
-        const firstStep = steps.findIndex((s) => fieldsForStep(s.key).includes(json.fields[0]));
-        if (firstStep >= 0) setStepIndex(firstStep);
+      // Server-side validation: mark the offending fields inline and list them
+      // in the summary, each linking to its field on whichever step owns it.
+      const serverFields = Array.isArray(json.fields) ? json.fields.filter((f) => typeof f === 'string') : [];
+      for (const field of serverFields) {
+        setError(field, { type: 'server', message: 'Please check this field.' });
       }
 
       setStatus('error');
@@ -224,6 +320,7 @@ export default function RequestWizard({
           json.message ||
           'We couldn’t submit your request right now. Your details are still here — please try again.',
         correlationId: json.correlationId || null,
+        fields: serverFields.map((name) => ({ name })),
       });
     } catch {
       setTurnstileToken('');
@@ -233,6 +330,7 @@ export default function RequestWizard({
         message:
           'We couldn’t reach the marketing desk. Your details are still here — check your connection and try again.',
         correlationId: null,
+        fields: [],
       });
     } finally {
       inFlightRef.current = false;
@@ -240,72 +338,7 @@ export default function RequestWizard({
   }
 
   if (status === 'success') {
-    const portal = result?.portalUrl || portalUrl;
-    const att = result?.attachments;
-    // Only claim files landed when Jira actually accepted them all.
-    const allAttached = !att?.total || att.attached === att.total;
-    return (
-      <div
-        ref={successRef}
-        tabIndex={-1}
-        role="status"
-        aria-live="polite"
-        className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center outline-none"
-      >
-        <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500 text-xl text-white">
-          ✓
-        </div>
-        <h3 className="text-lg font-semibold text-navy-900">Request received</h3>
-
-        {result?.requestKey && (
-          <p className="mt-3 text-sm text-navy-600">
-            Your ticket number is{' '}
-            <span className="rounded-md bg-white px-2 py-1 font-mono text-sm font-semibold text-navy-900">
-              {result.requestKey}
-            </span>
-          </p>
-        )}
-
-        <p className="mx-auto mt-3 max-w-md text-sm text-navy-600">
-          Thanks — the marketing desk has your request
-          {att?.total > 0 && allAttached ? ` and ${att.total} file${att.total > 1 ? 's' : ''}` : ''} and will
-          follow up by email at the address you provided.
-        </p>
-
-        {att?.total > 0 && !allAttached && (
-          <p className="mx-auto mt-3 max-w-md rounded-xl bg-amber-50 px-4 py-3 text-xs text-amber-900">
-            <span className="font-semibold">
-              {att.attached} of {att.total} file{att.total > 1 ? 's' : ''} attached.
-            </span>{' '}
-            The rest couldn’t be added to the ticket. Please reply to your confirmation email with the
-            remaining file{att.failed > 1 ? 's' : ''} so the marketing desk can attach {att.failed > 1 ? 'them' : 'it'}.
-          </p>
-        )}
-
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          {result?.requestUrl && (
-            <a
-              href={result.requestUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-brand-600"
-            >
-              View request
-            </a>
-          )}
-          {portal && (
-            <a
-              href={portal}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm font-semibold text-brand-600 underline-offset-2 transition hover:text-brand-700 hover:underline"
-            >
-              Open Marketing Requests Portal
-            </a>
-          )}
-        </div>
-      </div>
-    );
+    return <SuccessPanel ref={successRef} result={result} portalUrl={portalUrl} onSubmitAnother={submitAnother} />;
   }
 
   const submitting = status === 'submitting';
@@ -330,95 +363,53 @@ export default function RequestWizard({
       {/* Honeypot */}
       <input type="text" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" {...register('company')} />
 
-      {/* Progress indicator */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between text-sm">
-          <span className="font-semibold text-navy-900">
-            Step {clampedIndex + 1} of {steps.length}
-          </span>
-          <span className="text-navy-400">{step.title}</span>
+      {draft.restored && (
+        <DraftNotice
+          onKeep={draft.dismissRestored}
+          onStartOver={() => {
+            draft.startOver();
+            setStepErrors([]);
+            setStepIndex(0);
+          }}
+        />
+      )}
+
+      <WizardProgress ref={headingRef} steps={steps} index={clampedIndex} announce={announceStep} />
+
+      {stepErrors.length > 0 && (
+        <div className="mb-6">
+          <ErrorSummary
+            ref={errorSummaryRef}
+            title="Please fix the following before continuing:"
+            fields={stepErrors}
+            onFieldClick={goToField}
+          />
         </div>
-        <div className="mt-2 flex gap-1.5" aria-hidden="true">
-          {steps.map((s, i) => (
-            <div
-              key={s.key}
-              className={`h-1.5 flex-1 rounded-full transition-colors ${i <= clampedIndex ? 'bg-brand-500' : 'bg-navy-100'}`}
-            />
-          ))}
-        </div>
-      </div>
+      )}
 
       {/* Steps */}
       <fieldset disabled={submitting} className="contents">
         <div key={step.key} className="animate-[fadeIn_.25s_ease] space-y-4">
           {step.key === 'basics' && (
-            <>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <TextField id="name" label="Full name" required registration={register('name')} error={errors.name?.message} placeholder="Jane Officer" autoComplete="name" />
-                <TextField id="email" label="Work email" required type="email" registration={register('email')} error={errors.email?.message} placeholder="jofficer@unitedmortgage.com" autoComplete="email" />
-                <TextField id="phone" label="Phone number" required type="tel" registration={register('phone')} error={errors.phone?.message} placeholder="631-203-7480" autoComplete="tel" />
-                <TextField id="nmls" label="NMLS ID" required registration={register('nmls')} error={errors.nmls?.message} placeholder="1234567" inputMode="numeric" />
-              </div>
-              <TextField id="branch" label="Branch / office" required registration={register('branch')} error={errors.branch?.message} placeholder="e.g., Melville, NY" />
-              <SelectField id="requestType" label="Request type" required options={REQUEST_TYPES} registration={register('requestType')} error={errors.requestType?.message} placeholder="What do you need?" />
-              <div className="grid gap-4 sm:grid-cols-2">
-                <TextField id="dateNeeded" label="Date needed by" required type="date" min={minDate} registration={register('dateNeeded')} error={errors.dateNeeded?.message} />
-                <div className="flex items-end">
-                  <label htmlFor="rush" className="flex w-full cursor-pointer items-center justify-between rounded-xl border border-navy-200 px-4 py-3">
-                    <span className="text-sm font-medium text-navy-700">Rush request<span className="block text-xs font-normal text-navy-400">Needed in under 7 business days</span></span>
-                    <span className="relative inline-flex h-6 w-11 shrink-0 items-center">
-                      <input id="rush" type="checkbox" className="peer sr-only" {...register('rush')} />
-                      <span className="h-6 w-11 rounded-full bg-navy-200 transition-colors peer-checked:bg-brand-500 peer-focus-visible:ring-2 peer-focus-visible:ring-brand-200" />
-                      <span className="absolute left-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
-                    </span>
-                  </label>
-                </div>
-              </div>
-            </>
+            <BasicsStep register={register} errors={errors} minDate={minDate} rushSuggested={rushSuggested} />
           )}
-
           {step.key === 'details' && (
-            <>
-              {showPrint && (
-                <div className="space-y-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-navy-400">Printing</h3>
-                  <SelectField id="printingNeeded" label="Printing needed?" required options={YES_NO} registration={register('printingNeeded')} error={errors.printingNeeded?.message} />
-                  {printingNeeded === 'Yes' && (
-                    <div className="grid gap-4 sm:grid-cols-3">
-                      <SelectField id="quantity" label="Estimated quantity" required options={QUANTITIES} registration={register('quantity')} error={errors.quantity?.message} />
-                      <SelectField id="size" label="Size / format" required options={SIZES} registration={register('size')} error={errors.size?.message} />
-                      <SelectField id="finish" label="Finish / paper" required options={FINISHES} registration={register('finish')} error={errors.finish?.message} />
-                    </div>
-                  )}
-                </div>
-              )}
-              {showCobrand && (
-                <div className="space-y-4">
-                  <h3 className="text-sm font-semibold uppercase tracking-wide text-navy-400">Co-branding</h3>
-                  <SelectField id="cobrand" label="Co-branding with a partner?" required options={YES_NO} registration={register('cobrand')} error={errors.cobrand?.message} />
-                  {cobrand === 'Yes' && (
-                    <>
-                      <TextField id="partnerName" label="Partner company name" required registration={register('partnerName')} error={errors.partnerName?.message} placeholder="e.g., Capoano Group Realty" />
-                      <CheckboxField id="complianceApproved" label="I confirm this co-branded material complies with company and partner guidelines." registration={register('complianceApproved')} error={errors.complianceApproved?.message} />
-                    </>
-                  )}
-                </div>
-              )}
-            </>
+            <DetailsStep
+              register={register}
+              errors={errors}
+              showPrint={showPrint}
+              showCobrand={showCobrand}
+              printingNeeded={printingNeeded}
+              cobrand={cobrand}
+            />
           )}
-
           {step.key === 'creative' && (
-            <>
-              <TextField id="projectTitle" label="Project title" required registration={register('projectTitle')} error={errors.projectTitle?.message} placeholder="e.g., Q3 Suffolk County Farming Campaign" />
-              <TextareaField id="keyMessage" label="Key message / call to action" required registration={register('keyMessage')} error={errors.keyMessage?.message} placeholder="e.g., Call for a free home valuation, mention our 3.99% special…" />
-              <TextareaField id="additionalDetails" label="Additional details" registration={register('additionalDetails')} placeholder="Any specific colors, layout preferences, or text to include?" rows={3} />
-              <FileDropzone value={files} onChange={(f) => setValue('files', f, { shouldValidate: false })} />
-              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs text-amber-900">
-                <span className="font-semibold">Do not include borrower information.</span> Marketing requests
-                are not a secure channel — never attach or describe Social Security numbers, bank statements,
-                tax returns, credit reports, loan files, or any other nonpublic borrower information.
-              </p>
-            </>
+            <CreativeStep
+              register={register}
+              errors={errors}
+              files={files}
+              onFilesChange={(f) => setValue('files', f, { shouldValidate: false })}
+            />
           )}
         </div>
       </fieldset>
@@ -426,10 +417,7 @@ export default function RequestWizard({
       {/* Verification — last step only, directly above Submit so the user sees the
           challenge and the button it controls together. */}
       {isLast && (
-        <section
-          aria-labelledby="verification-heading"
-          className="mt-8 rounded-2xl border border-navy-100 bg-navy-50/40 p-5"
-        >
+        <section aria-labelledby="verification-heading" className="mt-8 rounded-2xl border border-navy-100 bg-navy-50/40 p-5">
           <h2 id="verification-heading" className="mb-3 text-sm font-semibold text-navy-900">
             Verification
           </h2>
@@ -445,82 +433,28 @@ export default function RequestWizard({
         </section>
       )}
 
-      {/* Navigation */}
-      <div className="mt-8 flex items-center justify-between gap-3">
-        {clampedIndex > 0 ? (
-          <button
-            type="button"
-            onClick={back}
-            disabled={submitting}
-            className="rounded-full px-5 py-2.5 text-sm font-semibold text-navy-600 transition hover:text-navy-900 disabled:opacity-60"
-          >
-            ← Back
-          </button>
-        ) : (
-          <span />
-        )}
-
-        {isLast ? (
-          <button
-            type="submit"
-            data-testid="submit-request"
-            disabled={submitting || challengePending || challengeUnavailable}
-            aria-busy={submitting}
-            aria-describedby={challengePending || challengeUnavailable ? 'challenge-pending' : undefined}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-500 px-7 py-3 text-sm font-semibold text-white transition hover:bg-brand-600 disabled:cursor-not-allowed disabled:opacity-60"
-          >
-            {submitting && (
-              <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="3" className="opacity-25" />
-                <path d="M12 2a10 10 0 0 1 10 10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" />
-              </svg>
-            )}
-            {submitting ? 'Sending…' : 'Submit request'}
-          </button>
-        ) : (
-          <button type="button" onClick={next} className="rounded-full bg-brand-500 px-7 py-3 text-sm font-semibold text-white transition hover:bg-brand-600">
-            Continue →
-          </button>
-        )}
-      </div>
-
-      {/* Status region: announced to assistive tech whether or not it has content. */}
-      <div aria-live="polite" aria-atomic="true" className="sr-only">
-        {submitting ? 'Submitting your request…' : ''}
-      </div>
-
-      {isLast && (challengePending || challengeUnavailable) && (
-        <p
-          id="challenge-pending"
-          className={`mt-3 text-center text-xs ${challengeUnavailable ? 'text-red-600' : 'text-navy-400'}`}
-        >
-          {challengeUnavailable
-            ? 'Submission is unavailable until verification is restored.'
-            : 'Complete the verification above to enable Submit.'}
-        </p>
-      )}
+      <WizardNav
+        showBack={clampedIndex > 0}
+        isLast={isLast}
+        submitting={submitting}
+        challengePending={challengePending}
+        challengeUnavailable={challengeUnavailable}
+        onBack={back}
+        onNext={next}
+      />
 
       {status === 'error' && submitError && (
-        <div
+        <ErrorSummary
           ref={errorSummaryRef}
-          tabIndex={-1}
-          role="alert"
-          className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 outline-none"
-        >
-          <p className="font-semibold">Your request wasn’t submitted.</p>
-          <p className="mt-1">{submitError.message}</p>
-          {submitError.correlationId && (
-            <p className="mt-2 text-xs text-red-500">
-              Reference ID: <span className="font-mono">{submitError.correlationId}</span> — include this if you
-              contact the marketing desk.
-            </p>
-          )}
-        </div>
+          title="Your request wasn’t submitted."
+          message={submitError.message}
+          fields={submitError.fields}
+          correlationId={submitError.correlationId}
+          onFieldClick={goToField}
+        />
       )}
 
-      <p className="mt-4 text-center text-xs text-navy-400">
-        Goes straight to the United Mortgage marketing desk
-      </p>
+      <p className="mt-4 text-center text-xs text-navy-500">Goes straight to the United Mortgage marketing desk</p>
     </form>
   );
 }
