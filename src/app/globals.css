@@ -67,3 +67,30 @@ body {
     transform: translateY(0);
   }
 }
+
+/*
+  Keyboard focus: one clearly visible ring everywhere, shown only for keyboard
+  (focus-visible) so mouse clicks don't flash an outline. In the base layer, so
+  inputs that deliberately draw their own focus ring (outline-none + ring) keep it.
+*/
+@layer base {
+  :focus-visible {
+    outline: 2px solid var(--color-brand-600);
+    outline-offset: 2px;
+  }
+}
+
+/* Respect the OS "reduce motion" setting. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -6,7 +6,7 @@ export default function NotFound() {
       <p className="text-sm font-semibold uppercase tracking-widest text-brand-500">404</p>
       <h1 className="mt-3 text-3xl font-bold text-navy-900">Page not found</h1>
       <p className="mt-3 text-navy-500">
-        That asset or page doesn't exist. Try browsing the library or searching from the header.
+        That asset or page doesn’t exist. Try browsing the library or searching from the header.
       </p>
       <div className="mt-8 flex gap-3">
         <Link href="/" className="rounded-full bg-brand-500 px-5 py-2.5 text-sm font-semibold text-white hover:bg-brand-600">

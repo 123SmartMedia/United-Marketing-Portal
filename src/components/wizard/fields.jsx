@@ -9,8 +9,8 @@
 
 const inputBase =
   'w-full rounded-xl border bg-white px-4 text-[15px] text-navy-900 outline-none transition ' +
-  'placeholder:text-navy-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 ' +
-  'disabled:bg-navy-50 disabled:text-navy-400';
+  'placeholder:text-navy-500 focus:border-brand-500 focus:ring-2 focus:ring-brand-200 ' +
+  'disabled:bg-navy-50 disabled:text-navy-500';
 
 function borderClass(hasError) {
   return hasError ? 'border-red-400 focus:border-red-500 focus:ring-red-200' : 'border-navy-200';
@@ -25,7 +25,7 @@ export function FieldShell({ id, label, required, error, hint, children }) {
         {label} {required && <span className="text-brand-500">*</span>}
       </label>
       {hint && (
-        <p id={hintId} className="mb-1.5 text-xs text-navy-400">
+        <p id={hintId} className="mb-1.5 text-xs text-navy-600">
           {hint}
         </p>
       )}
