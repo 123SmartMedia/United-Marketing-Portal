@@ -20,13 +20,9 @@ for (const [k, v] of Object.entries({ R2_ACCOUNT_ID, R2_ACCESS_KEY_ID, R2_SECRET
 }
 if (!bucket) {
   console.error(
-    'Missing R2_UPLOADS_BUCKET.
-
-' +
-      'This script deliberately refuses to fall back to R2_BUCKET: that bucket serves the
-' +
-      'public asset catalog, and it must not be given browser PUT access.
-' +
+    'Missing R2_UPLOADS_BUCKET.\n\n' +
+      'This script deliberately refuses to fall back to R2_BUCKET: that bucket serves the\n' +
+      'public asset catalog, and it must not be given browser PUT access.\n' +
       'Create a dedicated PRIVATE uploads bucket first, then set R2_UPLOADS_BUCKET.'
   );
   process.exit(1);
