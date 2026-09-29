@@ -1,10 +1,11 @@
 import { cookies } from 'next/headers';
 import { isAuthed, isAdminConfigured } from '@/lib/adminAuth';
-import { readPosts } from '@/lib/posts';
+import { readPostsStrict, isR2Configured } from '@/lib/posts';
 import { getCategories } from '@/lib/catalog';
 import { CATEGORY_GROUP_OPTIONS } from '@/lib/groups';
 import LoginForm from '@/components/admin/LoginForm';
 import AdminDashboard from '@/components/admin/AdminDashboard';
+import BookingsPanel from '@/components/admin/BookingsPanel';
 
 export const dynamic = 'force-dynamic';
 export const metadata = { title: 'Admin', robots: { index: false, follow: false } };
@@ -35,13 +36,34 @@ export default async function AdminPage() {
   }
 
   const categories = getCategories().map((c) => ({ slug: c.slug, title: c.title }));
-  const posts = await readPosts();
+  // Strict read: a storage failure must show as an error here, not as an empty
+  // list that makes it look like every piece has vanished.
+  let posts = [];
+  let loadFailed = false;
+  if (isR2Configured()) {
+    try {
+      posts = (await readPostsStrict()).posts;
+    } catch (err) {
+      console.error('[admin] posts load failed:', err?.code || err?.name);
+      loadFailed = true;
+    }
+  }
 
   return (
-    <AdminDashboard
-      categories={categories}
-      groupOptions={CATEGORY_GROUP_OPTIONS}
-      initialPosts={posts}
-    />
+    <>
+      {loadFailed && (
+        <div role="alert" className="mx-auto mt-6 max-w-6xl px-4 sm:px-6 lg:px-8">
+          <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-700">
+            Couldn’t load existing pieces from storage. They are safe — refresh in a minute. Avoid reordering until they load.
+          </p>
+        </div>
+      )}
+      <AdminDashboard
+        categories={categories}
+        groupOptions={CATEGORY_GROUP_OPTIONS}
+        initialPosts={posts}
+      />
+      <BookingsPanel />
+    </>
   );
 }
