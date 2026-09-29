@@ -22,7 +22,7 @@ export default function LoginForm() {
         window.location.reload();
       } else {
         setStatus('idle');
-        setError(json.error === 'invalid_password' ? 'Incorrect password.' : 'Sign-in failed.');
+        setError(json.error === 'invalid_password' ? 'Incorrect password.' : json.message || 'Sign-in failed.');
       }
     } catch {
       setStatus('idle');

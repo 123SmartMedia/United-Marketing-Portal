@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import TurnstileWidget from '@/components/wizard/TurnstileWidget';
 
 const REQUEST_TYPES = [
   'Business Cards',
@@ -15,15 +16,37 @@ const REQUEST_TYPES = [
  * Reusable request form. Posts to /api/requests, which emails the marketing desk
  * (and, in Phase 2, can also create a Total Expert task). `defaultType` and
  * `asset` pre-fill context when embedded on a category or item page.
+ *
+ * Turnstile-gated like the wizard. This form renders on static/ISR pages, so
+ * the public site key is fetched from /api/turnstile-config at runtime rather
+ * than passed as a server prop (which would be frozen at build time).
  */
+const CONFIG_LOADING = { siteKey: null, action: '' };
 export default function RequestForm({ defaultType = 'Custom / Other', asset = '', compact = false }) {
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
   const [error, setError] = useState('');
+  const [turnstile, setTurnstile] = useState(CONFIG_LOADING);
+  // Single-use token: cleared and re-minted after every attempt.
+  const [turnstileToken, setTurnstileToken] = useState('');
+  const [turnstileError, setTurnstileError] = useState('');
+  const [challengeReset, setChallengeReset] = useState(0);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetch('/api/turnstile-config', { cache: 'no-store' })
+      .then((r) => r.json())
+      .then((cfg) => !cancelled && setTurnstile({ siteKey: cfg.siteKey || '', action: cfg.action || '' }))
+      .catch(() => !cancelled && setTurnstile({ siteKey: '', action: '' }));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function onSubmit(e) {
     e.preventDefault();
     setStatus('submitting');
     setError('');
+    setTurnstileError('');
     const form = e.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
 
@@ -31,19 +54,24 @@ export default function RequestForm({ defaultType = 'Custom / Other', asset = ''
       const res = await fetch('/api/requests', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify({ ...data, turnstileToken }),
       });
-      const json = await res.json();
+      const json = await res.json().catch(() => ({}));
       if (res.ok && json.ok) {
         setStatus('success');
         form.reset();
       } else {
+        if (typeof json.error === 'string' && json.error.startsWith('turnstile_')) setTurnstileError(json.message);
         setStatus('error');
-        setError(errorMessage(json.error));
+        setError(json.message || errorMessage(json.error));
       }
     } catch {
       setStatus('error');
       setError('Something went wrong. Please email marketing@unitedmortgage.com directly.');
+    } finally {
+      // A Turnstile token is single use — mint a fresh one after any attempt.
+      setTurnstileToken('');
+      setChallengeReset((n) => n + 1);
     }
   }
 
@@ -117,14 +145,32 @@ export default function RequestForm({ defaultType = 'Custom / Other', asset = ''
         />
       </Field>
 
-      {status === 'error' && <p className="text-sm text-red-600">{error}</p>}
+      {turnstile.siteKey === null ? (
+        <p className="text-xs text-navy-500">Loading verification…</p>
+      ) : (
+        <TurnstileWidget
+          siteKey={turnstile.siteKey}
+          action={turnstile.action}
+          resetSignal={challengeReset}
+          error={turnstileError}
+          onToken={setTurnstileToken}
+          onExpire={() => setTurnstileToken('')}
+          onUnavailable={() => setTurnstileToken('')}
+        />
+      )}
+
+      {status === 'error' && (
+        <p role="alert" className="text-sm text-red-600">
+          {error}
+        </p>
+      )}
 
       <button
         type="submit"
-        disabled={status === 'submitting'}
+        disabled={status === 'submitting' || !turnstileToken}
         className="w-full rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-brand-600 disabled:opacity-60"
       >
-        {status === 'submitting' ? 'Sending…' : 'Submit request'}
+        {status === 'submitting' ? 'Sending…' : !turnstileToken ? 'Complete verification to submit' : 'Submit request'}
       </button>
       <p className="text-center text-xs text-navy-400">
         Goes straight to marketing@unitedmortgage.com
@@ -159,6 +205,8 @@ function errorMessage(code) {
       return 'Please fill in your name and email.';
     case 'invalid_email':
       return 'Please enter a valid email address.';
+    case 'email_domain_not_allowed':
+      return 'Please use your United Mortgage work email address.';
     case 'delivery_failed':
       return 'We couldn’t send your request. Please email marketing@unitedmortgage.com.';
     default:
