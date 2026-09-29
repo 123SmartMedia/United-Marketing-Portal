@@ -36,13 +36,22 @@ export const ROUTES = Object.freeze({
   PRINT: 'print',
   DIGITAL: 'digital',
   GENERAL: 'general',
+  TOTAL_EXPERT: 'total_expert',
 });
+
+/**
+ * The category the Total Expert sign-up form (/total-expert) submits. It is not
+ * one of the wizard's REQUEST_TYPES — that form has its own schema — so it is
+ * named here, once, and imported by src/lib/totalExpertSchema.js.
+ */
+export const TOTAL_EXPERT_REQUEST_TYPE = 'Total Expert Account';
 
 /** The env var that supplies each route's request type ID. */
 export const ROUTE_ENV_VARS = Object.freeze({
   [ROUTES.PRINT]: 'JIRA_REQUEST_TYPE_PRINT',
   [ROUTES.DIGITAL]: 'JIRA_REQUEST_TYPE_DIGITAL',
   [ROUTES.GENERAL]: 'JIRA_REQUEST_TYPE_ID',
+  [ROUTES.TOTAL_EXPERT]: 'JIRA_REQUEST_TYPE_TOTAL_EXPERT',
 });
 
 /**
@@ -57,6 +66,7 @@ export const CATEGORY_ROUTES = Object.freeze({
   'Print Order (Banner, Yard Sign, Door Hanger)': ROUTES.PRINT,
   'Digital Asset Creation': ROUTES.DIGITAL,
   'Custom / Other': ROUTES.GENERAL,
+  [TOTAL_EXPERT_REQUEST_TYPE]: ROUTES.TOTAL_EXPERT,
 });
 
 /** Reasons a resolution fell back, for safe logging. Never includes form data. */

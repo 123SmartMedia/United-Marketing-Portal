@@ -8,6 +8,7 @@ import {
   ROUTE_ENV_VARS,
   ROUTES,
   ROUTING_REASONS,
+  TOTAL_EXPERT_REQUEST_TYPE,
 } from '../src/lib/jira/requestTypeRouting.js';
 import { REQUEST_TYPES } from '../src/lib/requestSchema.js';
 
@@ -78,7 +79,10 @@ test('every form category has a route — none silently falls through', () => {
   for (const category of REQUEST_TYPES) {
     assert.ok(CATEGORY_ROUTES[category], `"${category}" has no route`);
   }
-  assert.equal(Object.keys(CATEGORY_ROUTES).length, REQUEST_TYPES.length);
+  // The only route key outside the wizard's REQUEST_TYPES is the Total Expert
+  // sign-up form's own category — anything else is an orphaned mapping.
+  assert.equal(Object.keys(CATEGORY_ROUTES).length, REQUEST_TYPES.length + 1);
+  assert.equal(CATEGORY_ROUTES[TOTAL_EXPERT_REQUEST_TYPE], ROUTES.TOTAL_EXPERT);
 });
 
 // --- fallback ---------------------------------------------------------------
@@ -172,6 +176,17 @@ test('each route names its own environment variable', () => {
   assert.equal(ROUTE_ENV_VARS[ROUTES.PRINT], 'JIRA_REQUEST_TYPE_PRINT');
   assert.equal(ROUTE_ENV_VARS[ROUTES.DIGITAL], 'JIRA_REQUEST_TYPE_DIGITAL');
   assert.equal(ROUTE_ENV_VARS[ROUTES.GENERAL], 'JIRA_REQUEST_TYPE_ID');
+  assert.equal(ROUTE_ENV_VARS[ROUTES.TOTAL_EXPERT], 'JIRA_REQUEST_TYPE_TOTAL_EXPERT');
+});
+
+test('Total Expert sign-ups route to their own request type, else the default', () => {
+  const routed = resolve(TOTAL_EXPERT_REQUEST_TYPE, { ...ENV, JIRA_REQUEST_TYPE_TOTAL_EXPERT: '130' });
+  assert.equal(routed.requestTypeId, '130');
+  assert.equal(routed.fallback, false);
+  const fallback = resolve(TOTAL_EXPERT_REQUEST_TYPE);
+  assert.equal(fallback.requestTypeId, '123');
+  assert.equal(fallback.fallback, true);
+  assert.equal(fallback.envVar, 'JIRA_REQUEST_TYPE_TOTAL_EXPERT');
 });
 
 test('a fallback result names the variable to set, so the warning is actionable', () => {
