@@ -2,11 +2,18 @@ import Link from 'next/link';
 import Logo from './Logo';
 import { SITE, getCategories } from '@/lib/catalog';
 
+const QUICK_LINKS = [
+  { href: '/podcast-studio', label: 'Podcast room calendar' },
+  { href: '/total-expert', label: 'Total Expert sign-up' },
+  { href: '/whats-new', label: 'What’s new' },
+  { href: '/my-kit', label: 'My kit' },
+];
+
 export default function Footer() {
   const categories = getCategories();
   return (
     <footer className="mt-24 bg-navy-900 text-navy-100">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-5 lg:px-8">
         <div className="lg:col-span-1">
           <Logo variant="white" />
           <p className="mt-4 max-w-xs text-sm text-navy-300">
@@ -29,6 +36,21 @@ export default function Footer() {
             ))}
           </ul>
         </div>
+
+        <nav aria-labelledby="footer-quick-links">
+          <h3 id="footer-quick-links" className="text-xs font-semibold uppercase tracking-wider text-navy-300">
+            Quick links
+          </h3>
+          <ul className="mt-4 space-y-2 text-sm">
+            {QUICK_LINKS.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-navy-200 transition hover:text-white">
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
         <div>
           <h3 className="text-xs font-semibold uppercase tracking-wider text-navy-400">

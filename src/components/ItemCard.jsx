@@ -1,16 +1,32 @@
 import Link from 'next/link';
 import AssetThumb from './AssetThumb';
+import FavoriteButton from './FavoriteButton';
 import { isNew } from '@/lib/groups';
 
-/** Grid card linking to an item's detail page. Used on category and browse pages. */
-export default function ItemCard({ item, categorySlug }) {
+/**
+ * Grid card linking to an item's detail page. Used on category and browse pages.
+ * The "Save to My kit" button is a sibling of the link, not nested inside it,
+ * so it's a separate tab stop and clicking it never follows the link.
+ */
+export default function ItemCard({ item, categorySlug, showFavorite = true }) {
+  return (
+    <div className="relative h-full">
+      <CardLink item={item} categorySlug={categorySlug} />
+      {showFavorite && (
+        <FavoriteButton item={item} category={categorySlug} className="absolute right-2 top-2 z-20" />
+      )}
+    </div>
+  );
+}
+
+function CardLink({ item, categorySlug }) {
   const fileCount = item.files.length;
   const badges = describeBadges(item);
   const fresh = isNew(item.createdAt);
   return (
     <Link
       href={`/category/${categorySlug}/${item.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-navy-100 bg-white transition hover:-translate-y-0.5 hover:border-brand-300 hover:shadow-lg"
     >
       {fresh && (
         <span className="absolute left-2 top-2 z-10 rounded-full bg-amber-400 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-amber-950 shadow">
@@ -26,13 +42,13 @@ export default function ItemCard({ item, categorySlug }) {
           {badges.map((b) => (
             <span
               key={b}
-              className="rounded-full bg-navy-50 px-2 py-0.5 text-[11px] font-medium text-navy-500"
+              className="rounded-full bg-navy-50 px-2 py-0.5 text-[11px] font-medium text-navy-600"
             >
               {b}
             </span>
           ))}
         </div>
-        <p className="mt-auto pt-3 text-xs text-navy-400">
+        <p className="mt-auto pt-3 text-xs text-navy-600">
           {fileCount} download{fileCount > 1 ? 's' : ''}
         </p>
       </div>
